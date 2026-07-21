@@ -1,0 +1,365 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\emergencystretch=1.5em
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\ZZ}{\mathbb{Z}}
+\theoremstyle{plain}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{lstheorem}{Theorem 2}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\title{Two remarks on Bedert's ``On unique sums in Abelian groups''}
+\author{Mark Watson}
+\date{21 July 2026}
+
+\begin{document}
+\maketitle
+
+This note records two observations about Bedert's paper [B]. First, the upper bound
+$m(p) = O((\log p)^2)$ of [B, Theorem 5] already follows, with a worse constant,
+from a theorem of {\L}uczak and Schoen [LS], which is [B]'s own reference [9]
+(Section 1). Second,
+[B, Proposition 1] holds with its first binomial factor removed (Section 2); this
+is the one result proved in full here, and it is machine-checked in Lean, apart
+from its final, elementary Vandermonde step. Section 3 collects smaller observations from a close
+reading of [B]'s proofs, about information that the packaged statements discard,
+together with an elementary limiting construction and some computations. Everything else is context, and is [B]'s or
+[LS]'s.
+
+For $A \subseteq \ZZ/p\ZZ$ and $g \in \ZZ/p\ZZ$, write
+\[
+r_A(g) \;=\; |\{(a,a') \in A^2 : a + a' = g\}|,
+\]
+counting ordered pairs. $A$ has \emph{no unique sum} iff no $g$ satisfies
+$1 \le r_A(g) \le 2$. Following [B], $m(p)$ is the size of a smallest
+$A \subseteq \ZZ/p\ZZ$ with no unique sum; I take $|A| \ge 2$ throughout, which
+excludes the vacuous $A = \emptyset$.
+
+\section{$m(p) = O((\log p)^2)$ follows from [LS, Theorem 2] with $Q = 2$}
+
+[LS] work with the same ordered count as $r_A$. They set
+\[
+\nu(t) \;=\; \nu_A(t) \;=\; |\{(a,b) \in A \times A : t = a+b\}|,
+\qquad
+\nu(A) \;=\; \min_{t \in A+A} \nu(t),
+\]
+with the convention (their p.~101) that ``if $a \neq b$, then we view $t = a+b$ and
+$t = b+a$ as two different representations of $t$''. Their Theorem 2 (p.~109) states:
+
+\begin{lstheorem}[{[LS], p.~109}]
+``For every positive integer $Q < \log_2 p/(2\log_2(\gamma_p \log_2 p))$, where
+$\gamma_p$ is the constant given in Straus' construction, there exists a set
+$A \subseteq \ZZ/p\ZZ$ such that $|A| = (\gamma_p \log_2 p)^Q$ and
+$\nu(A) \ge 2^Q$.''
+\end{lstheorem}
+
+\noindent They record $\gamma_p \le 2$, tending to $2/\log_2 3$.
+
+Take $Q = 2$. The hypothesis reads
+\[
+\log_2 p \;>\; 4 \log_2(\gamma_p \log_2 p),
+\]
+which holds for $p \ge 2^{22}$. The resulting $A$ has
+\[
+|A| \;\le\; 4(\log_2 p)^2, \qquad \nu(A) \;\ge\; 4,
+\]
+the first bound using $\gamma_p \le 2$. Every $g$ with $r_A(g) \ge 1$ lies in $A + A$, so $r_A(g) = \nu_A(g) \ge 4 > 2$: no
+$g$ has $r_A(g) \in \{1, 2\}$, and $A$ has no unique sum. Hence
+\[
+m(p) \;\le\; 4(\log_2 p)^2 \qquad (p \ge 2^{22}).
+\]
+
+This is the bound of [B, Theorem 5]. [LS] never state the $m(p)$ corollary, though
+the step from $\nu \ge 4$ to ``no unique sum'' is immediate, and [B] (p.~3) records
+the previous best upper bound as ``$m(p) \ll \sqrt{p}$ which came from a rather easy
+construction''.
+
+Bedert's construction is a constant-factor improvement over the one above, using
+balanced sets in place of Straus's $S$. At $Q = 2$ the [LS] set is $S + x \cdot S$,
+where [LS, Lemma 4] supplies an $x$ making $(s,s') \mapsto s + xs'$ injective, so
+$|S + xS| = |S|^2$: the same two-dimensional shape as Bedert's $B \times B$, though
+[LS, Lemma 4] gives injectivity only, not the higher-order condition a Freiman
+isomorphism requires.
+
+\section{A redundant factor in [B, Proposition 1]}
+
+Let $Z = (z_1, \dots, z_n)$ be a finite indexed family in an abelian group, let
+\[
+\Sigma(Z) \;=\; \Bigl\{\, \textstyle\sum_{i \in I} z_i \;:\; I \subseteq [n] \,\Bigr\}
+\]
+be its set of subset sums, and let $d = \dim(Z)$ be the largest size of an index set
+whose subset sums are pairwise distinct (equivalently, indexing a dissociated
+subfamily). The trivial bound $|\Sigma(Z)| \le 2^n$ always holds, with equality
+when $Z$ itself is dissociated, and [B, Proposition 1] shows this is essentially the
+only way $\Sigma(Z)$ gets large: a big additive span forces a big dissociated
+subfamily. Quantitatively, it states
+\[
+|\Sigma(Z)| \;\le\; \binom{n}{d}\binom{n+d}{d}.
+\]
+The observation here is that the first factor can be dropped.
+
+\begin{proposition}
+\begin{equation}
+|\Sigma(Z)| \;\le\; \#\{I \subseteq [n] : I \text{ dissociated}\}
+\;\le\; \sum_{j=0}^{d} \binom{n}{j} \;\le\; \binom{n+d}{d}.
+\label{eq:chain}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The idea is to pick one canonical index set for each attainable sum, and to count
+the representatives by shattering. Order index sets by their characteristic
+$0$--$1$ strings, lexicographically. For
+each $y \in \Sigma(Z)$ let $R_y$ be the lex-least $I$ with $\sum_{i \in I} z_i = y$,
+and set
+\[
+F \;=\; \{R_y : y \in \Sigma(Z)\},
+\]
+so that $|F| = |\Sigma(Z)|$.
+
+Every set $S$ shattered by $F$ is dissociated. Otherwise there are distinct
+$P, Q \subseteq S$ with equal sums; cancelling $P \cap Q$ we may take them disjoint,
+say $P < Q$ lexicographically. Shattering gives $R \in F$ with $R \cap S = Q$; then
+\[
+R' \;=\; (R \setminus Q) \cup P
+\]
+has the same sum as $R$ and is lex-smaller, contradicting the minimality of $R$.
+
+By Pajor's strengthening [P] of the Sauer--Shelah lemma [S, Sh], a finite family
+shatters at
+least as many sets as it has members, so $F$ shatters at least $|F|$ sets, all
+dissociated. A dissociated index set has at most $d$ elements by definition of
+$\dim$, and
+\[
+\sum_{j \le d} \binom{n}{j} \;\le\; \binom{n+d}{d}
+\]
+by Vandermonde.
+\end{proof}
+
+The argument uses only the indexed structure, so it covers multisets, the setting of
+[B].
+
+Bedert's own extremal example ([B] p.~6: $Z$ consists of $k$ copies of each of the
+standard basis vectors $e_1, \dots, e_d$ of $\ZZ^d$, $n = kd$) does not obstruct the
+improvement: there the first inequality of \eqref{eq:chain} is an equality, both
+sides being $(k+1)^d$, since a dissociated index set picks at most one of the $k$
+copies of each $e_i$.
+
+Downstream, with $K = n/d$, [B, Corollary 1] becomes
+\[
+|\Sigma(Z)| \;\le\; \binom{n+d}{d} \;\le\; \bigl(e(K+1)\bigr)^d,
+\]
+of $K^d$ scale rather than the $K^{2d}$ of the stated $(4K)^{2d}$.
+
+\begin{remark}
+The first two inequalities of \eqref{eq:chain} are machine-checked in Lean, as
+\texttt{BedertLab.card\_subsetSums\_le} in the repository accompanying this note,
+with Mathlib's \texttt{Finset.card\_le\_card\_shatterer} as the classical input (the
+Lean proof uses the colexicographic order; the argument is the same). The
+final Vandermonde step is not formalized; \texttt{verify.py} checks it numerically.
+\end{remark}
+
+\section{Further observations}
+
+These are secondary, none of them is asserted as new, and a remark after each one
+states exactly what backs it.
+
+The first three concern the lower-bound machinery of [B], so a word of context. That proof
+runs an iteration (Propositions 5 and 6) in which a set $S_j$ of shifts is
+repeatedly enlarged while $D + S_j$ covers more of $A$, for a fixed dissociated
+$D \subseteq A$. Coverage grows by at least $|D|^2/(36|A|)$ per step, so the
+iteration stops within $36K^2$ steps, where $K = |A|/\dim(A)$; and it can only stop
+once $|S_j|$ has outgrown the constraint [B, (22)]. A lower bound on the number of
+steps is therefore a lower bound on $K$. [B] writes $\omega_1$ for the resulting
+bound: applying Proposition 5 (to a translate of $A$, as in the proof of Theorem 4)
+gives $K \ge \omega_1(p)$, with
+$\omega_1(p) \gg (\log\log\log p)^{1/2}$, and the conversion in the proof of his
+Theorem 4 turns this into the $\omega(p)$ of the main result.
+
+\subsection{The shift set in Proposition 6 grows polynomially}
+
+[B, (23)] records only $|S'| \le \max(2|S|, |S|^3)$, so the iteration in Proposition
+5 knows only $\log_2|S_j| \le 3^j$. Reading the proof, however, $S'$ always has one of two
+forms:
+\[
+S' \;=\; S \cup (S+t) \ \text{ for a single } t,
+\qquad\text{or}\qquad
+S' \;=\; 2S - S \quad (\text{using } 0 \in S);
+\]
+these are the ``first case'' and ``final case'' of the proof, pp.~24--25.
+
+Read as generalized arithmetic progressions, the two operations are ``append a side
+of length $2$'' and ``map every side $L$ to $3L-2$'', and tracking the sides through
+the iteration gives
+\begin{equation}
+\log_2 |S_j| \;\le\; 0.4\, j^2 + j,
+\label{eq:growth}
+\end{equation}
+polynomial rather than exponential in $j$. With the same termination argument this
+yields
+\[
+\omega_1(p) \;\gg\; (\log\log p)^{1/4}
+\qquad\text{in place of}\qquad
+(\log\log\log p)^{1/2}.
+\]
+In words: with $|S_j|$ growing only polynomially, far more steps are needed before
+[B, (22)] fails, and every extra step raises the lower bound on $K$.
+
+The tracked progression is never a hypothesis, only an observation about the sets
+the proof already constructs, so no lemma in Proposition 6 is affected.
+
+\begin{remark}
+\texttt{verify.py} checks \eqref{eq:growth} for all $2^j$ schedules with $j \le 14$.
+A Lean proof for arbitrary schedules, and a kernel-checked derivation of the
+exponent from \eqref{eq:growth}, exist in my working development but are not
+included in the repository; the passage from the two-shape reading of Proposition 6
+to \eqref{eq:growth} is on paper only. The two-shape claim and its exhaustiveness
+were read from the PDF.
+\end{remark}
+
+\subsection{The two branches of Proposition 6 have different increments}
+
+[B, (24)] records an increment of $|D|^2/(36|A|)$ for both branches. Inspection of
+the proof, however, gives
+\[
+\frac{|D|^2}{36|A|} \ \text{ for the translate branch},
+\qquad
+\frac{|D|^2}{12|A|} \ \text{ for the cube branch},
+\]
+three times larger, and (24) takes the minimum; nothing downstream restores the
+difference, since Proposition 5 consumes only the packaged statement. With $c$
+translate and $f$ cube steps the termination budget is therefore
+\[
+c + 3f \;\le\; 36K^2
+\qquad\text{rather than}\qquad
+c + f \;\le\; 36K^2,
+\]
+which divides the quadratic coefficient in the growth analysis by $3$ and multiplies
+the final constant by exactly $3^{1/4} \approx 1.316$.
+
+\begin{remark}
+Read from the PDF's displayed formulas by two independent passes reaching identical
+constants; not formalized.
+\end{remark}
+
+\subsection{What the $\omega_1$ improvement is worth}
+
+The gain to $\omega_1$ is immediate and large; the gain to the published $\omega$ is
+not. [B]'s conversion
+\[
+f(x) \;=\; \frac{x}{2(2 + \log_2 x)}
+\]
+penalizes a larger $\omega_1$ more, because its denominator grows with $x$. At
+$\log_2\log_2 p = 2^{64}$, [B]'s $\omega_1 \approx 1.06$ loses a factor $4.2$ under
+$f$, while $\omega_1 \approx 1.4 \times 10^4$ loses a factor $31.5$.
+
+Comparing the published constant-free shapes,
+\[
+\frac{\sqrt{\log\log\log p}}{\log\log\log\log p}
+\qquad\text{against}\qquad
+\frac{(\log\log p)^{1/4}}{\log\log\log p},
+\]
+the crossover past which the improved $\omega$ exceeds [B]'s is around
+$\log\log p \approx 5 \times 10^4$, that is $p \approx \exp(\exp(50000))$. So this is
+an asymptotic improvement to $\omega$ and an immediate one only to $\omega_1$.
+
+\begin{remark}
+The numbers in this subsection are recomputed by \texttt{verify.py}.
+\end{remark}
+
+\subsection{A limit on the Section 2 improvement}
+
+The Proposition of Section 2 removes one factor; the remaining $K^d$ scale cannot be
+removed, even for sets. Take $d = 2h$ and
+\[
+Z \;=\; \{\, e_i + \chi_S \;:\; 1 \le i \le h,\ S \subseteq \{h+1,\dots,2h\} \,\}
+\;\subset\; \ZZ^d,
+\]
+a set, not a multiset. Its subset sums record, in the first $h$ coordinates, how
+many elements with each index were chosen, giving
+\[
+\log_2|\Sigma(Z)| \;\ge\; d^2/4.
+\]
+But any dissociated $D \subseteq \{0,1\}^d$ has $2^{|D|}$ distinct subset sums lying
+in $\{0,\dots,|D|\}^d$, so
+\[
+2^{|D|} \;\le\; (|D|+1)^d,
+\]
+and $\dim(Z) = O(d\log d)$. The ratio diverges, so no bound of the form
+$|\Sigma(Z)| \le 2^{C\dim(Z)}$ holds for sets.
+
+\begin{remark}
+Elementary; both halves are reproduced in \texttt{verify.py}.
+\end{remark}
+
+\subsection{Exact values of $m(p)$}
+
+Computed by exact solver, certified optimal:
+\[
+\begin{array}{c|ccccccccccc}
+p & 3 & 5 & 7 & 11 & 13 & 17 & 19 & 23 & 29 & 31 & 37\\\hline
+m(p) & 3 & 4 & 5 & 7 & 7 & 8 & 9 & 10 & 11 & 11 & 12
+\end{array}
+\]
+with $m(41), m(43) \le 13$. I did not find this sequence in the OEIS.
+
+The solver's optimal witnesses for $p \le 23$ happen to be double-covering additive
+bases, though at $p = 19$ and $23$ most extremal sets are not additive bases at all;
+$m(p)$ tracks $2\sqrt{p}$ throughout this range. That is a warning rather than a
+finding: the $2\sqrt{p}$ design regime governs until roughly $p \sim 10^3$ to
+$10^4$, so these values cannot identify the asymptotic exponent, and fitting a
+growth law to $p < 1000$ fits the wrong regime.
+
+Separately, the minimum size of a balanced set is
+$\lceil \log_2 p + 1\rceil + \{0,1\}$ throughout the computed range, so the
+Bilu--Lev--Ruzsa rectification threshold $\log_2 p$ ([B, Lemma 1]) is essentially
+sharp here.
+
+\begin{remark}
+The values of $m(p)$ for $p \le 19$, and the balanced-set minima on the same range,
+were reproduced by independent exhaustive search, which \texttt{verify.py} repeats.
+\end{remark}
+
+\section*{Closing remarks}
+
+Section 2 is a direct application of a classical theorem (Sauer [S], Shelah [Sh],
+Pajor [P]), and while I could not locate it stated as a subset-sum bound, that is
+the profile of a fact a specialist may regard as standard. I am not affiliated with
+an institution, so MathSciNet and some publisher citation indices were unavailable
+to me. I made substantial use of AI tools in this work; the quotations were checked
+character for character against the sources, and the Proposition of Section 2 is
+machine-checked in Lean, apart from the final Vandermonde step.
+
+To check, in the repository
+(\texttt{github.com/mkwatson/unique-sums-notes}): run
+\texttt{lake exe cache get \&\& lake build}, then
+\begin{center}
+\texttt{\#print axioms BedertLab.card\_subsetSums\_le},
+\end{center}
+expecting \texttt{[propext, Classical.choice, Quot.sound]}; and run
+\texttt{python3 verify.py} for the arithmetic and the small computations.
+
+\begin{thebibliography}{Sh}
+
+\bibitem[B]{bedert} B.~Bedert, \emph{On unique sums in Abelian groups},
+Combinatorica \textbf{44}(2) (2024), 269--298; arXiv:2303.15134. Page references
+are to the arXiv PDF.
+
+\bibitem[LS]{ls} T.~{\L}uczak and T.~Schoen, \emph{On a problem of Konyagin},
+Acta Arith.\ \textbf{134}(2) (2008), 101--109.
+
+\bibitem[P]{pajor} A.~Pajor, \emph{Sous-espaces $l_1^n$ des espaces de Banach},
+Travaux en Cours 16, Hermann, Paris, 1985.
+
+\bibitem[S]{sauer} N.~Sauer, \emph{On the density of families of sets},
+J.~Combin.\ Theory Ser.~A \textbf{13} (1972), 145--147.
+
+\bibitem[Sh]{shelah} S.~Shelah, \emph{A combinatorial problem; stability and
+order for models and theories in infinitary languages}, Pacific J.~Math.\
+\textbf{41} (1972), 247--261.
+
+\end{thebibliography}
+
+\end{document}
