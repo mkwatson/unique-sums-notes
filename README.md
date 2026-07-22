@@ -18,4 +18,19 @@ The build output should include
 
     python3 verify.py
 
+`bedert-lab/` is a second, self-contained Lean project: the working development that the
+remark in section 3 of the note mentions as not yet included. `BedertLab/Iteration.lean`
+states the two-branch reading of Proposition 6 as one explicit hypothesis (`TwoBranchStep`,
+the single statement to check against the paper) and derives the improved exponent from it,
+kernel-checked end to end, together with the growth bound for arbitrary schedules
+(`bookkeeping`) and the abstract iteration bound. Building it re-checks everything:
+
+    cd bedert-lab
+    lake exe cache get
+    lake build
+
+The build output should include
+
+    'BedertLab.milestone3' depends on axioms: [propext, Classical.choice, Quot.sound]
+
 Mark Watson
