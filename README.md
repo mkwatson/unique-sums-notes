@@ -1,36 +1,25 @@
-Notes on B. Bedert, "On unique sums in Abelian groups", Combinatorica 44 (2024) 269-298.
+# Notes on unique sums
 
-**[note.pdf](note.pdf)** (source: `note.tex`) is the write-up: two remarks on the paper, and
-some further observations.
+These are five short remarks on B. Bedert, “On unique sums in Abelian groups,”
+Combinatorica 44 (2024), 269--298. The note records a 2-torsion scope issue in
+one proof step, two observations confirmed by the author, an empty-set
+convention, and exact values of \(m(p)\) through \(p=59\) with their
+verification tiers.
 
-`SubsetSums.lean` is a machine-checked proof of the proposition in section 2, all but its
-final, elementary Vandermonde step. The file ends with `#print axioms`, so building re-checks
-it:
+To check the Lean proofs and the pure-Python computations:
 
-    lake exe cache get
-    lake build
+```text
+lake exe cache get
+lake build
+python3 verify.py
+```
 
-The build output should include
+The Lean build prints the axiom sets for the principal results. They should be
+exactly `[propext, Classical.choice, Quot.sound]`.
 
-    'BedertLab.card_subsetSums_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Changelog: v1, 2026-07-21; v2, 2026-07-29.
 
-`verify.py` re-runs the arithmetic and the small computations (about 20 seconds, stdlib only):
-
-    python3 verify.py
-
-`bedert-lab/` is a second, self-contained Lean project: the working development that the
-remark in section 3 of the note mentions as not yet included. `BedertLab/Iteration.lean`
-states the two-branch reading of Proposition 6 as one explicit hypothesis (`TwoBranchStep`,
-the single statement to check against the paper) and derives the improved exponent from it,
-kernel-checked end to end, together with the growth bound for arbitrary schedules
-(`bookkeeping`) and the abstract iteration bound. Building it re-checks everything:
-
-    cd bedert-lab
-    lake exe cache get
-    lake build
-
-The build output should include
-
-    'BedertLab.milestone3' depends on axioms: [propext, Classical.choice, Quot.sound]
+I made substantial use of AI tools. Mathematical claims were checked against
+the cited sources, and the formal statements are checked by Lean.
 
 Mark Watson

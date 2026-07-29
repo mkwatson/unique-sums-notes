@@ -177,3 +177,63 @@ for p, want in expected_bal.items():
     c = math.ceil(log2(p) + 1)
     assert got in (c, c + 1)
 print("Observations: balanced-set minima reproduced for p <= 19:", expected_bal)
+
+# Staged v2, Section 1: the complete C_12 unordered representation table.
+def unordered_representations(A, modulus):
+    table = {s: [] for s in range(modulus)}
+    ordered_A = sorted(A)
+    for i, a in enumerate(ordered_A):
+        for b in ordered_A[i:]:
+            table[(a + b) % modulus].append((a, b))
+    return table
+
+c12 = {0, 1, 2, 3, 5, 6, 8}
+c12_expected = {
+    0: [(0, 0), (6, 6)],
+    1: [(0, 1), (5, 8)],
+    2: [(0, 2), (1, 1), (6, 8)],
+    3: [(0, 3), (1, 2)],
+    4: [(1, 3), (2, 2), (8, 8)],
+    5: [(0, 5), (2, 3)],
+    6: [(0, 6), (1, 5), (3, 3)],
+    7: [(1, 6), (2, 5)],
+    8: [(0, 8), (2, 6), (3, 5)],
+    9: [(1, 8), (3, 6)],
+    10: [(2, 8), (5, 5)],
+    11: [(3, 8), (5, 6)],
+}
+c12_got = unordered_representations(c12, 12)
+assert c12_got == c12_expected
+assert all(len(pairs) >= 2 for pairs in c12_got.values())
+
+def midpoint_witnesses(A, modulus, x):
+    return [(a, b) for i, a in enumerate(sorted(A))
+            for b in sorted(A)[i + 1:]
+            if (a + b) % modulus == (2 * x) % modulus]
+
+assert midpoint_witnesses(c12, 12, 0) == []
+assert midpoint_witnesses(c12, 12, 6) == []
+print("Section 1: complete C_12 table and failed midpoint witnesses verified.")
+
+# Staged v2, Section 5: recheck each displayed frontier witness directly.
+def is_usf_ordered(A, modulus):
+    counts = [0] * modulus
+    for a in A:
+        for b in A:
+            counts[(a + b) % modulus] += 1
+    return all(count == 0 or count >= 3 for count in counts)
+
+frontier_witnesses = {
+    41: [0, 1, 17, 19, 21, 22, 25, 26, 28, 29, 30, 36, 39],
+    43: [0, 1, 18, 21, 22, 24, 26, 27, 28, 29, 30, 35, 39],
+    47: [0, 1, 16, 18, 19, 27, 29, 30, 38, 40, 41, 42, 45],
+    53: [0, 1, 18, 21, 24, 25, 26, 27, 31, 32, 35, 42, 43, 46],
+    59: [0, 1, 10, 12, 14, 18, 22, 23, 31, 34, 38, 39, 40, 51, 58],
+}
+frontier_values = {41: 13, 43: 13, 47: 13, 53: 14, 59: 15}
+for p, witness in frontier_witnesses.items():
+    assert len(witness) == frontier_values[p]
+    assert len(set(witness)) == len(witness)
+    assert all(0 <= a < p for a in witness)
+    assert is_usf_ordered(witness, p), p
+print("Section 5: frontier witnesses verified for p = 41, 43, 47, 53, 59.")
