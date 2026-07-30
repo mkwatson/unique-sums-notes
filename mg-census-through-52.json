@@ -1,0 +1,4939 @@
+{
+  "complete": true,
+  "convention": "unordered pairs with repetition; swapping the two entries is not a second representation",
+  "elapsed_seconds": 1127.8546143737622,
+  "extension_history": [
+    {
+      "elapsed_seconds": 111.4229542077519,
+      "extended_from_order": 40,
+      "extended_through_order": 52,
+      "new_group_count": 21
+    }
+  ],
+  "frontier": {
+    "contiguous_through_order": 52,
+    "first_unincluded_order": 53,
+    "noncontiguous_gaps": [
+      {
+        "group": "C53",
+        "lower_bound": 13,
+        "reason": "No retained DRAT certificate from the prior exact-enumeration run."
+      },
+      {
+        "aborted_partial_proof_bytes": 902823936,
+        "group": "C58",
+        "lower_bound": 10,
+        "reason": "The proof stream was interrupted below 1 GiB because no completed size anchor existed for a binding disk lease; no result row was emitted."
+      },
+      {
+        "group": "C59",
+        "lower_bound": 14,
+        "reason": "The known exact-enumeration value m(59)=15 has no retained DRAT certificate."
+      }
+    ],
+    "prior_attempt_packed_proof_bytes": 4247067515,
+    "prior_attempt_proof_retained": false,
+    "prior_attempt_solve_seconds": 22921.5,
+    "reason": "C53 at bound 13 has no retained DRAT certificate; the prior exact-enumeration lower bound does not meet this census's DRAT-retention standard.",
+    "status": "BLOCKED"
+  },
+  "group_count": 88,
+  "max_order_requested": 52,
+  "results": [
+    {
+      "group": "C2",
+      "lower": {
+        "cnf": "mg-work/C2/none.cnf",
+        "cnf_sha256": "2c91f2c7b05371a4a100be6ecc58cb34b65e37f96c31e7e92809e88dfa582888",
+        "elapsed_seconds": 0.005294166970998049,
+        "proof": "mg-work/C2/none.drat",
+        "proof_sha256": "53dba682f754fadf7c53e21ec16f4c03ea6e7d3f81432477a9e104e76d9bbd35",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": null,
+      "moduli": [
+        2
+      ],
+      "order": 2,
+      "tier": "EXACT COMPUTATION",
+      "witness": null
+    },
+    {
+      "group": "C3",
+      "lower": {
+        "cnf": "mg-work/C3/lower-2.cnf",
+        "cnf_sha256": "4a22e8d32d42474811fe5a38f5ecf0497a6231e62de8c15694c6c96794ead616",
+        "elapsed_seconds": 0.004999042022973299,
+        "proof": "mg-work/C3/lower-2.drat",
+        "proof_sha256": "9a71d679df7a74480b92688f78eed9737305db34f247724f2682d8dba1fd79d2",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        3
+      ],
+      "order": 3,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C3/upper-3.cnf",
+        "cnf_sha256": "135f6eb3b398063ff4792af7c3eadd5e9d6bb7c23e1c7b8caf02363413eeca76",
+        "elapsed_seconds": 0.004601249936968088,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "group": "C4",
+      "lower": {
+        "cnf": "mg-work/C4/lower-3.cnf",
+        "cnf_sha256": "7642b66aba14c0a63c4688dd35add1c35d29662834dd2f9e85b5fae11f117c8b",
+        "elapsed_seconds": 0.004847500007599592,
+        "proof": "mg-work/C4/lower-3.drat",
+        "proof_sha256": "383011a1450d711ea0aef215ae84c254e28367385952357c1d71a62efc549bd8",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        4
+      ],
+      "order": 4,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C4/upper-4.cnf",
+        "cnf_sha256": "b4a8b52b1797b2e2172e551b290046fcd42bc818998a05910cb65612c2c2d41f",
+        "elapsed_seconds": 0.004621332976967096,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "group": "C2xC2",
+      "lower": {
+        "cnf": "mg-work/C2xC2/lower-3.cnf",
+        "cnf_sha256": "37d2ad461f744132ac19264182cc94cb486917eb6281b5514481beeed7b2ca25",
+        "elapsed_seconds": 0.004907750058919191,
+        "proof": "mg-work/C2xC2/lower-3.drat",
+        "proof_sha256": "fa5383031c62ee5615cfd709eb75b49bc5aea5318c8104b8a2d7eb13cd766bb7",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2
+      ],
+      "order": 4,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2/upper-4.cnf",
+        "cnf_sha256": "807490681e09fdb27e8273efe47df472ddbc9f789b43a0f17a918fe0e3ff0d27",
+        "elapsed_seconds": 0.004936791956424713,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "group": "C5",
+      "lower": {
+        "cnf": "mg-work/C5/lower-3.cnf",
+        "cnf_sha256": "9595cdc0d36ea427311d3a34fa36efe105a8d2e21fef23031398ca81d6633a1a",
+        "elapsed_seconds": 0.006014415994286537,
+        "proof": "mg-work/C5/lower-3.drat",
+        "proof_sha256": "a6247a008c166668f214ae0c9645ddfd270421a17b5ce9fb59dba5e14dde8562",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        5
+      ],
+      "order": 5,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C5/upper-4.cnf",
+        "cnf_sha256": "61e8eb15b3b8225a35f629af63793ae77af31ae824654afee805db1a54c303ce",
+        "elapsed_seconds": 0.004600875079631805,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          3,
+          4
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "group": "C6",
+      "lower": {
+        "cnf": "mg-work/C6/lower-2.cnf",
+        "cnf_sha256": "d112f48cf5490f15bb05447eed13820ff84542791e8c45ce57417ea605d15e7c",
+        "elapsed_seconds": 0.009372875094413757,
+        "proof": "mg-work/C6/lower-2.drat",
+        "proof_sha256": "40291673668e14abac27e2192d6dafcc91d170dfa79e342537e7d0f9e8866b46",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        6
+      ],
+      "order": 6,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C6/upper-3.cnf",
+        "cnf_sha256": "5f55d294895db4bdd6f3a817a1b4de2fb28608e5575f2d1c2c24c1566920fbce",
+        "elapsed_seconds": 0.004527665674686432,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "group": "C7",
+      "lower": {
+        "cnf": "mg-work/C7/lower-4.cnf",
+        "cnf_sha256": "2fcd4f60da6c9520b5d76499c876193059679d995a5e296889a4478882c3f2da",
+        "elapsed_seconds": 0.005826875101774931,
+        "proof": "mg-work/C7/lower-4.drat",
+        "proof_sha256": "684c4c8b13b87d1219ecb9ac56dffe34bb99c9f6fae39dc286fb08ba51471674",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 4,
+      "m": 5,
+      "moduli": [
+        7
+      ],
+      "order": 7,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C7/upper-5.cnf",
+        "cnf_sha256": "843952ba8660b01a6d38fcc14efbd95ce8b4f1018f610272a62b07047293837e",
+        "elapsed_seconds": 0.004598958883434534,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "group": "C8",
+      "lower": {
+        "cnf": "mg-work/C8/lower-3.cnf",
+        "cnf_sha256": "f16421497e1037daad52fc906ecb99489407d77045e44b7cddb90350a205d39c",
+        "elapsed_seconds": 0.005984750110656023,
+        "proof": "mg-work/C8/lower-3.drat",
+        "proof_sha256": "e09c8213ebe9663b2baaad80099651e01e820700d473d76b54825b8c7ed6c184",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        8
+      ],
+      "order": 8,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C8/upper-4.cnf",
+        "cnf_sha256": "36dfe93ddd9b4ba0a6fb5f4f46055aed3d8eaac55231e2d994b520947defcc79",
+        "elapsed_seconds": 0.004096500109881163,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "group": "C2xC4",
+      "lower": {
+        "cnf": "mg-work/C2xC4/lower-3.cnf",
+        "cnf_sha256": "326b42d35c5c688d8519660e085ce318380b0c2a0cdce782306dc2a96cb3d1af",
+        "elapsed_seconds": 0.0064714159816503525,
+        "proof": "mg-work/C2xC4/lower-3.drat",
+        "proof_sha256": "d3728af013edb28d516565bba5096529ed10831366a58b96f2c9af6f4cb5dd9d",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        4
+      ],
+      "order": 8,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC4/upper-4.cnf",
+        "cnf_sha256": "e4b8c2e5bb81434930f59c702d60e3c81f682ef6446cdc950ad6178414933848",
+        "elapsed_seconds": 0.0028541251085698605,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "group": "C2xC2xC2",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC2/lower-3.cnf",
+        "cnf_sha256": "d78d647f9aa943918e49af28c3c257cb93509f5ae5361c8c3ee7293d4bb3f15c",
+        "elapsed_seconds": 0.00665395800024271,
+        "proof": "mg-work/C2xC2xC2/lower-3.drat",
+        "proof_sha256": "184c6d02c688d44764f7e30710ee94d183f832c9b392b84b79209da84cd7dba4",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        2
+      ],
+      "order": 8,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC2/upper-4.cnf",
+        "cnf_sha256": "79e4ab190eb9b44d93cfaebf0274799936f3f235acdaf44f4662ddc6259d4749",
+        "elapsed_seconds": 0.004553833045065403,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          3,
+          5,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "group": "C9",
+      "lower": {
+        "cnf": "mg-work/C9/lower-2.cnf",
+        "cnf_sha256": "ede50a268aa39cf65e545e4403e69289f4d6cfebfcd25114713f57e43b15b8d4",
+        "elapsed_seconds": 0.008022000081837177,
+        "proof": "mg-work/C9/lower-2.drat",
+        "proof_sha256": "5950672d581586b60d197b099f056f2206db80719610319dde8c22bb28e2cd28",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        9
+      ],
+      "order": 9,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C9/upper-3.cnf",
+        "cnf_sha256": "ce6c01dd1e6dd8cc8474b353af32be8be7d2f7720d8ee29376b08de7d9196785",
+        "elapsed_seconds": 0.00762300007045269,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          3,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        3,
+        6
+      ]
+    },
+    {
+      "group": "C3xC3",
+      "lower": {
+        "cnf": "mg-work/C3xC3/lower-2.cnf",
+        "cnf_sha256": "7523be54c26030aa850d89439f6ca671db6d3c1759b074a41e38046677d41c5f",
+        "elapsed_seconds": 0.0064050001092255116,
+        "proof": "mg-work/C3xC3/lower-2.drat",
+        "proof_sha256": "0a6596ce5fa62206f5d15455b189819dccbb2e4810ae5026c526d35420b94acb",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        3,
+        3
+      ],
+      "order": 9,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C3xC3/upper-3.cnf",
+        "cnf_sha256": "2c839b785a85de5c15892abc95721625754e58b4e7434b690fc10346d9dc9625",
+        "elapsed_seconds": 0.005253666080534458,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          5,
+          7
+        ]
+      },
+      "witness": [
+        0,
+        5,
+        7
+      ]
+    },
+    {
+      "group": "C10",
+      "lower": {
+        "cnf": "mg-work/C10/lower-3.cnf",
+        "cnf_sha256": "58792dabd7208bc2bf82cbe66ca786e116d8b87670bda6d90b2dabf84e8c730d",
+        "elapsed_seconds": 0.008737166877835989,
+        "proof": "mg-work/C10/lower-3.drat",
+        "proof_sha256": "1c71fa67e22a1b164e1298eaeba8373f0ea592991ecd446febaa5c6792cdac9d",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        10
+      ],
+      "order": 10,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C10/upper-4.cnf",
+        "cnf_sha256": "cccdb718398301fbe3438c8a89c2558eef610c281ef384123f416475e20a583d",
+        "elapsed_seconds": 0.006139666307717562,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          6,
+          8
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "group": "C11",
+      "lower": {
+        "cnf": "mg-work/C11/lower-6.cnf",
+        "cnf_sha256": "6f6c7b53615f0ac3161992a7beb2d037d047b711d9b267b4b945e7f0bb73191a",
+        "elapsed_seconds": 0.013099916279315948,
+        "proof": "mg-work/C11/lower-6.drat",
+        "proof_sha256": "4f9642a41f088127cbb27d9d27980878717d2f1b8ce805f59887c056016c5feb",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 6,
+      "m": 7,
+      "moduli": [
+        11
+      ],
+      "order": 11,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C11/upper-7.cnf",
+        "cnf_sha256": "adc752051138a00077f6662f74cfa01003e173ab12ddd1316372bab12482542a",
+        "elapsed_seconds": 0.005259708035737276,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "witness": [
+        0,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "group": "C12",
+      "lower": {
+        "cnf": "mg-work/C12/lower-2.cnf",
+        "cnf_sha256": "5e504913f79a151430e0778101a8f51ad02eae353be4efcce3d3f515ee34efff",
+        "elapsed_seconds": 0.005252375267446041,
+        "proof": "mg-work/C12/lower-2.drat",
+        "proof_sha256": "5bb63420327b2b67b2fdf6c7bb472b28835ef933f1568cd2c679f6c11a5a0180",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        12
+      ],
+      "order": 12,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C12/upper-3.cnf",
+        "cnf_sha256": "2aad9b90457afb00c79e32022295ef3ce6b282990d590823df84a950e7791f19",
+        "elapsed_seconds": 0.01187704224139452,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          8
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "group": "C2xC6",
+      "lower": {
+        "cnf": "mg-work/C2xC6/lower-2.cnf",
+        "cnf_sha256": "7b7fcc503356a6078b55da80f0a12d31bf7a8c353801adc639f277f9da5b7de7",
+        "elapsed_seconds": 0.005765208043158054,
+        "proof": "mg-work/C2xC6/lower-2.drat",
+        "proof_sha256": "d2c9d969ed2c670bd7c88056bbd5ec58ede198b38a68864b772c9aeea8802682",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        2,
+        6
+      ],
+      "order": 12,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC6/upper-3.cnf",
+        "cnf_sha256": "01752f8e2cc4918d604c2d92adf2383f187f153d601fe32ced11beb6c64f32d5",
+        "elapsed_seconds": 0.005246249958872795,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "group": "C13",
+      "lower": {
+        "cnf": "mg-work/C13/lower-6.cnf",
+        "cnf_sha256": "db83d0214f960eb59a17c0938e8967909f37053df6e9575f4cf81b814bbb1285",
+        "elapsed_seconds": 0.02030174992978573,
+        "proof": "mg-work/C13/lower-6.drat",
+        "proof_sha256": "7d99a594564b07d995430665c84a5b8d4d79f3d48ea0c5d9887f5fd02ce44ff8",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 6,
+      "m": 7,
+      "moduli": [
+        13
+      ],
+      "order": 13,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C13/upper-7.cnf",
+        "cnf_sha256": "754265dbb1ef4ca6bc3c961b7c9e9c94f9f81cceb0406fbe5e1a1dd3d1006b39",
+        "elapsed_seconds": 0.018850750289857388,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          7,
+          8
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "group": "C14",
+      "lower": {
+        "cnf": "mg-work/C14/lower-4.cnf",
+        "cnf_sha256": "52d70bee19ffd89cb2c7ee7752e51848f313a62c48a0ea5290601632f719765c",
+        "elapsed_seconds": 0.019960292149335146,
+        "proof": "mg-work/C14/lower-4.drat",
+        "proof_sha256": "da16d475e87fa27afa9849b9b9f8a96348c294feb8d5506a18febd46fc3ba52b",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 4,
+      "m": 5,
+      "moduli": [
+        14
+      ],
+      "order": 14,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C14/upper-5.cnf",
+        "cnf_sha256": "916d685fc9c1c5f71e0b929aae3afd572dc347fb1b5a3dc3030aa91fbdaab294",
+        "elapsed_seconds": 0.0052880411967635155,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          6,
+          8,
+          10,
+          12
+        ]
+      },
+      "witness": [
+        0,
+        6,
+        8,
+        10,
+        12
+      ]
+    },
+    {
+      "group": "C15",
+      "lower": {
+        "cnf": "mg-work/C15/lower-2.cnf",
+        "cnf_sha256": "b5fffe81312c766f42126ec9387965fc0d7894099e589c268bc974a1d3ff256c",
+        "elapsed_seconds": 0.006452958099544048,
+        "proof": "mg-work/C15/lower-2.drat",
+        "proof_sha256": "1be35c05c50d4d74c3f0e2a039cf6f5d0e768ae839d6d0dd3dcbdea67d16d325",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        15
+      ],
+      "order": 15,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C15/upper-3.cnf",
+        "cnf_sha256": "04f3346480a6ff82a26df888be1f05a1c63d943e8b59e98a690a46a7fa12129d",
+        "elapsed_seconds": 0.025187000166624784,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          5,
+          10
+        ]
+      },
+      "witness": [
+        0,
+        5,
+        10
+      ]
+    },
+    {
+      "group": "C16",
+      "lower": {
+        "cnf": "mg-work/C16/lower-3.cnf",
+        "cnf_sha256": "766b88c59dc0dd3c02e8537e77bfac5d8c0b7344ae73ab2bfac3d3c14c34fe09",
+        "elapsed_seconds": 0.022879874799400568,
+        "proof": "mg-work/C16/lower-3.drat",
+        "proof_sha256": "8f517def84c9956b8f90e8d1b31869035e9f00f79fdefa2bb8c4d1a7666a6c98",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        16
+      ],
+      "order": 16,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C16/upper-4.cnf",
+        "cnf_sha256": "a30b8dde6150505473c54640b19036154b8d24dfa3568ca42d13c90ca8a0bcf3",
+        "elapsed_seconds": 0.030364917125552893,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          8,
+          12
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "group": "C2xC8",
+      "lower": {
+        "cnf": "mg-work/C2xC8/lower-3.cnf",
+        "cnf_sha256": "3330e93bfc0f21814c9a9af0c0d5f412835266870b67ef237a5264ba40376072",
+        "elapsed_seconds": 0.029278125148266554,
+        "proof": "mg-work/C2xC8/lower-3.drat",
+        "proof_sha256": "fbd135593a815a9740606ff0dc6af86bf044538a313d9d45788c60587575e86f",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        8
+      ],
+      "order": 16,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC8/upper-4.cnf",
+        "cnf_sha256": "387f2ea67f916a97f9fac3884a0e5c7512177a8ee5dfeb0f397917539e3fcb24",
+        "elapsed_seconds": 0.023704166989773512,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "group": "C4xC4",
+      "lower": {
+        "cnf": "mg-work/C4xC4/lower-3.cnf",
+        "cnf_sha256": "959ee58bbf455dad4fb45888d5332a0d278ef5bb2ff236c15db6bde9da7ca1f5",
+        "elapsed_seconds": 0.02473395923152566,
+        "proof": "mg-work/C4xC4/lower-3.drat",
+        "proof_sha256": "92df2300bebc7e9d7fb22dfdeb22c8238d3af11c96d80e3cfb26c69427e99062",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        4,
+        4
+      ],
+      "order": 16,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C4xC4/upper-4.cnf",
+        "cnf_sha256": "e41d6481f35dbfbeb1c0ac9471746102337d1b4381e13cc390535312ecde359b",
+        "elapsed_seconds": 0.0043938341550529,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          7,
+          10,
+          13
+        ]
+      },
+      "witness": [
+        0,
+        7,
+        10,
+        13
+      ]
+    },
+    {
+      "group": "C2xC2xC4",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC4/lower-3.cnf",
+        "cnf_sha256": "b22715b2eaa5f1ad523805dedd86b59eed8c41cecf70b58dfd2aa7749948d952",
+        "elapsed_seconds": 0.02506233286112547,
+        "proof": "mg-work/C2xC2xC4/lower-3.drat",
+        "proof_sha256": "7055cf87c3491c2aea3cb4c5821c5e195dd2bbf67befaa87f08c323349da2024",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        4
+      ],
+      "order": 16,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC4/upper-4.cnf",
+        "cnf_sha256": "c0483d15d620dbb0ce15f40e3c330712559bb30417bb57850e8e2c2adf0f6d35",
+        "elapsed_seconds": 0.005588999949395657,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "group": "C2xC2xC2xC2",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC2xC2/lower-3.cnf",
+        "cnf_sha256": "18bbdd49be89b25653c434ea164ea1d374f37a97405d87b84f28d74974b7387f",
+        "elapsed_seconds": 0.019018833059817553,
+        "proof": "mg-work/C2xC2xC2xC2/lower-3.drat",
+        "proof_sha256": "e124101192cdfe9c3dc6ebfbb9c728f35bbade6c4e754bfc2b49f53162dda128",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "order": 16,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC2xC2/upper-4.cnf",
+        "cnf_sha256": "f539fc4b6c1b34167d72020a3d3633a0c7986ef68b570ae185b06595f5648992",
+        "elapsed_seconds": 0.004526542034000158,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          7,
+          11,
+          12
+        ]
+      },
+      "witness": [
+        0,
+        7,
+        11,
+        12
+      ]
+    },
+    {
+      "group": "C17",
+      "lower": {
+        "cnf": "mg-work/C17/lower-7.cnf",
+        "cnf_sha256": "f9cd62c9bd5c44deb7a43b98ad0a7e580fd4fa27c5264a2296d074963b2c8451",
+        "elapsed_seconds": 0.04092229204252362,
+        "proof": "mg-work/C17/lower-7.drat",
+        "proof_sha256": "ce13d79f76397564b8b9e8dda4929594b8e84906840eaa6e9e65ce20d31e4eb5",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 7,
+      "m": 8,
+      "moduli": [
+        17
+      ],
+      "order": 17,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C17/upper-8.cnf",
+        "cnf_sha256": "25c18c2b69f334d49505930b554bb82b55527655e6d02622845d9b9d4ffd6575",
+        "elapsed_seconds": 0.037361124996095896,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          11
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        11
+      ]
+    },
+    {
+      "group": "C18",
+      "lower": {
+        "cnf": "mg-work/C18/lower-2.cnf",
+        "cnf_sha256": "2f556b842072a26ba7955ea89986355a06423321cdc93e61cea57ea9c29d749e",
+        "elapsed_seconds": 0.007265791762620211,
+        "proof": "mg-work/C18/lower-2.drat",
+        "proof_sha256": "eba039302d910f432b7bd16d2b610485e12d9575595ca0a2252e53556a6f43b5",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        18
+      ],
+      "order": 18,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C18/upper-3.cnf",
+        "cnf_sha256": "106ba35b7ccbdef2dfce960f89312ffb633f4d5e76a5deb836af57b167c008d8",
+        "elapsed_seconds": 0.025042416993528605,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          6,
+          12
+        ]
+      },
+      "witness": [
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "group": "C3xC6",
+      "lower": {
+        "cnf": "mg-work/C3xC6/lower-2.cnf",
+        "cnf_sha256": "b4a98616b932a830fa1b0764d168318b4767ff5d23f792400d610cb8df8d48b3",
+        "elapsed_seconds": 0.009238666389137506,
+        "proof": "mg-work/C3xC6/lower-2.drat",
+        "proof_sha256": "3ca57a0558a3faf697de32846402e94bef042991632a546c9891060ac7aa46a5",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        3,
+        6
+      ],
+      "order": 18,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C3xC6/upper-3.cnf",
+        "cnf_sha256": "e10c32c483711c7e84bfc27d4f5102cc696cc13b3b87d17e4d081fc5711491a6",
+        "elapsed_seconds": 0.012850792147219181,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          10,
+          14
+        ]
+      },
+      "witness": [
+        0,
+        10,
+        14
+      ]
+    },
+    {
+      "group": "C19",
+      "lower": {
+        "cnf": "mg-work/C19/lower-8.cnf",
+        "cnf_sha256": "4d516adc4f904809b1f4c11445755494b7a25ba03044a3ef7ccd701b161a693a",
+        "elapsed_seconds": 0.14700916595757008,
+        "proof": "mg-work/C19/lower-8.drat",
+        "proof_sha256": "5865782a824f06490b122ef1c511b89be462260256e62f5382379d9bdca6377c",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 8,
+      "m": 9,
+      "moduli": [
+        19
+      ],
+      "order": 19,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C19/upper-9.cnf",
+        "cnf_sha256": "b6bb333266d20b851e990c436f77a594e06e6e7374ea71f129ae3c27a4d709c6",
+        "elapsed_seconds": 0.009415500331670046,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          9,
+          10,
+          11,
+          12,
+          14,
+          16,
+          17,
+          18
+        ]
+      },
+      "witness": [
+        0,
+        9,
+        10,
+        11,
+        12,
+        14,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "group": "C20",
+      "lower": {
+        "cnf": "mg-work/C20/lower-3.cnf",
+        "cnf_sha256": "0a21f7d3f3a75e419de55dad40a866881ca764039111ea46b819e0bc8f796889",
+        "elapsed_seconds": 0.028090041130781174,
+        "proof": "mg-work/C20/lower-3.drat",
+        "proof_sha256": "70861f53fae554358f788bc33a5035ff95c24c57487e5920b92c6623aeb8f27c",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        20
+      ],
+      "order": 20,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C20/upper-4.cnf",
+        "cnf_sha256": "b60053f0cc45b077e5ff34d221199927182795970d40d11938428232a00be6d1",
+        "elapsed_seconds": 0.03387399995699525,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          8,
+          12
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "group": "C2xC10",
+      "lower": {
+        "cnf": "mg-work/C2xC10/lower-3.cnf",
+        "cnf_sha256": "f54bf6a7acb17893b4a13427ebb145208bb1e5fd2693a975804b324c4a3eda2e",
+        "elapsed_seconds": 0.025389791931957006,
+        "proof": "mg-work/C2xC10/lower-3.drat",
+        "proof_sha256": "47b0aa4f3c2e1ba0b426830ac2a1169b3225aa8d380288cda79bcb7afa3b28e0",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        10
+      ],
+      "order": 20,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC10/upper-4.cnf",
+        "cnf_sha256": "1d2f55b1f0a711bb3bb443757554bbc3fafcf6ba22909ee6da2c0bd424a59330",
+        "elapsed_seconds": 0.003289666958153248,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "group": "C21",
+      "lower": {
+        "cnf": "mg-work/C21/lower-2.cnf",
+        "cnf_sha256": "e47be28741fe5026ae12b8eb485f8f7a58e50ee787d690d310b7054fb2f0e85f",
+        "elapsed_seconds": 0.004769040737301111,
+        "proof": "mg-work/C21/lower-2.drat",
+        "proof_sha256": "3c569595af46e343cefa63d3f48b9d9cc98bd5dd56c5465f94e03507f1a124f7",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        21
+      ],
+      "order": 21,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C21/upper-3.cnf",
+        "cnf_sha256": "e4e36cd0774d5290f61fa3cb9e7bf8e326fe77be6c1a7f8560bb969a687b3a15",
+        "elapsed_seconds": 0.03420687513425946,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          7,
+          14
+        ]
+      },
+      "witness": [
+        0,
+        7,
+        14
+      ]
+    },
+    {
+      "group": "C22",
+      "lower": {
+        "cnf": "mg-work/C22/lower-6.cnf",
+        "cnf_sha256": "3353aaec33f848ceb26527045fe703ff6e01834695583e9ef4cf2c2b682676a4",
+        "elapsed_seconds": 0.0564367501065135,
+        "proof": "mg-work/C22/lower-6.drat",
+        "proof_sha256": "acf0229ed440fd6b38d8935c71653923bc22e1018d4f7b685a97d6ba7dafb933",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 6,
+      "m": 7,
+      "moduli": [
+        22
+      ],
+      "order": 22,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C22/upper-7.cnf",
+        "cnf_sha256": "01c97c136ef3bfff44a19636bd081e3d1036694c902aaba6b74869dea8629dd3",
+        "elapsed_seconds": 0.004907499998807907,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20
+        ]
+      },
+      "witness": [
+        0,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "group": "C23",
+      "lower": {
+        "cnf": "mg-work/C23/lower-9.cnf",
+        "cnf_sha256": "1e7e160ca73008180242b2e428f6142058c80b73f9e3e1c80c8a7420246049b1",
+        "elapsed_seconds": 0.8972041672095656,
+        "proof": "mg-work/C23/lower-9.drat",
+        "proof_sha256": "2f46371c73e9338331bd002c6bb0b09b3fb89d37a2fab0481eb6eae33612c1d9",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 9,
+      "m": 10,
+      "moduli": [
+        23
+      ],
+      "order": 23,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C23/upper-10.cnf",
+        "cnf_sha256": "569632d3e96713b97bba657f15a7093740ba494dc0487a43f495f8b6e988660c",
+        "elapsed_seconds": 0.0071801249869167805,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          11,
+          12,
+          13,
+          14,
+          16,
+          18,
+          20,
+          21,
+          22
+        ]
+      },
+      "witness": [
+        0,
+        11,
+        12,
+        13,
+        14,
+        16,
+        18,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "group": "C24",
+      "lower": {
+        "cnf": "mg-work/C24/lower-2.cnf",
+        "cnf_sha256": "bcce19dae068a3cb177bcc21a298168eb0a3795a1caf50f238534c76cf55186c",
+        "elapsed_seconds": 0.00414841715246439,
+        "proof": "mg-work/C24/lower-2.drat",
+        "proof_sha256": "77cc1df424faada966ca87d810c51fb4b90406a96ab7ddfdb7568fe7bd72f8b9",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        24
+      ],
+      "order": 24,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C24/upper-3.cnf",
+        "cnf_sha256": "327311a5d0af9a5a1efb2048db5a1f79659b5aa811cc2e063079ba414ffb33e4",
+        "elapsed_seconds": 0.03372108284384012,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          8,
+          16
+        ]
+      },
+      "witness": [
+        0,
+        8,
+        16
+      ]
+    },
+    {
+      "group": "C2xC12",
+      "lower": {
+        "cnf": "mg-work/C2xC12/lower-2.cnf",
+        "cnf_sha256": "a201971e207f6afe99e2250e085f443d38abc582f8c213de5ebf124ef5513394",
+        "elapsed_seconds": 0.00604470819234848,
+        "proof": "mg-work/C2xC12/lower-2.drat",
+        "proof_sha256": "6b51a04d04e9cc6f823074353f55f86bd4ccbc3443f2fb721cc903287172619a",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        2,
+        12
+      ],
+      "order": 24,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC12/upper-3.cnf",
+        "cnf_sha256": "0924df0400af74868bb362a53306a6e8bd9776c4115b3b3e47d376dacb448bb7",
+        "elapsed_seconds": 0.03529458260163665,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          8
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "group": "C2xC2xC6",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC6/lower-2.cnf",
+        "cnf_sha256": "fa2a5d20764ca99ca5765db8d89db6fed1d2ea89c81f486c23bbd387a889ef2f",
+        "elapsed_seconds": 0.006424874998629093,
+        "proof": "mg-work/C2xC2xC6/lower-2.drat",
+        "proof_sha256": "719f741f5f1741117359e7302ae5489cf09a80c3ba27da11da77128471bfa845",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        2,
+        2,
+        6
+      ],
+      "order": 24,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC6/upper-3.cnf",
+        "cnf_sha256": "3590c982c2b4158d828d4a3a402d9bb9b032a0fa9b6ac86e4542abca2768095a",
+        "elapsed_seconds": 0.00576774962246418,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "group": "C25",
+      "lower": {
+        "cnf": "mg-work/C25/lower-3.cnf",
+        "cnf_sha256": "780a889ad68ff24c223fca4bf3d221f429d52971a5ca4228b6af218e012b8fce",
+        "elapsed_seconds": 0.03224545810371637,
+        "proof": "mg-work/C25/lower-3.drat",
+        "proof_sha256": "d1fcdcfb3930da759af98426ace7e5c99b1924421b301e99d78216753f3c615b",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        25
+      ],
+      "order": 25,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C25/upper-4.cnf",
+        "cnf_sha256": "624aad50bade0841adfbe8df6903254a5a605a2ce7d47f9bdceb69ce9d3ddd1f",
+        "elapsed_seconds": 0.03371229209005833,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          5,
+          10,
+          15
+        ]
+      },
+      "witness": [
+        0,
+        5,
+        10,
+        15
+      ]
+    },
+    {
+      "group": "C5xC5",
+      "lower": {
+        "cnf": "mg-work/C5xC5/lower-3.cnf",
+        "cnf_sha256": "988331178bdc4fde363297c1964466636ddd1c158f78fe5e632e6f68273bb3c1",
+        "elapsed_seconds": 0.036189207807183266,
+        "proof": "mg-work/C5xC5/lower-3.drat",
+        "proof_sha256": "6b893321e4ad0bc237448cec29c6a9069e736288e25ac8540ff195839b0a068e",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        5,
+        5
+      ],
+      "order": 25,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C5xC5/upper-4.cnf",
+        "cnf_sha256": "2a8ceb1a40293332ba3069dcd611aca8a5863aa2f77dc63229c67d1e70f6d988",
+        "elapsed_seconds": 0.0057014161720871925,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          14,
+          16,
+          23
+        ]
+      },
+      "witness": [
+        0,
+        14,
+        16,
+        23
+      ]
+    },
+    {
+      "group": "C26",
+      "lower": {
+        "cnf": "mg-work/C26/lower-6.cnf",
+        "cnf_sha256": "36faacec942ced06dfdf7d712f8f4c509f5b82ffba8519976ac659ae7b2cebce",
+        "elapsed_seconds": 0.08953941706568003,
+        "proof": "mg-work/C26/lower-6.drat",
+        "proof_sha256": "204cf8e438d5b989b36c93975fe86d66793b0d888a7030fabdd4289cccbbe3cd",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 6,
+      "m": 7,
+      "moduli": [
+        26
+      ],
+      "order": 26,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C26/upper-7.cnf",
+        "cnf_sha256": "b6c680d872f7ccdffafb2a2f6f82ff3a8af40cbe86ad7b8e5bbe1a5ce7f5f291",
+        "elapsed_seconds": 0.03632491733878851,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          6,
+          8,
+          10,
+          14,
+          16
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        6,
+        8,
+        10,
+        14,
+        16
+      ]
+    },
+    {
+      "group": "C27",
+      "lower": {
+        "cnf": "mg-work/C27/lower-2.cnf",
+        "cnf_sha256": "e6358af6be2f187cff349521aab8ab66fdf737f5ade07aed88508eb824bc6e11",
+        "elapsed_seconds": 0.006865458097308874,
+        "proof": "mg-work/C27/lower-2.drat",
+        "proof_sha256": "5c71158897568a68874e4cf4692b7521fb6d60904d13887f8f1225cb77c917b1",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        27
+      ],
+      "order": 27,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C27/upper-3.cnf",
+        "cnf_sha256": "ed0a7dc20584dc7da5210c58cdd1da107cba970d61a93503758e52edef42a851",
+        "elapsed_seconds": 0.03498854208737612,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          9,
+          18
+        ]
+      },
+      "witness": [
+        0,
+        9,
+        18
+      ]
+    },
+    {
+      "group": "C3xC9",
+      "lower": {
+        "cnf": "mg-work/C3xC9/lower-2.cnf",
+        "cnf_sha256": "6b1b5e6c6549aa37098cb4d2c69c0d63e9de8d374db0ab7aba9de6a101ae0144",
+        "elapsed_seconds": 0.005887750070542097,
+        "proof": "mg-work/C3xC9/lower-2.drat",
+        "proof_sha256": "d5f61482971d26a8d3c933dbf141ae30cffeb30fb8ae04243b25214d11a12154",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        3,
+        9
+      ],
+      "order": 27,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C3xC9/upper-3.cnf",
+        "cnf_sha256": "47d5015e43bcbc5dfc1a2ff2971ca67e068eda550ab51bc804569f371d797515",
+        "elapsed_seconds": 0.006354792043566704,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          15,
+          21
+        ]
+      },
+      "witness": [
+        0,
+        15,
+        21
+      ]
+    },
+    {
+      "group": "C3xC3xC3",
+      "lower": {
+        "cnf": "mg-work/C3xC3xC3/lower-2.cnf",
+        "cnf_sha256": "d69c07349d6fe4db0fca4039f4054aa3a8fce7eb2fbf382e23a16fe8f58f691e",
+        "elapsed_seconds": 0.0046996669843792915,
+        "proof": "mg-work/C3xC3xC3/lower-2.drat",
+        "proof_sha256": "c38d6123fca2cd4ce6a05e4b8bb91d7c3337aff917106657104b9a80c2edb66c",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        3,
+        3,
+        3
+      ],
+      "order": 27,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C3xC3xC3/upper-3.cnf",
+        "cnf_sha256": "ce64c770469153d8a9975afd5a167c0ee385ae6d7cb38aae2efc222089ec9fc8",
+        "elapsed_seconds": 0.0057740830816328526,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          17,
+          22
+        ]
+      },
+      "witness": [
+        0,
+        17,
+        22
+      ]
+    },
+    {
+      "group": "C28",
+      "lower": {
+        "cnf": "mg-work/C28/lower-3.cnf",
+        "cnf_sha256": "15e51ad44d1e8ac7ef38dc919a679032589dc2c8472e0eeafe56bf3c9748413f",
+        "elapsed_seconds": 0.03770633414387703,
+        "proof": "mg-work/C28/lower-3.drat",
+        "proof_sha256": "0f45a8a7b095fd9b3d66c29fe26e6da88855c9aae6f29a0ef817c6c79e278563",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        28
+      ],
+      "order": 28,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C28/upper-4.cnf",
+        "cnf_sha256": "28e228f3ca368d69999151178a4c9420dbcdf3a927d4b6eb1e6ca895ae38f0a4",
+        "elapsed_seconds": 0.033765166997909546,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          7,
+          14,
+          21
+        ]
+      },
+      "witness": [
+        0,
+        7,
+        14,
+        21
+      ]
+    },
+    {
+      "group": "C2xC14",
+      "lower": {
+        "cnf": "mg-work/C2xC14/lower-3.cnf",
+        "cnf_sha256": "4beba3ebc49727acf21baf1a834990bcfd92c6f3d1c05a540c0fa508e03f7dde",
+        "elapsed_seconds": 0.03738745767623186,
+        "proof": "mg-work/C2xC14/lower-3.drat",
+        "proof_sha256": "27c7be29ae8aab80009525a14fce0b1a93c8073ede912fdcca9863cd5ded0ee2",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        14
+      ],
+      "order": 28,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC14/upper-4.cnf",
+        "cnf_sha256": "c92b49220fdc2cbd192f0b04af635aa90c095c992cbca7af416a45fb3a28b395",
+        "elapsed_seconds": 0.03714983398094773,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          7,
+          14,
+          21
+        ]
+      },
+      "witness": [
+        0,
+        7,
+        14,
+        21
+      ]
+    },
+    {
+      "group": "C29",
+      "lower": {
+        "cnf": "mg-work/C29/lower-10.cnf",
+        "cnf_sha256": "b619e07db36acacb9f3b2ff80727f0b4dff928cbc834187ccd5995cc6492b2ee",
+        "elapsed_seconds": 13.951597915962338,
+        "proof": "mg-work/C29/lower-10.drat",
+        "proof_sha256": "244659de4f9d509600c7efc4c64f182a9fe9e4c5204c6507dd5d28c0b0ac33b9",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 10,
+      "m": 11,
+      "moduli": [
+        29
+      ],
+      "order": 29,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C29/upper-11.cnf",
+        "cnf_sha256": "eedf804c446b086b9fae297dbcf7bb47d2198498f059481c00818fa9fecf59f8",
+        "elapsed_seconds": 0.035535582806915045,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          3,
+          5,
+          8,
+          9,
+          11,
+          12,
+          15,
+          16,
+          17
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        3,
+        5,
+        8,
+        9,
+        11,
+        12,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "group": "C30",
+      "lower": {
+        "cnf": "mg-work/C30/lower-2.cnf",
+        "cnf_sha256": "65041e08271cc8f64e3db536a2805a0631b06d4deb6448a8461e81b06d229672",
+        "elapsed_seconds": 0.00696879206225276,
+        "proof": "mg-work/C30/lower-2.drat",
+        "proof_sha256": "a2f82f2e1d20a852c51af40be0e34791a75a0dde55f17fca6fcccfc90db4e5be",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        30
+      ],
+      "order": 30,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C30/upper-3.cnf",
+        "cnf_sha256": "c025629f56277e6aa880b3fc35241a9e573f3f7f86a114a1d5415eb3f6df0d0f",
+        "elapsed_seconds": 0.05489404080435634,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          10,
+          20
+        ]
+      },
+      "witness": [
+        0,
+        10,
+        20
+      ]
+    },
+    {
+      "group": "C31",
+      "lower": {
+        "cnf": "mg-work/C31/lower-10.cnf",
+        "cnf_sha256": "4d819c71b10295640413ec68d4f307ee48cb3a777e05bcf8809e6db66d2fad0d",
+        "elapsed_seconds": 31.908286374993622,
+        "proof": "mg-work/C31/lower-10.drat",
+        "proof_sha256": "75b4a2ed41f18d3959fcb2b85f6c72f0f6666ca3fd06b010a2a6ed9b70ec8975",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 10,
+      "m": 11,
+      "moduli": [
+        31
+      ],
+      "order": 31,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C31/upper-11.cnf",
+        "cnf_sha256": "cf884a6f7a1af08b803f7d4e1bc9192fba046622da8b20bacd9a1a3fbb97b816",
+        "elapsed_seconds": 0.0397415840998292,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8,
+          11,
+          15,
+          16,
+          19
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        11,
+        15,
+        16,
+        19
+      ]
+    },
+    {
+      "group": "C32",
+      "lower": {
+        "cnf": "mg-work/C32/lower-3.cnf",
+        "cnf_sha256": "349b7f3c2fdf6ad1817ed07eb71fda5e94e7e2c5fb42c9b913bf389ceec3495e",
+        "elapsed_seconds": 0.03508941596373916,
+        "proof": "mg-work/C32/lower-3.drat",
+        "proof_sha256": "58332b9b915f19021a835f0157d08b328013bdd264049a898c7842309a679443",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        32
+      ],
+      "order": 32,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C32/upper-4.cnf",
+        "cnf_sha256": "1fab6c09ce6c5c9cad040237c6e9acf15830f61a06bed6d89b4b5da7a7aa341b",
+        "elapsed_seconds": 0.05689775012433529,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          8,
+          16,
+          24
+        ]
+      },
+      "witness": [
+        0,
+        8,
+        16,
+        24
+      ]
+    },
+    {
+      "group": "C2xC16",
+      "lower": {
+        "cnf": "mg-work/C2xC16/lower-3.cnf",
+        "cnf_sha256": "e77706e29a83d8f84079ce540eb1fac0bf330802eeb4e1e2fd6f07d910f786a9",
+        "elapsed_seconds": 0.03791841585189104,
+        "proof": "mg-work/C2xC16/lower-3.drat",
+        "proof_sha256": "105ea78e5f80200b76b9292a18a87963eb8ffb6597340a66723193843d6fab64",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        16
+      ],
+      "order": 32,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC16/upper-4.cnf",
+        "cnf_sha256": "e69d0e6a6cde507d47aa8f3d95b023ef2d30dd803953d821b804e5c4ca852588",
+        "elapsed_seconds": 0.031902417074888945,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          8,
+          12
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "group": "C4xC8",
+      "lower": {
+        "cnf": "mg-work/C4xC8/lower-3.cnf",
+        "cnf_sha256": "12c57a933747484b1abea1a34f86e0f33e7a8755cb17c5d90ba098fa5d7552af",
+        "elapsed_seconds": 0.0381993749178946,
+        "proof": "mg-work/C4xC8/lower-3.drat",
+        "proof_sha256": "d64bf388820da972189e37aabd9562414494fd2cc259b72d2f2aedaae34754ed",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        4,
+        8
+      ],
+      "order": 32,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C4xC8/upper-4.cnf",
+        "cnf_sha256": "75f02462c9b8d811eece9b0c0e61569479ccc965ee881c5b6d65e0524c4fd7b3",
+        "elapsed_seconds": 0.033909584395587444,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "group": "C2xC2xC8",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC8/lower-3.cnf",
+        "cnf_sha256": "2bb819112518fc425e05b97df8fa62b298e0bf8b2b6ca79f80a1ea49e95bfada",
+        "elapsed_seconds": 0.03124458296224475,
+        "proof": "mg-work/C2xC2xC8/lower-3.drat",
+        "proof_sha256": "faa9370f32856a0294caa40c9fe646524c8d5872337116ce3c32c452c0353d9b",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        8
+      ],
+      "order": 32,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC8/upper-4.cnf",
+        "cnf_sha256": "082fd57a33c1a0bb8935bc06284754960e5386a8075f8bf816a2a4140c428bd7",
+        "elapsed_seconds": 0.037854624912142754,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "group": "C2xC4xC4",
+      "lower": {
+        "cnf": "mg-work/C2xC4xC4/lower-3.cnf",
+        "cnf_sha256": "1780aecfe957d49b9873e6036f9c7c88c2a5a42addd10583c573213d193d3a53",
+        "elapsed_seconds": 0.05311879189684987,
+        "proof": "mg-work/C2xC4xC4/lower-3.drat",
+        "proof_sha256": "6bfa1c46e0e6b0e05211b47d35f9ea64ecc4d10f0e41b0f8246c070c62c5157a",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        4,
+        4
+      ],
+      "order": 32,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC4xC4/upper-4.cnf",
+        "cnf_sha256": "6f6607445e4640868e24a93d6cb173e800537171b78c0d96cc761b1a3a68c57b",
+        "elapsed_seconds": 0.010282041970640421,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "group": "C2xC2xC2xC4",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC2xC4/lower-3.cnf",
+        "cnf_sha256": "b0cce240eb9541929c8b68dc7341800f906ca7760dfd359a5f3db67d64f3d455",
+        "elapsed_seconds": 0.05720537481829524,
+        "proof": "mg-work/C2xC2xC2xC4/lower-3.drat",
+        "proof_sha256": "5eb5b0e69228a06ca9ae3d6c1170001ef5595a7e5fca83d21a93caeef325c8c4",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        2,
+        4
+      ],
+      "order": 32,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC2xC4/upper-4.cnf",
+        "cnf_sha256": "b518f62330475ba769b9f9cf967e4bce1c373d9004548754fff496b59a4c01ef",
+        "elapsed_seconds": 0.005117458291351795,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "group": "C2xC2xC2xC2xC2",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC2xC2xC2/lower-3.cnf",
+        "cnf_sha256": "781652160ad37b94e7c9d73f64405ac591d04fae860c3e87937473a69918a12e",
+        "elapsed_seconds": 0.03375479206442833,
+        "proof": "mg-work/C2xC2xC2xC2xC2/lower-3.drat",
+        "proof_sha256": "e84359e581527d919637ea567ef3b1bd370a2ddf322f82a9a4dd9d31ad9c1b66",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "order": 32,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC2xC2xC2/upper-4.cnf",
+        "cnf_sha256": "edacd431fdc4aed0a01cd93253016f6a8b0fb9f63403c7aa61e5bd54f732b858",
+        "elapsed_seconds": 0.005757458973675966,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          15,
+          23,
+          24
+        ]
+      },
+      "witness": [
+        0,
+        15,
+        23,
+        24
+      ]
+    },
+    {
+      "group": "C33",
+      "lower": {
+        "cnf": "mg-work/C33/lower-2.cnf",
+        "cnf_sha256": "6ab047d84cbc65327beaa0db0e8da3b86186ebff4853e376082e84072b812df9",
+        "elapsed_seconds": 0.007142624817788601,
+        "proof": "mg-work/C33/lower-2.drat",
+        "proof_sha256": "93c6e094633ebba968bf4ef25334e3fa2db04051048bac56a5c42b7e55da8d3f",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        33
+      ],
+      "order": 33,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C33/upper-3.cnf",
+        "cnf_sha256": "fc5bf93f46d7f1e062831ac29e2bc3cdfa89cc081250869b3f848e536bb500aa",
+        "elapsed_seconds": 0.039574333000928164,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          11,
+          22
+        ]
+      },
+      "witness": [
+        0,
+        11,
+        22
+      ]
+    },
+    {
+      "group": "C34",
+      "lower": {
+        "cnf": "mg-work/C34/lower-7.cnf",
+        "cnf_sha256": "f0e33cc7acb54b0a3e436876f760c2059139bd70e5080c613253cc0415d47f90",
+        "elapsed_seconds": 0.7411602498032153,
+        "proof": "mg-work/C34/lower-7.drat",
+        "proof_sha256": "552ef008442402d40f82ec0bc62f93e7da16e3d1a37243156b4070eee2a382a1",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 7,
+      "m": 8,
+      "moduli": [
+        34
+      ],
+      "order": 34,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C34/upper-8.cnf",
+        "cnf_sha256": "8b0f85ca02bfb0458dbafcd69fe838b60d975278bbc00bf7ee2e3cd8d1f34864",
+        "elapsed_seconds": 0.039737333077937365,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          6,
+          8,
+          14,
+          16,
+          18,
+          22
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        6,
+        8,
+        14,
+        16,
+        18,
+        22
+      ]
+    },
+    {
+      "group": "C35",
+      "lower": {
+        "cnf": "mg-work/C35/lower-3.cnf",
+        "cnf_sha256": "a65a31e6fdbf28276567a6023a8cb92353538f8231dadaf986ba93ac8d4df1b5",
+        "elapsed_seconds": 0.035062375012785196,
+        "proof": "mg-work/C35/lower-3.drat",
+        "proof_sha256": "510b55c36f16a953c17f460ed443ac5148d03f4fc50a1f34b8088e87f4af7f8e",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        35
+      ],
+      "order": 35,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C35/upper-4.cnf",
+        "cnf_sha256": "485bf18f5f680c008476effaff35cfef43b27bdf500fcf6938f4a0778699366d",
+        "elapsed_seconds": 0.040369000285863876,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          7,
+          14,
+          21
+        ]
+      },
+      "witness": [
+        0,
+        7,
+        14,
+        21
+      ]
+    },
+    {
+      "group": "C36",
+      "lower": {
+        "cnf": "mg-work/C36/lower-2.cnf",
+        "cnf_sha256": "26ae6d8d426857ab93342657f221ab07860b89384d7d5f9753eae6923a43c9f5",
+        "elapsed_seconds": 0.006760458927601576,
+        "proof": "mg-work/C36/lower-2.drat",
+        "proof_sha256": "1bab3729c480f31c0d22ee964f357358b1b6a741f2402a59dcee18149a01172c",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        36
+      ],
+      "order": 36,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C36/upper-3.cnf",
+        "cnf_sha256": "201568cb4330d7e941bebb34c038934418e0bef6417fa8fe55628027d264e3e8",
+        "elapsed_seconds": 0.03717087535187602,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          12,
+          24
+        ]
+      },
+      "witness": [
+        0,
+        12,
+        24
+      ]
+    },
+    {
+      "group": "C2xC18",
+      "lower": {
+        "cnf": "mg-work/C2xC18/lower-2.cnf",
+        "cnf_sha256": "ab6769264bf01c3b3996457d78226c42ab3281b94ccbd8167873afa8ea61b007",
+        "elapsed_seconds": 0.005927124992012978,
+        "proof": "mg-work/C2xC18/lower-2.drat",
+        "proof_sha256": "5850b8c142e2d93929f68a6a8b97418eef5f803f05973c8d753a9c337fac0e0f",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        2,
+        18
+      ],
+      "order": 36,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC18/upper-3.cnf",
+        "cnf_sha256": "d4c31782eebb329869ddf96f608e00960cb0600d81daf5283e236a2b6a74e62a",
+        "elapsed_seconds": 0.03341150004416704,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          6,
+          12
+        ]
+      },
+      "witness": [
+        0,
+        6,
+        12
+      ]
+    },
+    {
+      "group": "C3xC12",
+      "lower": {
+        "cnf": "mg-work/C3xC12/lower-2.cnf",
+        "cnf_sha256": "cb853e1f9de76419e8b52d2454b212a2571943a07717bdf6aa0244e54e6411fa",
+        "elapsed_seconds": 0.005968749988824129,
+        "proof": "mg-work/C3xC12/lower-2.drat",
+        "proof_sha256": "8aef875ac7b3dd0cb405c2ce054a2a1d81ffc6a4ff8b85e592f5e94432cc8e0d",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        3,
+        12
+      ],
+      "order": 36,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C3xC12/upper-3.cnf",
+        "cnf_sha256": "6c003ed8afc4e76a5c82e7de0a6058e930c3ceddf619ea8e902b9886ad81d183",
+        "elapsed_seconds": 0.0060285828076303005,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          20,
+          28
+        ]
+      },
+      "witness": [
+        0,
+        20,
+        28
+      ]
+    },
+    {
+      "group": "C6xC6",
+      "lower": {
+        "cnf": "mg-work/C6xC6/lower-2.cnf",
+        "cnf_sha256": "9e166ae72babb0ded2e0f6796e176fa9db2d1fe60504394191aa8332917d9068",
+        "elapsed_seconds": 0.0053861672058701515,
+        "proof": "mg-work/C6xC6/lower-2.drat",
+        "proof_sha256": "a0a60662cf8e7f1cdaa7e4a8522e62580c7ca3005dade77904cdefa1dc4d8283",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        6,
+        6
+      ],
+      "order": 36,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C6xC6/upper-3.cnf",
+        "cnf_sha256": "29170819f1bae21516be4fda6b2c5e7b68bf882584d4640a5b6190ba7a6a0235",
+        "elapsed_seconds": 0.007326125167310238,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "group": "C37",
+      "lower": {
+        "cnf": "mg-work/C37/lower-11.cnf",
+        "cnf_sha256": "bce629108dcd57ae4f4fe6924038206741bb60d9007d72bc7f01a93cfc69f527",
+        "elapsed_seconds": 390.9091137922369,
+        "proof": "mg-work/C37/lower-11.drat",
+        "proof_sha256": "27a8a3bae0b89a5424d8bc92abeec3c3c7bce16520fbe1030085f3e625ec3a09",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 11,
+      "m": 12,
+      "moduli": [
+        37
+      ],
+      "order": 37,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C37/upper-12.cnf",
+        "cnf_sha256": "3358a94c477cc6450541093b9ce794aedf1ec1f87eb88ab4fd85cdb9aa4722ba",
+        "elapsed_seconds": 0.045754500199109316,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          13,
+          15,
+          20,
+          22
+        ]
+      },
+      "witness": [
+        0,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        13,
+        15,
+        20,
+        22
+      ]
+    },
+    {
+      "group": "C38",
+      "lower": {
+        "cnf": "mg-work/C38/lower-8.cnf",
+        "cnf_sha256": "1b838c0354f23a2e3265001704984221838abc926fd69d5f1d20cec6f4c85d5c",
+        "elapsed_seconds": 3.394785583950579,
+        "proof": "mg-work/C38/lower-8.drat",
+        "proof_sha256": "e8b29745961c59bea9586d9eaf610e85a1ffa0383e961ed4def4039604af6344",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 8,
+      "m": 9,
+      "moduli": [
+        38
+      ],
+      "order": 38,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C38/upper-9.cnf",
+        "cnf_sha256": "0b8999efa081396816c4c2e5e7a2634109e63db238a6d798bcc5683fad1f44ff",
+        "elapsed_seconds": 0.005719458684325218,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          18,
+          20,
+          22,
+          24,
+          28,
+          32,
+          34,
+          36
+        ]
+      },
+      "witness": [
+        0,
+        18,
+        20,
+        22,
+        24,
+        28,
+        32,
+        34,
+        36
+      ]
+    },
+    {
+      "group": "C39",
+      "lower": {
+        "cnf": "mg-work/C39/lower-2.cnf",
+        "cnf_sha256": "bcea03d26c96c86423c5e80f6c69e3d7f951c608b5f63fa04c723282c577b979",
+        "elapsed_seconds": 0.005603333003818989,
+        "proof": "mg-work/C39/lower-2.drat",
+        "proof_sha256": "40788477292c907a36587520ff3e356c7320963f0ea2f73a70b2fbba1859de8f",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        39
+      ],
+      "order": 39,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C39/upper-3.cnf",
+        "cnf_sha256": "6e446dd0de9b6a10defc2ad9abc1e0bfe06323e33de0121dcfcfe57b5d4e6a98",
+        "elapsed_seconds": 0.02496300032362342,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          13,
+          26
+        ]
+      },
+      "witness": [
+        0,
+        13,
+        26
+      ]
+    },
+    {
+      "group": "C40",
+      "lower": {
+        "cnf": "mg-work/C40/lower-3.cnf",
+        "cnf_sha256": "e599fcd9c941320d9bc9f11b0e5c404ce3b55ba1ea4e3efcdfcea6c8e139d39d",
+        "elapsed_seconds": 0.024564417079091072,
+        "proof": "mg-work/C40/lower-3.drat",
+        "proof_sha256": "5a15872cc1118c7b04f6be3e3a5f86b0ef4f1632088ea96e36779f1baf20738c",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        40
+      ],
+      "order": 40,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C40/upper-4.cnf",
+        "cnf_sha256": "a9d3fb425c9b6ce0981f5fd671f2b2f5ddabe29bf059deecf33534974e553ac3",
+        "elapsed_seconds": 0.025953917298465967,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          8,
+          16,
+          24
+        ]
+      },
+      "witness": [
+        0,
+        8,
+        16,
+        24
+      ]
+    },
+    {
+      "group": "C2xC20",
+      "lower": {
+        "cnf": "mg-work/C2xC20/lower-3.cnf",
+        "cnf_sha256": "17d3c6e4311161768c8949e4f886dedc679639ea5010188ecc4163c6967bc421",
+        "elapsed_seconds": 0.022620332892984152,
+        "proof": "mg-work/C2xC20/lower-3.drat",
+        "proof_sha256": "38a252afd983a678cbc71631a47c5d553f32c2b34120675ff297ddd3d2e539a8",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        20
+      ],
+      "order": 40,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC20/upper-4.cnf",
+        "cnf_sha256": "de74ab183b51b545121cb4d5ae76253c29ad484312d8d5e5ee2bc6ce80f39596",
+        "elapsed_seconds": 0.024355709087103605,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          8,
+          12
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "group": "C2xC2xC10",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC10/lower-3.cnf",
+        "cnf_sha256": "52b3577a08912fa89dd5394e9cb06d662aa48d8ab8de1769ea44725133cc7fe0",
+        "elapsed_seconds": 0.030592374969273806,
+        "proof": "mg-work/C2xC2xC10/lower-3.drat",
+        "proof_sha256": "9f6894da034c1612784fa19b284e1ef8db1b4931d0d62b1684f795007d542cda",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        10
+      ],
+      "order": 40,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC10/upper-4.cnf",
+        "cnf_sha256": "623d6f18ed834a0a7fbf6c7c49bf074c6c206248bda3963ccc7fc3fffb12708f",
+        "elapsed_seconds": 0.004360875114798546,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "group": "C41",
+      "lower": {
+        "artifact_compression": "zstd",
+        "cnf": "mg-work/C41/imported/p41_k12_UNSAT.cnf.zst",
+        "cnf_sha256": "442c16ba8cea47f91d1baf43723733ffbb7c5eb0e9559b371f5f1d80307fe774",
+        "drat_log": "mg-work/C41/imported/p41_k12_UNSAT.drat.log",
+        "elapsed_seconds": 284.252,
+        "encoding": "affine-normalized odd-prime encoding",
+        "ordered_unordered_equivalence": "valid because doubling is injective in the odd-prime cyclic group",
+        "proof": "mg-work/C41/imported/p41_k12_UNSAT.drat.zst",
+        "proof_replay_seconds": 124.977,
+        "proof_sha256": "ca3aae14446857e379dd883d11dacc220b1124446d665ecc9967ab746e9d87f7",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 12,
+      "m": 13,
+      "moduli": [
+        41
+      ],
+      "order": 41,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C41/upper-13.cnf",
+        "cnf_sha256": "9bead6ac3c1ac991f81c682e3206b1ec527c24931f6aea80368c15e2b2d46b5f",
+        "elapsed_seconds": 0.03258066717535257,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          5,
+          6,
+          10,
+          11,
+          15,
+          16,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        5,
+        6,
+        10,
+        11,
+        15,
+        16,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "group": "C42",
+      "lower": {
+        "cnf": "mg-work/C42/lower-2.cnf",
+        "cnf_sha256": "0965a9bf3828ca89db26192e7d4185fc203ad90f5eafb6892bdd1cc5d3caeb3d",
+        "elapsed_seconds": 0.005664458032697439,
+        "proof": "mg-work/C42/lower-2.drat",
+        "proof_sha256": "4f495f0b36fc78d6a929cfe8d711aed9a7421c53161463725395f7e80f985574",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        42
+      ],
+      "order": 42,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C42/upper-3.cnf",
+        "cnf_sha256": "9610381f9521f4f329b79c58da2f7c983426894dbd4ee364274bc03a37b2043d",
+        "elapsed_seconds": 0.020618292037397623,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          14,
+          28
+        ]
+      },
+      "witness": [
+        0,
+        14,
+        28
+      ]
+    },
+    {
+      "group": "C43",
+      "lower": {
+        "artifact_compression": "zstd",
+        "cnf": "mg-work/C43/imported/p43_k12_UNSAT.cnf.zst",
+        "cnf_sha256": "d9c2a721f4a9a66b5c7aa86beeb98d37540d20c5a0600e9f45cfe7ef2a1ed9f5",
+        "drat_log": "mg-work/C43/imported/p43_k12_UNSAT.drat.log",
+        "elapsed_seconds": 443.516,
+        "encoding": "affine-normalized odd-prime encoding",
+        "ordered_unordered_equivalence": "valid because doubling is injective in the odd-prime cyclic group",
+        "proof": "mg-work/C43/imported/p43_k12_UNSAT.drat.zst",
+        "proof_replay_seconds": 222.025,
+        "proof_sha256": "2b374e0cb361af6adeead1ef7997d2171ca6960ac52f932d7ef239f6ba68bca2",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 12,
+      "m": 13,
+      "moduli": [
+        43
+      ],
+      "order": 43,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C43/upper-13.cnf",
+        "cnf_sha256": "bc8f1c362da9c553eb67abc4cc8a10f8fbb461f2d8ba43042e8513f1e41a1352",
+        "elapsed_seconds": 0.027559167239814997,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2,
+          7,
+          8,
+          10,
+          11,
+          13,
+          14,
+          17,
+          21,
+          22,
+          25
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2,
+        7,
+        8,
+        10,
+        11,
+        13,
+        14,
+        17,
+        21,
+        22,
+        25
+      ]
+    },
+    {
+      "group": "C44",
+      "lower": {
+        "cnf": "mg-work/C44/lower-3.cnf",
+        "cnf_sha256": "5dd5492324ca5159109093b80af9ea26255ec0eb124f4e017d7b0f5202f2ac06",
+        "elapsed_seconds": 0.026834875345230103,
+        "proof": "mg-work/C44/lower-3.drat",
+        "proof_sha256": "8d2461b260b05c9ec601bf0570af5350361ca67fffa5da376be07670b291ebe4",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        44
+      ],
+      "order": 44,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C44/upper-4.cnf",
+        "cnf_sha256": "d87073bf2864f94397feed08256965fe1f3a9094198af8a6bb9a72a7b70a38a0",
+        "elapsed_seconds": 0.020070166792720556,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          11,
+          22,
+          33
+        ]
+      },
+      "witness": [
+        0,
+        11,
+        22,
+        33
+      ]
+    },
+    {
+      "group": "C2xC22",
+      "lower": {
+        "cnf": "mg-work/C2xC22/lower-3.cnf",
+        "cnf_sha256": "e49c69b0ddfdcf136790b5a18e47539458cf0a78073b59d839c7e634c08eeba5",
+        "elapsed_seconds": 0.028334917034953833,
+        "proof": "mg-work/C2xC22/lower-3.drat",
+        "proof_sha256": "16f4924915cc4157e6c76ebbbf8d672d159452fa9be530bd0c6435c7e07d5389",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        22
+      ],
+      "order": 44,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC22/upper-4.cnf",
+        "cnf_sha256": "c3ca6f5614659052403a436f7d37ce5cb489c8b6ee7781afead57390fac64763",
+        "elapsed_seconds": 0.02735812496393919,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          11,
+          22,
+          33
+        ]
+      },
+      "witness": [
+        0,
+        11,
+        22,
+        33
+      ]
+    },
+    {
+      "group": "C45",
+      "lower": {
+        "cnf": "mg-work/C45/lower-2.cnf",
+        "cnf_sha256": "9c39a898f7b9799f798d0c401b0d548a05156aa149741b40f98dbaa463716ee6",
+        "elapsed_seconds": 0.004076541401445866,
+        "proof": "mg-work/C45/lower-2.drat",
+        "proof_sha256": "a83865e2dedbdc24d5d2f602d2579ef8193573f8053c613a160440b578c02887",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        45
+      ],
+      "order": 45,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C45/upper-3.cnf",
+        "cnf_sha256": "91d61b57e237ec1f42413eee5aeebf79ba60d94e212b4d1dbdcbeac22c0728f4",
+        "elapsed_seconds": 0.025727999862283468,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          15,
+          30
+        ]
+      },
+      "witness": [
+        0,
+        15,
+        30
+      ]
+    },
+    {
+      "group": "C3xC15",
+      "lower": {
+        "cnf": "mg-work/C3xC15/lower-2.cnf",
+        "cnf_sha256": "a7f82c578a5a53c2626cd0bc17c0f98a72f7508430af883cf1c25c6c2c9328a6",
+        "elapsed_seconds": 0.005938082933425903,
+        "proof": "mg-work/C3xC15/lower-2.drat",
+        "proof_sha256": "fa604e8126d6e2ba0c05b3ec48f575ca3c84c0571fe03ca190691e226d937ec9",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        3,
+        15
+      ],
+      "order": 45,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C3xC15/upper-3.cnf",
+        "cnf_sha256": "0a15ed18b9ece9444737926334243f04e79dec6a6906f1a9f02bcd7c84d45b78",
+        "elapsed_seconds": 0.005951332859694958,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          25,
+          35
+        ]
+      },
+      "witness": [
+        0,
+        25,
+        35
+      ]
+    },
+    {
+      "group": "C46",
+      "lower": {
+        "cnf": "mg-work/C46/lower-9.cnf",
+        "cnf_sha256": "a4575c385d6264358924f86b3cba06e980b3b4817fedda6b4af0012c0c3ab01d",
+        "elapsed_seconds": 42.45958512509242,
+        "proof": "mg-work/C46/lower-9.drat",
+        "proof_sha256": "69ab5929b43de5a82f69d313b36a48ae7e55107f47750cd0c81d6dbcdaf9cc4c",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 9,
+      "m": 10,
+      "moduli": [
+        46
+      ],
+      "order": 46,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C46/upper-10.cnf",
+        "cnf_sha256": "5515fde3faa9d341de6167950e4c9e85b2dbf52d86e7f6e2b31454dc2249b770",
+        "elapsed_seconds": 0.006682917010039091,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          22,
+          24,
+          26,
+          28,
+          32,
+          36,
+          40,
+          42,
+          44
+        ]
+      },
+      "witness": [
+        0,
+        22,
+        24,
+        26,
+        28,
+        32,
+        36,
+        40,
+        42,
+        44
+      ]
+    },
+    {
+      "group": "C47",
+      "lower": {
+        "artifact_compression": "zstd",
+        "cnf": "mg-work/C47/imported/p47k12_dilation.cnf",
+        "cnf_sha256": "81909611c291df8919cdd6641cd8e1374f1ac6b5a2001fb30f18ed3d87169d7d",
+        "drat_log": "mg-work/C47/imported/p47k12_dilation.drat.log",
+        "elapsed_seconds": 2400.35,
+        "encoding": "dilation-normalized odd-prime encoding",
+        "ordered_unordered_equivalence": "valid because doubling is injective in the odd-prime cyclic group",
+        "proof": "mg-work/C47/imported/p47k12_dilation.drat.zst",
+        "proof_replay_seconds": 509.612,
+        "proof_sha256": "8fecf38c911d7be34bf65b57d417b6a716e21567971e66d86d5398805282fde1",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 12,
+      "m": 13,
+      "moduli": [
+        47
+      ],
+      "order": 47,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C47/upper-13.cnf",
+        "cnf_sha256": "caeeed0e22f1e02c2e6eae77d323535487d1bef21865e49c05420f7556963044",
+        "elapsed_seconds": 4.262439958751202,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          3,
+          7,
+          8,
+          9,
+          11,
+          16,
+          33,
+          34,
+          35,
+          37,
+          46
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        3,
+        7,
+        8,
+        9,
+        11,
+        16,
+        33,
+        34,
+        35,
+        37,
+        46
+      ]
+    },
+    {
+      "group": "C48",
+      "lower": {
+        "cnf": "mg-work/C48/lower-2.cnf",
+        "cnf_sha256": "1c85cfa7432bffa93181ca9ef83eeb7b89513fbd3905923fbe78f5747c2778f7",
+        "elapsed_seconds": 0.004181917291134596,
+        "proof": "mg-work/C48/lower-2.drat",
+        "proof_sha256": "dc0626edcaad897d592c26ff7a2b66d020886e78fa74ceb2873c06a39333d7e3",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        48
+      ],
+      "order": 48,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C48/upper-3.cnf",
+        "cnf_sha256": "f6ba5fe8378ece6e8938c1226708cba74e018e348391c8fef7aaca8a5bb836f5",
+        "elapsed_seconds": 0.026768499985337257,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          16,
+          32
+        ]
+      },
+      "witness": [
+        0,
+        16,
+        32
+      ]
+    },
+    {
+      "group": "C2xC24",
+      "lower": {
+        "cnf": "mg-work/C2xC24/lower-2.cnf",
+        "cnf_sha256": "4b14349db315fc2566c7aa01216a29012ffcde998a72fa2b14880feaf92fc923",
+        "elapsed_seconds": 0.004973457660526037,
+        "proof": "mg-work/C2xC24/lower-2.drat",
+        "proof_sha256": "5350f781629eae4dc701a7d7d168b6ff61ed9519ba0901e16470323ddb6c726d",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        2,
+        24
+      ],
+      "order": 48,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC24/upper-3.cnf",
+        "cnf_sha256": "cfe912a5203122cd9ed892267ab78aa3297d64ddd1672a855fdd8037488b2965",
+        "elapsed_seconds": 0.02866495819762349,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          8,
+          16
+        ]
+      },
+      "witness": [
+        0,
+        8,
+        16
+      ]
+    },
+    {
+      "group": "C4xC12",
+      "lower": {
+        "cnf": "mg-work/C4xC12/lower-2.cnf",
+        "cnf_sha256": "6c8cee7de3739d4d008600629322de0fca876504b5832fe5bec22f5045e0025d",
+        "elapsed_seconds": 0.006141874939203262,
+        "proof": "mg-work/C4xC12/lower-2.drat",
+        "proof_sha256": "1f439ff8737481b151289219740aff17460fa9cec141bdc81737fb75867b9f3b",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        4,
+        12
+      ],
+      "order": 48,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C4xC12/upper-3.cnf",
+        "cnf_sha256": "4cc0e32ac6a41c5f78fcaa0b6a27bbc0bddec0faa31603d09778217cadf312d0",
+        "elapsed_seconds": 0.027137165889143944,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          8
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "group": "C2xC2xC12",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC12/lower-2.cnf",
+        "cnf_sha256": "af3816d4be57a6c09234ff0f1dc2439fb0df4c6712e8691b40a0bf8b7c07a039",
+        "elapsed_seconds": 0.006951166782528162,
+        "proof": "mg-work/C2xC2xC12/lower-2.drat",
+        "proof_sha256": "3b6257676053e01dbf93c65f3cfae8783b66533997748ec18e2886aec5290aa2",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        2,
+        2,
+        12
+      ],
+      "order": 48,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC12/upper-3.cnf",
+        "cnf_sha256": "3a8bbd2d013bf77f962243829952d87f3f54858bf7576d407d28b63e1cda33ab",
+        "elapsed_seconds": 0.03184829093515873,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          8
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        8
+      ]
+    },
+    {
+      "group": "C2xC2xC2xC6",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC2xC6/lower-2.cnf",
+        "cnf_sha256": "d5443c6b8c9008380e6256e7af62fcbf94247d1766f4afc6931b06379696a604",
+        "elapsed_seconds": 0.006144125014543533,
+        "proof": "mg-work/C2xC2xC2xC6/lower-2.drat",
+        "proof_sha256": "375a1b12caf68aa996e79f748ecff6721b865a56216afc42686cf861bbcf3a23",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        2,
+        2,
+        2,
+        6
+      ],
+      "order": 48,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC2xC6/upper-3.cnf",
+        "cnf_sha256": "5ed7f1059b44b03fdcce448c715141749645a81c3c0309621f4c775bfcb197b2",
+        "elapsed_seconds": 0.006946624722331762,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "group": "C49",
+      "lower": {
+        "cnf": "mg-work/C49/lower-4.cnf",
+        "cnf_sha256": "c30d518274428d201b4e9bd8762f2aca2f400f1aab753dfec1ec1b40bc7bd33c",
+        "elapsed_seconds": 0.041144415736198425,
+        "proof": "mg-work/C49/lower-4.drat",
+        "proof_sha256": "5c798d824a512aa3d2f6ac10a9d2d09a3a0282c4edf9922fe5ee054f3d589f73",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 4,
+      "m": 5,
+      "moduli": [
+        49
+      ],
+      "order": 49,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C49/upper-5.cnf",
+        "cnf_sha256": "186c109cae6593104ae8e05b30b3df53fff44f4a345727b1d47701e79aa7f688",
+        "elapsed_seconds": 0.026706166565418243,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          7,
+          14,
+          21,
+          28
+        ]
+      },
+      "witness": [
+        0,
+        7,
+        14,
+        21,
+        28
+      ]
+    },
+    {
+      "group": "C7xC7",
+      "lower": {
+        "cnf": "mg-work/C7xC7/lower-4.cnf",
+        "cnf_sha256": "837359c43ae5841185cf3f8502405a4ed6fd2f8f3875b2e6966fe79c49aefe04",
+        "elapsed_seconds": 0.03938766708597541,
+        "proof": "mg-work/C7xC7/lower-4.drat",
+        "proof_sha256": "da0354e165901c29ccf5da7c3183d1c541e8b97dd8f015a5a7d008d3d71931e8",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 4,
+      "m": 5,
+      "moduli": [
+        7,
+        7
+      ],
+      "order": 49,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C7xC7/upper-5.cnf",
+        "cnf_sha256": "11e0be1e15ad79da84f34742b658be8226e5953d63b356f0e88a738ec07c2bbd",
+        "elapsed_seconds": 0.0045980000868439674,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          27,
+          29,
+          38,
+          47
+        ]
+      },
+      "witness": [
+        0,
+        27,
+        29,
+        38,
+        47
+      ]
+    },
+    {
+      "group": "C50",
+      "lower": {
+        "cnf": "mg-work/C50/lower-3.cnf",
+        "cnf_sha256": "4086c3586ddbb3fbf0e2967b1e8470a946f5e3db23c081bf2c99ef25b4f7a5bb",
+        "elapsed_seconds": 0.02833916712552309,
+        "proof": "mg-work/C50/lower-3.drat",
+        "proof_sha256": "3886c76cf017140bcaaec340ec3c35da2ff17673e3ccdc9a627d01e307240565",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        50
+      ],
+      "order": 50,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C50/upper-4.cnf",
+        "cnf_sha256": "7c4476ac16c824967b0a79f6f095aa773b1597cd818e17f9f8d50d6a464061d3",
+        "elapsed_seconds": 0.02848983323201537,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          10,
+          20,
+          30
+        ]
+      },
+      "witness": [
+        0,
+        10,
+        20,
+        30
+      ]
+    },
+    {
+      "group": "C5xC10",
+      "lower": {
+        "cnf": "mg-work/C5xC10/lower-3.cnf",
+        "cnf_sha256": "620a1302e8c0c4526c19c616a8de847827db24c4d58c45aa410e14ea40a9f0ab",
+        "elapsed_seconds": 0.03346575004979968,
+        "proof": "mg-work/C5xC10/lower-3.drat",
+        "proof_sha256": "2d2dc413f42a66c3ef4d7444457b6dbff695d70649d27ea84a68f6bc58661349",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        5,
+        10
+      ],
+      "order": 50,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C5xC10/upper-4.cnf",
+        "cnf_sha256": "9ce2ccfc81277afecaf646139f1ffce5a3110bb90509c32b9e686aece8060f94",
+        "elapsed_seconds": 0.0073552923277020454,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          28,
+          32,
+          46
+        ]
+      },
+      "witness": [
+        0,
+        28,
+        32,
+        46
+      ]
+    },
+    {
+      "group": "C51",
+      "lower": {
+        "cnf": "mg-work/C51/lower-2.cnf",
+        "cnf_sha256": "ee6d8dcc8e74a934150c12d6fbcb85bd912ed918d37a6cff35950e8aa842293c",
+        "elapsed_seconds": 0.004801832605153322,
+        "proof": "mg-work/C51/lower-2.drat",
+        "proof_sha256": "98eb4ef75d790760a1f4ea88661dfc7383efa7d8843f3a065160fa8f1b226eeb",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        51
+      ],
+      "order": 51,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C51/upper-3.cnf",
+        "cnf_sha256": "01354dba861231dbb4e9b8c902227ba65512140fa190e5da48efa21235227f62",
+        "elapsed_seconds": 0.03407824970781803,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          17,
+          34
+        ]
+      },
+      "witness": [
+        0,
+        17,
+        34
+      ]
+    },
+    {
+      "group": "C52",
+      "lower": {
+        "cnf": "mg-work/C52/lower-3.cnf",
+        "cnf_sha256": "7e5e6d6d6f09aa5cd02a7cf7be8629f272ac1ebe8bfc5127f02ffd3dfae27317",
+        "elapsed_seconds": 0.028703500051051378,
+        "proof": "mg-work/C52/lower-3.drat",
+        "proof_sha256": "83f2be4686ae5c703d10d1a623e693e0c29a9d62a403eadd20ed43efeed13d12",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        52
+      ],
+      "order": 52,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C52/upper-4.cnf",
+        "cnf_sha256": "39979a30be75b1e16b2608fdc6f331a94203bd27425bccde88ae4a4070ee1a48",
+        "elapsed_seconds": 0.038482166826725006,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          13,
+          26,
+          39
+        ]
+      },
+      "witness": [
+        0,
+        13,
+        26,
+        39
+      ]
+    },
+    {
+      "group": "C2xC26",
+      "lower": {
+        "cnf": "mg-work/C2xC26/lower-3.cnf",
+        "cnf_sha256": "67a0391d9d4c2cffc494a919a79c9e8691771d3e2e57a5fa41d0bf7d9f847ab3",
+        "elapsed_seconds": 0.028961707837879658,
+        "proof": "mg-work/C2xC26/lower-3.drat",
+        "proof_sha256": "6e33da1c6da867f889232b66f8c462e38d47ca7de25a280b9767898669514327",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        26
+      ],
+      "order": 52,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC26/upper-4.cnf",
+        "cnf_sha256": "20ee0abd8ee18dd77b554770a4c5a4fc37061ff0c9bf2f71957dc21479451204",
+        "elapsed_seconds": 0.03446270804852247,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          13,
+          26,
+          39
+        ]
+      },
+      "witness": [
+        0,
+        13,
+        26,
+        39
+      ]
+    }
+  ],
+  "schema": 1,
+  "stress_group_count": 26,
+  "stress_results": [
+    {
+      "group": "C64",
+      "lower": {
+        "cnf": "mg-work/C64/lower-3.cnf",
+        "cnf_sha256": "244eba54a28c4ca06b27439419d5246016ed167827e3ef55e6443d0709d53c3a",
+        "elapsed_seconds": 0.0412025423720479,
+        "proof": "mg-work/C64/lower-3.drat",
+        "proof_sha256": "c2b2af01c0af27b041251fa5bb5539638cd3db46b0baa41b0ac53a3911e99347",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        64
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C64/upper-4.cnf",
+        "cnf_sha256": "7a504a8f00160dec4c6e7979aac191ec2d469eb5d4a0a9ff3e25b3390e67a2d8",
+        "elapsed_seconds": 0.038348374888300896,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          16,
+          32,
+          48
+        ]
+      },
+      "witness": [
+        0,
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "group": "C2xC32",
+      "lower": {
+        "cnf": "mg-work/C2xC32/lower-3.cnf",
+        "cnf_sha256": "1b570753b3d09a52a37b123cd2cd97afc26273c88a03bab19e92d776b52f92a2",
+        "elapsed_seconds": 0.035410291980952024,
+        "proof": "mg-work/C2xC32/lower-3.drat",
+        "proof_sha256": "1ae658e6a6a7f510532cba741ed15ac5212c042a61ade43aa8018f9b96cfe095",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        32
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC32/upper-4.cnf",
+        "cnf_sha256": "2f115a13e08b5b1d734bd800009f6e7a4dd62e15b0bfffcd849ea04c5ce3de42",
+        "elapsed_seconds": 0.03388050012290478,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          8,
+          16,
+          24
+        ]
+      },
+      "witness": [
+        0,
+        8,
+        16,
+        24
+      ]
+    },
+    {
+      "group": "C4xC16",
+      "lower": {
+        "cnf": "mg-work/C4xC16/lower-3.cnf",
+        "cnf_sha256": "0fe7b541bc901d43528f73475dc2559f6698c4f493a915107d8fd5b2fe07e3f1",
+        "elapsed_seconds": 0.03649275004863739,
+        "proof": "mg-work/C4xC16/lower-3.drat",
+        "proof_sha256": "f5fb75d7c4c64017d69c41b07ab365e0f068dc288428c603a78a204765257a52",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        4,
+        16
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C4xC16/upper-4.cnf",
+        "cnf_sha256": "229b7e9a54476d86ed4c96440c6fc313a531d9a28375bb1368e13967cd77fa76",
+        "elapsed_seconds": 0.028107833117246628,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          8,
+          12
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "group": "C8xC8",
+      "lower": {
+        "cnf": "mg-work/C8xC8/lower-3.cnf",
+        "cnf_sha256": "958431623e95e2985e47ee587a05f6fc8336fd94f98d6a50a72808f9ab36d1ac",
+        "elapsed_seconds": 0.03136412473395467,
+        "proof": "mg-work/C8xC8/lower-3.drat",
+        "proof_sha256": "78bbebf17d5477dfdf5920d0532a3219f141b33ee5cc2e0db79b0df33a1bc72c",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        8,
+        8
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C8xC8/upper-4.cnf",
+        "cnf_sha256": "83784f5955aa10ef22bff577b46ec1486ee52822c37cb0fef5fbdee9e5105352",
+        "elapsed_seconds": 0.03248508274555206,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "group": "C2xC2xC16",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC16/lower-3.cnf",
+        "cnf_sha256": "9b8181f9ed2d1bf86e4c2ce90b2cf2a6fbcf0d4ddbf46f8b463ff96f54bad334",
+        "elapsed_seconds": 0.0392253752797842,
+        "proof": "mg-work/C2xC2xC16/lower-3.drat",
+        "proof_sha256": "6a072b9bcb3942d242e28316d17e9eeaec7c44a6646127aee87ecc38ef7c0cd5",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        16
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC16/upper-4.cnf",
+        "cnf_sha256": "55982423a762cca680381710a542d3c71d7de84e45fc6d5cee918af4352340a7",
+        "elapsed_seconds": 0.03447437519207597,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          4,
+          8,
+          12
+        ]
+      },
+      "witness": [
+        0,
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "group": "C2xC4xC8",
+      "lower": {
+        "cnf": "mg-work/C2xC4xC8/lower-3.cnf",
+        "cnf_sha256": "8490cf4e4d7ee4d08e36e09bb95a6f1083714ea16ef12494124383a1423ddb59",
+        "elapsed_seconds": 0.039395667146891356,
+        "proof": "mg-work/C2xC4xC8/lower-3.drat",
+        "proof_sha256": "d98799b5ba1639be70d2facab8038114642e4526000605e0f1beea796051343b",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        4,
+        8
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC4xC8/upper-4.cnf",
+        "cnf_sha256": "2cf0011800d9de9209446b63cf8c0321a0fb04e9a4661095875435ae06dc122e",
+        "elapsed_seconds": 0.02941720886155963,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "group": "C4xC4xC4",
+      "lower": {
+        "cnf": "mg-work/C4xC4xC4/lower-3.cnf",
+        "cnf_sha256": "042d283b5048607723adb6ac7a5cc300ad54df8f61ba53a33febf0d534b25c64",
+        "elapsed_seconds": 0.03892075037583709,
+        "proof": "mg-work/C4xC4xC4/lower-3.drat",
+        "proof_sha256": "4fd4498ecc479389dc7e8dbba2faaa67e74307a23d0f11690486bef3e1d555ca",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        4,
+        4,
+        4
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C4xC4xC4/upper-4.cnf",
+        "cnf_sha256": "d1525e863449944ad11b556f28690f5a1ddb888090ea53951afb28f290fcf73f",
+        "elapsed_seconds": 0.005766957998275757,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          31,
+          42,
+          53
+        ]
+      },
+      "witness": [
+        0,
+        31,
+        42,
+        53
+      ]
+    },
+    {
+      "group": "C2xC2xC2xC8",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC2xC8/lower-3.cnf",
+        "cnf_sha256": "a581184cca470351f6fef21dd2fb65bef6298faf77f64789956a71ab67b29f75",
+        "elapsed_seconds": 0.0394504158757627,
+        "proof": "mg-work/C2xC2xC2xC8/lower-3.drat",
+        "proof_sha256": "c03b3baec61ee9842fae81c88fb172b1dc71243d3d04fb44a50f35478c7dd613",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        2,
+        8
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC2xC8/upper-4.cnf",
+        "cnf_sha256": "4fd555b4308745524288c957ce1a1d75931c5b0de306999643db93bb359dd275",
+        "elapsed_seconds": 0.032498584128916264,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          2,
+          4,
+          6
+        ]
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "group": "C2xC2xC4xC4",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC4xC4/lower-3.cnf",
+        "cnf_sha256": "5f36590c3d06f4d094ed31b3dc58c01def8ac757ac93d6c3e98599f3752579c6",
+        "elapsed_seconds": 0.039418083149939775,
+        "proof": "mg-work/C2xC2xC4xC4/lower-3.drat",
+        "proof_sha256": "06ab9c3a4ee4fb23fce8c7eef62fbf3b4729a2e009ae8dfa49cc79c8d3e7cb7a",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        4,
+        4
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC4xC4/upper-4.cnf",
+        "cnf_sha256": "76dbca18c2ff684309a60c78f48205a4f5874baa76b26314208aab9b72417dad",
+        "elapsed_seconds": 0.004642333369702101,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "group": "C2xC2xC2xC2xC4",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC2xC2xC4/lower-3.cnf",
+        "cnf_sha256": "9c1edbdbd6dd10fb52fc3425911427ea8c3a51a5e6ba3a5402ad306025fcd601",
+        "elapsed_seconds": 0.03251316584646702,
+        "proof": "mg-work/C2xC2xC2xC2xC4/lower-3.drat",
+        "proof_sha256": "828609a71e595265cb353f4ba6869f47eea99a334a9bcbd1140a9acb4c0e4d39",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC2xC2xC4/upper-4.cnf",
+        "cnf_sha256": "48074dcacfcaf325a7f9277acba02541a3eb1b02e494c8f4eb31685b95358a7e",
+        "elapsed_seconds": 0.00804550014436245,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "witness": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "group": "C2xC2xC2xC2xC2xC2",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC2xC2xC2xC2/lower-3.cnf",
+        "cnf_sha256": "01097194ed97dbc410633a1b971c36010e32a595984e725ccd6233147136039a",
+        "elapsed_seconds": 0.04047291725873947,
+        "proof": "mg-work/C2xC2xC2xC2xC2xC2/lower-3.drat",
+        "proof_sha256": "337f4b6a36d4641d249e0a4b9e6173216cee4a5ecb230d1dc6c02eb42e80f7f4",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "order": 64,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC2xC2xC2xC2/upper-4.cnf",
+        "cnf_sha256": "99a6229c8a2a8b2c66b46c47d1788a2c6a45ee3c3f245f123027ece69210ab63",
+        "elapsed_seconds": 0.007461042143404484,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          31,
+          47,
+          48
+        ]
+      },
+      "witness": [
+        0,
+        31,
+        47,
+        48
+      ]
+    },
+    {
+      "group": "C77",
+      "lower": {
+        "cnf": "mg-work/C77/lower-4.cnf",
+        "cnf_sha256": "a2c263e87d09e3b38b4e5ad015abc9e11f7fee2a6b0b90cfc9c53d59d5984b14",
+        "elapsed_seconds": 0.0933499583043158,
+        "proof": "mg-work/C77/lower-4.drat",
+        "proof_sha256": "7f73153e52af4c1017018a75ae8e8ceff3f3ff2d074ad0fd5af66d72009c2832",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 4,
+      "m": 5,
+      "moduli": [
+        77
+      ],
+      "order": 77,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C77/upper-5.cnf",
+        "cnf_sha256": "c5ff7e9f9507b65d9b3f55ad34ed650c4bb099db753e21bebd2b369c7cf97377",
+        "elapsed_seconds": 0.03850833419710398,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          11,
+          22,
+          33,
+          44
+        ]
+      },
+      "witness": [
+        0,
+        11,
+        22,
+        33,
+        44
+      ]
+    },
+    {
+      "group": "C91",
+      "lower": {
+        "cnf": "mg-work/C91/lower-4.cnf",
+        "cnf_sha256": "53300548ed28f0a407085320ed3508b9dbc4132dc2797f3ac15c0b2fbda21cca",
+        "elapsed_seconds": 0.14822450000792742,
+        "proof": "mg-work/C91/lower-4.drat",
+        "proof_sha256": "098cf828d8544d55716b607eced3eb19ea823344daf7340f73aff1681b45148a",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 4,
+      "m": 5,
+      "moduli": [
+        91
+      ],
+      "order": 91,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C91/upper-5.cnf",
+        "cnf_sha256": "5614b260a3d2b91703f43e460b77f24578de015c3e613a2355af250439752bdf",
+        "elapsed_seconds": 0.04551083408296108,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          13,
+          26,
+          39,
+          52
+        ]
+      },
+      "witness": [
+        0,
+        13,
+        26,
+        39,
+        52
+      ]
+    },
+    {
+      "group": "C143",
+      "lower": {
+        "cnf": "mg-work/C143/lower-6.cnf",
+        "cnf_sha256": "b805907f068960683d94ae9af4d7c6f3882fd3b3b0f44b0cf7b7f451f68eabd9",
+        "elapsed_seconds": 17.962731000036,
+        "proof": "mg-work/C143/lower-6.drat",
+        "proof_sha256": "5a139bf08cad1cd0a25ef08bbec5945e2ae166f4f1697a8647e834a72077cce4",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 6,
+      "m": 7,
+      "moduli": [
+        143
+      ],
+      "order": 143,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C143/upper-7.cnf",
+        "cnf_sha256": "b1d286c9605b57e530429f3b6fd5d9be75c52119bc26746f954c4d40627870a4",
+        "elapsed_seconds": 0.12674337485805154,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          13,
+          26,
+          39,
+          52,
+          65,
+          78
+        ]
+      },
+      "witness": [
+        0,
+        13,
+        26,
+        39,
+        52,
+        65,
+        78
+      ]
+    },
+    {
+      "group": "C187",
+      "lower": {
+        "cnf": "mg-work/C187/lower-6.cnf",
+        "cnf_sha256": "75d04f78fa3940f18f4c5ce839cc1400053295379c7c0f7578e889a21d87b564",
+        "elapsed_seconds": 43.08476966666058,
+        "proof": "mg-work/C187/lower-6.drat",
+        "proof_sha256": "4447b0124c0fcd6fac18840ed8713fadb201489d450b89b1978f0a9cb271a207",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 6,
+      "m": 7,
+      "moduli": [
+        187
+      ],
+      "order": 187,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C187/upper-7.cnf",
+        "cnf_sha256": "3cbb2e712915b521bb9749550c748001a4267505b3f77920505a41d806bcfa5a",
+        "elapsed_seconds": 0.5368408332578838,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          17,
+          34,
+          51,
+          68,
+          85,
+          102
+        ]
+      },
+      "witness": [
+        0,
+        17,
+        34,
+        51,
+        68,
+        85,
+        102
+      ]
+    },
+    {
+      "group": "C221",
+      "lower": {
+        "cnf": "mg-work/C221/lower-6.cnf",
+        "cnf_sha256": "a679d1472ce52f576125362bae691284525accf013cb1ccd88d7bf6b4d4143ba",
+        "elapsed_seconds": 93.01928704092279,
+        "proof": "mg-work/C221/lower-6.drat",
+        "proof_sha256": "8e2d00c752b72a3e5b2bc2e924f296bf36d805546395b5f34a0a95ed6b14534d",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 6,
+      "m": 7,
+      "moduli": [
+        221
+      ],
+      "order": 221,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C221/upper-7.cnf",
+        "cnf_sha256": "19005ce1a0f6ebb30259a2698029290b4aeb11167161cb1030873f9dbfcf99bc",
+        "elapsed_seconds": 1.2672089170664549,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          17,
+          51,
+          68,
+          85,
+          119,
+          136
+        ]
+      },
+      "witness": [
+        0,
+        17,
+        51,
+        68,
+        85,
+        119,
+        136
+      ]
+    },
+    {
+      "group": "C54",
+      "lower": {
+        "cnf": "mg-work/C54/lower-2.cnf",
+        "cnf_sha256": "fb9b1e69bd2d32ece60c9a36a5b7dc43f8d7656238c34bda4f4e22f0c18e8a89",
+        "elapsed_seconds": 0.01271379180252552,
+        "proof": "mg-work/C54/lower-2.drat",
+        "proof_sha256": "711960933145ee2a82556486d3c2ed6344b4fb9be3c2d5444003748155a1b780",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        54
+      ],
+      "order": 54,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C54/upper-3.cnf",
+        "cnf_sha256": "f614b6c2da73ff2489c93ede22b71016ca7ec7ee3e4f977efdbf921f322f2985",
+        "elapsed_seconds": 0.02702187467366457,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          18,
+          36
+        ]
+      },
+      "witness": [
+        0,
+        18,
+        36
+      ]
+    },
+    {
+      "group": "C3xC18",
+      "lower": {
+        "cnf": "mg-work/C3xC18/lower-2.cnf",
+        "cnf_sha256": "7bf26a2d7f0955369ce6c591c8be0d99e530e864dd17373e2f9419df4c972af8",
+        "elapsed_seconds": 0.006996541284024715,
+        "proof": "mg-work/C3xC18/lower-2.drat",
+        "proof_sha256": "4c859727466881e16fb5b19e7d14e7d23b52ab83973210c558c2d31966e5e0ea",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        3,
+        18
+      ],
+      "order": 54,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C3xC18/upper-3.cnf",
+        "cnf_sha256": "93beafebc80d6ebb04322cc9ddb30f3f10dd6ad1594bf2d1fff0761bc5287534",
+        "elapsed_seconds": 0.004127792082726955,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          30,
+          42
+        ]
+      },
+      "witness": [
+        0,
+        30,
+        42
+      ]
+    },
+    {
+      "group": "C3xC3xC6",
+      "lower": {
+        "cnf": "mg-work/C3xC3xC6/lower-2.cnf",
+        "cnf_sha256": "7d7039c88de727f6e4b6dac71ea6be155cd68e65e57487d129166e1bd147c956",
+        "elapsed_seconds": 0.004276750143617392,
+        "proof": "mg-work/C3xC3xC6/lower-2.drat",
+        "proof_sha256": "8328e397fa5cca5bbacba18a9fc05006cf1d5545e20f1539548a46adb4dda80f",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        3,
+        3,
+        6
+      ],
+      "order": 54,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C3xC3xC6/upper-3.cnf",
+        "cnf_sha256": "066566f252be702f4209aad1fa555966d42adf31fc648ee51bece4efb746c3d6",
+        "elapsed_seconds": 0.004484792239964008,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          34,
+          44
+        ]
+      },
+      "witness": [
+        0,
+        34,
+        44
+      ]
+    },
+    {
+      "group": "C55",
+      "lower": {
+        "cnf": "mg-work/C55/lower-3.cnf",
+        "cnf_sha256": "304c33283fb8f589eab16f7ddbf8a982ff6906f876bcdf9b142a5505c44eaafe",
+        "elapsed_seconds": 0.031136457808315754,
+        "proof": "mg-work/C55/lower-3.drat",
+        "proof_sha256": "b75667bcdfe8a69733e710420833d22310fe11dc7efef4ffac7f3f44af694fd9",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        55
+      ],
+      "order": 55,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C55/upper-4.cnf",
+        "cnf_sha256": "86d8217d3c2475a82fc4a491d8d165089e5c95fdc43a41191de8ee450ac43c13",
+        "elapsed_seconds": 0.026143250055611134,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          11,
+          22,
+          33
+        ]
+      },
+      "witness": [
+        0,
+        11,
+        22,
+        33
+      ]
+    },
+    {
+      "group": "C56",
+      "lower": {
+        "cnf": "mg-work/C56/lower-3.cnf",
+        "cnf_sha256": "f328b3ec81634ad1c9d1045e9dadce2ae4309b96d1ff5c2af075dd394fc01a4a",
+        "elapsed_seconds": 0.032007042318582535,
+        "proof": "mg-work/C56/lower-3.drat",
+        "proof_sha256": "ce79e27773df9e35bed82e94e0d8473f37781efd803915b838b004b16a672e11",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        56
+      ],
+      "order": 56,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C56/upper-4.cnf",
+        "cnf_sha256": "ce790877b8faf11e6f08f73a34d6d74ac63cfe2f5b17abd3888dd08a732efd4d",
+        "elapsed_seconds": 0.03302412526682019,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          14,
+          28,
+          42
+        ]
+      },
+      "witness": [
+        0,
+        14,
+        28,
+        42
+      ]
+    },
+    {
+      "group": "C2xC28",
+      "lower": {
+        "cnf": "mg-work/C2xC28/lower-3.cnf",
+        "cnf_sha256": "49c9d9c02ceca7e634a756a677491289ebb5d429562a84d39171b4b87ca7c822",
+        "elapsed_seconds": 0.028763290960341692,
+        "proof": "mg-work/C2xC28/lower-3.drat",
+        "proof_sha256": "ff81dc490cbdedea9d981b624a6be0745f5c004a3a0d3a28f5e3c69384d116cc",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        28
+      ],
+      "order": 56,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC28/upper-4.cnf",
+        "cnf_sha256": "600e833e339cd7f31e8c9aced54c07fb5d382a14e8c82f076a5b5f7b51cbf133",
+        "elapsed_seconds": 0.027335583232343197,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          7,
+          14,
+          21
+        ]
+      },
+      "witness": [
+        0,
+        7,
+        14,
+        21
+      ]
+    },
+    {
+      "group": "C2xC2xC14",
+      "lower": {
+        "cnf": "mg-work/C2xC2xC14/lower-3.cnf",
+        "cnf_sha256": "7b34125b11248a34bc6e13051581b388863730f649761240ea23e8ac22793c9e",
+        "elapsed_seconds": 0.030311124864965677,
+        "proof": "mg-work/C2xC2xC14/lower-3.drat",
+        "proof_sha256": "f6d5820719c0575e1e3f5fe908487464033213135377152d462aa94b817561cb",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 3,
+      "m": 4,
+      "moduli": [
+        2,
+        2,
+        14
+      ],
+      "order": 56,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC2xC14/upper-4.cnf",
+        "cnf_sha256": "b6f62460aa4a0ecd7f3229057b3f4cfe6d052d539495a3635d8eb7b0aae7602f",
+        "elapsed_seconds": 0.028359999880194664,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          7,
+          14,
+          21
+        ]
+      },
+      "witness": [
+        0,
+        7,
+        14,
+        21
+      ]
+    },
+    {
+      "group": "C57",
+      "lower": {
+        "cnf": "mg-work/C57/lower-2.cnf",
+        "cnf_sha256": "ff833b871d15fa9e77a8e4c5aa4f791534ef7bcb66bd33abf4737dc3696e27ff",
+        "elapsed_seconds": 0.004611541982740164,
+        "proof": "mg-work/C57/lower-2.drat",
+        "proof_sha256": "fc12a8cf138e3d62cd477299eebaa7c831e9e0508fc0a2dd0b597ab29ded14b9",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        57
+      ],
+      "order": 57,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C57/upper-3.cnf",
+        "cnf_sha256": "7203e95360f757db4dd7fd8bfd5feefc341c816d66e5f369652aad7f175e4ce7",
+        "elapsed_seconds": 0.029747374821454287,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          19,
+          38
+        ]
+      },
+      "witness": [
+        0,
+        19,
+        38
+      ]
+    },
+    {
+      "group": "C60",
+      "lower": {
+        "cnf": "mg-work/C60/lower-2.cnf",
+        "cnf_sha256": "c3e68dd26118e7b3565a08261919c844b47d8f9d2de9875074458fdbc2999b40",
+        "elapsed_seconds": 0.0045591252855956554,
+        "proof": "mg-work/C60/lower-2.drat",
+        "proof_sha256": "e4983c5287a859533dcf16a663a75eabbb8e7c0d5efdebab9c1cc76dd0ec0531",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        60
+      ],
+      "order": 60,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C60/upper-3.cnf",
+        "cnf_sha256": "9482c2df3af62e3f52704fbf09414b024f8823260db468346ec3c6d498608735",
+        "elapsed_seconds": 0.032029957976192236,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          20,
+          40
+        ]
+      },
+      "witness": [
+        0,
+        20,
+        40
+      ]
+    },
+    {
+      "group": "C2xC30",
+      "lower": {
+        "cnf": "mg-work/C2xC30/lower-2.cnf",
+        "cnf_sha256": "e20989db4a078a250176ea28b0018f8e4c227864df8f36e17e3a14749545e663",
+        "elapsed_seconds": 0.004866375122219324,
+        "proof": "mg-work/C2xC30/lower-2.drat",
+        "proof_sha256": "c76553629c265074b55f420fd2c48a6477a0417d6aca37bde81c176ad5a233a1",
+        "proof_verified": true,
+        "status": "UNSAT",
+        "witness": null
+      },
+      "lower_bound": 2,
+      "m": 3,
+      "moduli": [
+        2,
+        30
+      ],
+      "order": 60,
+      "tier": "EXACT COMPUTATION",
+      "upper": {
+        "cnf": "mg-work/C2xC30/upper-3.cnf",
+        "cnf_sha256": "61b453318dbb9690ef385d8daaffeddaa1db1d0e4cee3b57684baa67f0202fcc",
+        "elapsed_seconds": 0.03126058401539922,
+        "proof": null,
+        "proof_sha256": null,
+        "proof_verified": null,
+        "status": "SAT",
+        "witness": [
+          0,
+          10,
+          20
+        ]
+      },
+      "witness": [
+        0,
+        10,
+        20
+      ]
+    }
+  ],
+  "timeout_seconds_per_solver_call": 1800
+}

@@ -237,3 +237,49 @@ for p, witness in frontier_witnesses.items():
     assert all(0 <= a < p for a in witness)
     assert is_usf_ordered(witness, p), p
 print("Section 5: frontier witnesses verified for p = 41, 43, 47, 53, 59.")
+
+# Staged v3, Part III: stdlib-feasible finite-group checks.
+def group_elements(moduli):
+    return list(itertools.product(*(range(n) for n in moduli)))
+
+def group_add(a, b, moduli):
+    return tuple((x + y) % n for x, y, n in zip(a, b, moduli))
+
+def is_usf_unordered_group(A, moduli):
+    counts = {}
+    ordered_A = list(A)
+    for i, a in enumerate(ordered_A):
+        for b in ordered_A[i:]:
+            s = group_add(a, b, moduli)
+            counts[s] = counts.get(s, 0) + 1
+    return bool(A) and all(count != 1 for count in counts.values())
+
+def m_of_group(moduli):
+    elements = group_elements(moduli)
+    for k in range(1, len(elements) + 1):
+        for A in itertools.combinations(elements, k):
+            if is_usf_unordered_group(A, moduli):
+                return k
+    return None
+
+small_group_minima = {
+    (2,): None,
+    (3,): 3,
+    (4,): 4,
+    (2, 2): 4,
+    (6,): 3,
+    (8,): 4,
+    (2, 4): 4,
+    (9,): 3,
+    (12,): 3,
+}
+for moduli, want in small_group_minima.items():
+    got = m_of_group(moduli)
+    assert got == want, (moduli, got, want)
+print("Part III: finite-group minima reproduced:", small_group_minima)
+
+B11 = {(x,) for x in (0, 1, 2, 4, 7)}
+A2x11 = {(e, x) for e in (0, 1) for x in (0, 1, 2, 4, 7)}
+assert is_usf_unordered_group(A2x11, (2, 11))
+assert not is_usf_unordered_group(B11, (11,))
+print("Part III: C_2 x C_11 projection counterexample verified.")

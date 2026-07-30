@@ -1,12 +1,16 @@
-\documentclass[11pt]{article}
-\usepackage{amsmath,amssymb,amsthm,booktabs}
+\documentclass[10pt]{article}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[margin=0.73in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \emergencystretch=1.5em
 
 \newcommand{\ZZ}{\mathbb Z}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\tier}[1]{\par\smallskip\noindent\textsc{Verification: #1.}\ }
 \theoremstyle{plain}
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{proposition}{Proposition}
+\newtheorem*{conjecture}{Conjecture}
 
 \title{Remarks on Bedert's ``On unique sums in Abelian groups''}
 \author{Mark Watson}
@@ -15,14 +19,14 @@
 \begin{document}
 \maketitle
 
-This note records five small observations about Bedert's paper [B]. The first
-concerns the scope of one step in the printed proof for general Abelian groups.
-The next two tighten remarks from an earlier version of this note. The last two
-record an empty-set convention and finite computations. The theorem discussed
-in Section 1 is not disputed.
+This note collects corrections, sharpenings, finite-group results, and data
+related to Bedert's paper [B]. Parts II and III contain observations obtained
+in the course of checking the argument. They are offered as supplements to
+the paper, not as claims about what its author intended to optimize. For a
+finite subset $A$ of an Abelian group, [B] calls $a_1+a_2$ a unique sum when
+its only ordered representations are $(a_1,a_2)$ and $(a_2,a_1)$.
 
-For a finite subset $A$ of an Abelian group, [B] calls $a_1+a_2$ a unique sum
-when its only ordered representations are $(a_1,a_2)$ and $(a_2,a_1)$.
+\part{Corrections and scope}
 
 \section{A 2-torsion scope issue}
 
@@ -33,122 +37,237 @@ another diagonal pair. Consider
 \[
  A=\{0,1,2,3,5,6,8\}\subset \ZZ/12\ZZ.
 \]
-Here is the complete table of representations, with the order of the two
-summands suppressed:
+The numbers of unordered representations of the twelve residues are
 \[
-\begin{array}{c|l}
-s&\{a,b\}\subset A,\ a+b=s\\ \hline
-0&(0,0),(6,6)\\
-1&(0,1),(5,8)\\
-2&(0,2),(1,1),(6,8)\\
-3&(0,3),(1,2)\\
-4&(1,3),(2,2),(8,8)\\
-5&(0,5),(2,3)\\
-6&(0,6),(1,5),(3,3)\\
-7&(1,6),(2,5)\\
-8&(0,8),(2,6),(3,5)\\
-9&(1,8),(3,6)\\
-10&(2,8),(5,5)\\
-11&(3,8),(5,6)
-\end{array}
+(2,2,3,2,3,2,3,2,3,2,2,2).
 \]
-Every sum has at least two unordered representations, so $A$ has no unique
-sum under the definition in [B, line 62]. It is not balanced: neither $0$ nor
-$6$ is the midpoint of two distinct members of $A$. In particular, the two
-ordered representations of zero are $(0,0)$ and $(6,6)$, so the ordered-count
-criterion at [B, lines 118--122] also diverges from the line-62 definition.
-
-The proof of the general-group lower-bound theorem invokes the implication
-``no unique sum implies balanced'' at [B, line 458]. Thus the printed proof
-needs an odd-order clause at that step, or a separate argument for groups with
-2-torsion. This is a scope issue in the proof. It is not a counterexample to
-the theorem itself.
+Thus $A$ has no unique sum under [B, line 62]. It is not balanced: neither
+$0$ nor $6$ is the midpoint of two distinct members of $A$. The proof of the
+general-group lower-bound theorem invokes ``no unique sum implies balanced''
+at [B, line 458]. The printed proof therefore needs an odd-order clause at
+that step, or a separate argument for groups with 2-torsion. This does not
+dispute the theorem itself.
 
 The boundary is sharp among cyclic groups of even order.
-
 \begin{theorem}
-For $m\geq 0$, there is a set $A\subset \ZZ/(2m)\ZZ$ with no unique sum and
-some ordered representation count equal to $2$ if and only if $m\geq 6$.
+For $m\geq0$, there is a set $A\subset\ZZ/(2m)\ZZ$ with no unique sum and
+some ordered representation count equal to $2$ if and only if $m\geq6$.
 \end{theorem}
-
 For $m\geq6$, one may take
 \[
  \{0,\ldots,m\}\setminus\{m-2\}\ \cup\ \{m+2\}.
 \]
-The positive family, including the concrete $C_{12}$ witness, and the
-exhaustive cases $2m<12$ are machine-checked in \texttt{CycEven.lean}.
-\texttt{C12Witness.lean} records the displayed set as a standalone object,
-and the full table is recomputed by \texttt{verify.py}.
+\tier{kernel-certified}
+The family and the exhaustive cases $2m<12$ are checked in
+\texttt{CycEven.lean}; \texttt{verify.py} recomputes the $C_{12}$ table.
 
 \section{The {\L}uczak--Schoen upper bound}
 
-{\L}uczak and Schoen [LS, Theorem 2] use the same ordered representation
-count as [B]. Taking their parameter $Q=2$ gives, for $p\geq 2^{22}$, a set
+{\L}uczak and Schoen [LS, Theorem 2] use the ordered representation count of
+[B]. Taking $Q=2$ gives, for $p\geq2^{22}$, a set
 $A\subset\ZZ/p\ZZ$ with
 \[
- |A|\leq 4(\log_2p)^2,\qquad r_A(g)\geq4\quad(g\in A+A).
+ |A|\leq4(\log_2p)^2,\qquad r_A(g)\geq4\quad(g\in A+A).
 \]
-Hence $A$ has no unique sum and $m(p)\leq4(\log_2p)^2$. Thus the order of
-growth in [B, Theorem 5] already follows from [LS]. Bedert's balanced-set
-construction improves the constant and gives a more direct construction.
-The author has confirmed this observation and intends to add a note.
+Hence $m(p)\leq4(\log_2p)^2$. Thus the order of growth in [B, Theorem 5]
+already follows from [LS]. Bedert's construction improves the constant and
+is more direct. The author has confirmed this observation and intends to add
+a note.
 
 \section{A redundant factor in Proposition 1}
 
 For an indexed family $Z=(z_1,\ldots,z_n)$, let $\Sigma(Z)$ be its set of
 subset sums and let $d$ be the largest size of a dissociated index set. Then
 \[
- |\Sigma(Z)|
- \leq \#\{I\subseteq[n]:I\hbox{ is dissociated}\}
- \leq \sum_{j=0}^{d}\binom nj
- \leq \binom{n+d}{d}.
+ |\Sigma(Z)|\leq
+ \#\{I\subseteq[n]:I\text{ is dissociated}\}
+ \leq\sum_{j=0}^{d}\binom nj
+ \leq\binom{n+d}{d}.
 \]
-The proof is the one in the first version of this note. Choose the
-colexicographically least index set representing each subset sum. Every set
-shattered by this family is dissociated, and Pajor's strengthening of the
-Sauer--Shelah lemma completes the count. This removes the first factor from
-the bound $\binom nd\binom{n+d}{d}$ in [B, Proposition 1].
-\texttt{SubsetSums.lean} checks the first two inequalities, and
-\texttt{verify.py} checks the elementary Vandermonde step. The author has
-confirmed the improvement and explained that he chose the simpler sufficient
-bound because the extra factor does not affect the asymptotic main theorem.
+Choose the colexicographically least index set representing each subset sum.
+Every set shattered by this family is dissociated, and Pajor's strengthening
+of Sauer--Shelah completes the count. This removes the first factor from
+$\binom nd\binom{n+d}{d}$ in [B, Proposition 1].
+\tier{kernel-certified first two inequalities; finite arithmetic check for the last}
+\texttt{SubsetSums.lean} checks the first two inequalities and
+\texttt{verify.py} checks the Vandermonde step. The author has explained that
+he chose the simpler sufficient bound because the factor does not affect the
+asymptotic theorem.
 
 \section{The empty set}
 
-The definition at [B, line 282] makes the empty set balanced, since its
-condition is universal over its elements. Proposition 3 at [B, lines
-296--298], however, asks for an element $g\in-B$ for every balanced set $B$.
-For $B=\varnothing$ there is no such $g$. The proof at [B, lines 349--350]
-also uses that a balanced set contains at least two distinct elements.
+The definition at [B, line 282] makes the empty set balanced, while
+Proposition 3 asks for $g\in-B$ for every balanced $B$. The repair is to
+require balanced sets to be nonempty in the definition, or in the
+propositions that use such an element.
 
-The harmless repair is to require balanced sets to be nonempty in the
-definition, or to state the propositions for nonempty balanced sets. With
-that convention, the argument at [B, lines 349--350] supplies the stronger
-fact that such a set has at least two elements.
+\part{The general-group question}
+
+\section{The minima three and four}
+
+\begin{theorem}
+For every finite Abelian group $G$,
+\[
+ m(G)=3\quad\Longleftrightarrow\quad3\mid|G|.
+\]
+Moreover, if $4\mid|G|$ and $3\nmid|G|$, then $m(G)=4$.
+\end{theorem}
+
+\begin{proof}
+Translate a three-set to $\{0,x,y\}$. If it has no unique sum, the pair
+$\{0,x\}$ can collide only with $\{y,y\}$, so $x=2y$. Symmetrically
+$y=2x$, whence $3x=0$. Conversely, a coset of a subgroup of order three has
+no unique sum. This proves the first assertion by Cauchy's theorem.
+
+If $4\mid|G|$, choose a subgroup $H$ of order four. For $a,b\in H$, choose
+$h\in H\setminus\{0,b-a\}$. Then
+\[
+ (a+h)+(b-h)=a+b
+\]
+is neither the original nor the swapped pair. Thus $H$ has no unique sum.
+The first assertion and the elementary two-point obstruction give the lower
+bound when $3\nmid|G|$.
+\end{proof}
+\tier{proved, elementary; algebraic core kernel-certified}
+\texttt{Dcyc.lean} checks the three-set algebra, both order-four groups, and
+the necessary $C_{12}$ counterexample to the unguarded four-branch.
+
+\section{Census-52}
+
+\tier{exact computation, DRAT-certified}
+All 88 Abelian groups of orders $2$ through $52$, and 26 separately labelled
+stress groups through order $221$, match
+\[
+ m(G)=\min\bigl(\{4:4\mid|G|\}\cup
+ \{m(p):p\text{ odd prime},\ p\mid|G|\}\bigr),       \tag{2}
+\]
+with $C_2$ separately having no nonempty such set. This is 114 exact groups,
+not a theorem for all finite Abelian groups. Each of the 114 lower bounds has
+a retained DRAT proof and verified checker log; the 113 upper witnesses were
+recounted directly. The proofs are not distributed with this note. Their
+CNF and proof SHA-256 hashes, paths, group sizes, and outcomes are recorded
+in \texttt{mg-census-through-52.json}, whose own SHA-256 is
+\[
+\texttt{f8d1c7119e5e98f6d97c7bd4bc76e7eeac1060915876196040f6df74f9a073e9}.
+\]
+The manifest does not record proof byte counts, so no byte-size claim is made
+here.
+
+\section{A double-cyclic conjecture}
+
+\begin{conjecture}
+For every odd prime $p$,
+\[
+                         m(C_{2p})=m(C_p).           \tag{3}
+\]
+\end{conjecture}
+The following evidence and reduction do not prove (3).
+
+First, a DRAT-certified exact search shows that every minimum set in
+$C_2\times C_p$ lies in one parity fibre for
+$p=3,5,7,11,13,17,19,23$. Second, write
+\[
+A_e=\{x:(e,x)\in A\},\quad B=A_0\cup A_1,\quad
+D=A_0\cap A_1.
+\]
+If $A$ is minimum and $D=\varnothing$, projection is injective and $B$ has
+no unique sum. Hence $m(C_p)\leq|B|=|A|$, while embedding a minimum set of
+$C_p$ in one fibre gives the reverse inequality.
+\tier{proved reduction}
+Thus empty overlap at the minimum implies (3). Eliminating nonempty residual
+overlap remains open.
+
+The naive statement that projection preserves the property is false. In
+$C_2\times C_{11}$, the full double lift of
+\[
+                 \{0,1,2,4,7\}\subset C_{11}
+\]
+has no unique sum, although its projection does. This counterexample is
+kernel-certified in \texttt{Dcyc.lean}. It is not minimum, so it does not
+refute (3).
+
+\part{Sharpenings of the prime-cyclic argument}
+
+\section{A one-log improvement}
+
+Put
+\[
+ M=\log_2\log_2p,\qquad K(A)=\frac{|A|}{\dim A}.
+\]
+Replacing the update
+$|S'|\leq\max(2|S|,|S|^3)$ in [B, lines 479--494] by a two-point update
+throughout gives the following conclusion under the hypotheses displayed in
+the formal statement:
+\[
+             K(A)>\sqrt{M/404}.                 \tag{1}
+\]
+This is a genuine asymptotic improvement, replacing the triple logarithm
+under the square root by a double logarithm. It is numerically vacuous at
+every computable prime: the free inequality $K(A)\geq1$ dominates (1) below
+\[
+                         p>2^{\,2^{404}}.
+\]
+Both facts are part of the claim.
+
+There are two formal statements. The statement in
+\texttt{ObjectLayer/O7Headline.lean} is
+\tier{conditional, kernel-certified; frontier hypothesis}
+conditional on the stated Lev rectification interface \texttt{hBLR}. In that
+formalization we do not establish this hypothesis, and nothing in the development supplies an instance of it. The extracted theorem
+\texttt{sqrt\_improvement\_from\_isUSF\_internal} has the identical remaining
+hypotheses and conclusion but no \texttt{hBLR} binder.
+\tier{kernel-certified, unconditional}
+Its 19-module import closure is included with this note and prints exactly
+\texttt{[propext, Classical.choice, Quot.sound]}. The associated
+satisfiability check supplies a concrete model of the arithmetic hypotheses,
+so the unconditional statement is not vacuous merely by inconsistent
+numeric assumptions. The paper itself says that the simplest sufficient
+form of this slowly growing factor was chosen and that its exact shape was
+not optimized [B, after Theorem 3].
+
+\section{Sharpness of the simultaneous-selector threshold}
+
+Let $f(p)$ be the largest cardinality for which the selector conclusion used
+in [B, Lemma 5.1] holds for every $S\subset\ZZ/p\ZZ$. Then
+\[
+                         f(p)=\lceil\log_2p\rceil.
+\]
+Equivalently, a selector exists for every $k$-set precisely while
+$2^{k-1}<p$. The general upper obstruction is
+\[
+ \{0\}\cup\{\lceil p/2^i\rceil:1\leq i\leq\lceil\log_2p\rceil\}.
+\]
+\tier{exhaustive computation at 29 primes across five complete bands, plus a
+hand proof of the general upper bound with machine-checked algebraic identities}
+The exact computations cover all primes in the five bands from $(4,8)$
+through $(64,128)$. In particular, all $234{,}531{,}275$ seven-subsets pass
+at $p=127$, while an eight-subset fails. The rectification threshold used
+here originates in Lev's Theorem 1 [L]. The gain over the displayed
+$2^{|S|}\leq p$ hypothesis is exactly one element, not a change of scale.
+
+\part{Data}
 
 \section{Exact values of $m(p)$}
 
-The current computations give:
 \[
 \begin{array}{c|rrrrrrrrrrrrrrrr}
 p&3&5&7&11&13&17&19&23&29&31&37&41&43&47&53&59\\ \hline
 m(p)&3&4&5&7&7&8&9&10&11&11&12&13&13&13&14&15
 \end{array}
 \]
-The verification tiers are not uniform:
 \begin{center}
-\begin{tabular}{@{}p{0.33\textwidth}|p{0.61\textwidth}@{}}
+\begin{tabular}{@{}p{0.31\textwidth}|p{0.63\textwidth}@{}}
 $p$&verification tier\\ \hline
-$3,5,7,11,13,17,19,$\newline $23,29,31,37$&
+$3,5,7,11,13,17,19,23,29,31,37$&
 exact solver output, independently corroborated; not certified here\\
-$41,43,47$&certified optimality and verified witness\\
-$53,59$&exact by exhaustion and verified witness; not certified
+$41,43,47$&DRAT-certified optimality and verified witness\\
+$53,59$&exact by exhaustion and verified witness; not DRAT-certified
 \end{tabular}
 \end{center}
-Here ``certified'' means that a retained machine-checkable certificate was
-verified. The values at $53$ and $59$ have exhaustive lower-bound searches
-but no DRAT certificate. The checking script redoes the small cases feasible
-in pure Python and verifies the displayed witnesses at $41,43,47,53,59$.
+The requested $p=53$ cloud metadata object was not present when this version
+was staged, so its tier has not been upgraded. The checking script redoes the
+small cases feasible in pure Python and verifies the displayed witnesses at
+$41,43,47,53,59$.
 
 \section*{Checking}
 
@@ -158,12 +277,16 @@ Run
 \qquad\text{and}\qquad
 \texttt{python3 verify.py}.
 \]
-The printed axiom sets for the main Lean theorems should contain exactly
+The principal Lean axiom prints should contain exactly
 \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
 
 \begin{thebibliography}{LS}
 \bibitem[B]{bedert} B.~Bedert, \emph{On unique sums in Abelian groups},
-Combinatorica \textbf{44}(2) (2024), 269--298; arXiv:2303.15134.
+Combinatorica \textbf{44}(2) (2024), 269--298.
+DOI: \href{https://doi.org/10.1007/s00493-023-00069-w}{10.1007/s00493-023-00069-w};
+arXiv: \href{https://arxiv.org/abs/2303.15134}{2303.15134}.
+\bibitem[L]{lev} V.~F.~Lev, \emph{The rectifiability threshold in Abelian
+groups}, Combinatorica \textbf{28} (2008), 491--497.
 \bibitem[LS]{ls} T.~{\L}uczak and T.~Schoen, \emph{On a problem of Konyagin},
 Acta Arith.\ \textbf{134}(2) (2008), 101--109.
 \bibitem[P]{pajor} A.~Pajor, \emph{Sous-espaces $l_1^n$ des espaces de Banach},
