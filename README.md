@@ -1,10 +1,10 @@
 # Notes on unique sums
 
 These are five short remarks on B. Bedert, “On unique sums in Abelian groups,”
-Combinatorica 44 (2024), 269--298. The note records a 2-torsion scope issue in
-one proof step, two observations confirmed by the author, an empty-set
-convention, and exact values of \(m(p)\) through \(p=59\) with their
-verification tiers.
+Combinatorica 44 (2024), 269--298. **The write-up is [note.pdf](note.pdf)**
+(source: `note.tex`). It records a 2-torsion scope issue in one proof step,
+two observations confirmed by the author, an empty-set convention, and exact
+values of \(m(p)\) through \(p=59\) with their verification tiers.
 
 To check the Lean proofs and the pure-Python computations:
 
