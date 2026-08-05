@@ -24,6 +24,14 @@ unconditional headline theorem. `Dcyc.lean` contains the finite-group kernel
 cores. The principal axiom prints should be exactly
 `[propext, Classical.choice, Quot.sound]`.
 
+`Green27Upper` proves the \((\log p)^2\) upper bound of [Be23, Theorem 5] as it
+is stated in the Formal Conjectures repository. It takes that repository as a
+Lake dependency and imports its `m`, `primesAtTop` and `upperBest`, so the
+proposition proved is the one stated there and not a restatement. The route is
+Łuczak-Schoen, via Straus's simple set. Build it with `lake build Green27Upper`;
+it is not in the default targets. See
+[formal-conjectures#4549](https://github.com/google-deepmind/formal-conjectures/pull/4549).
+
 The Census-52 DRAT proofs are retained locally and are not distributed.
 Their paths and SHA-256 hashes are recorded in
 `mg-census-through-52.json`.
