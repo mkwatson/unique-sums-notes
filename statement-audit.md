@@ -44,10 +44,26 @@ These modules back the encoding-verification claims described in `README.md`'s L
 | Deliberately broken encoder variants are all caught | Executable `run_mutation_suite` (`encoding-tests/mutation_harness.py`); formal reference `satisfies_encode_iff` (`EncodeSpec.lean:116`) | **Tested, not proved:** all fixed mutations are detected within the recorded finite range ($p\leq13$); see `encoding-tests/README.md` for the exact count and the traced survivors | Finite differential testing, not a Lean proof; does not extend to primes outside the tested range | N/A (test harness, not a formal statement) |
 | Parser/printer self-consistency on the DIMACS text this encoder emits | Executable `roundtrip_control.py` (`encoding-tests/roundtrip_control.py`) | **Tested, not proved:** parse-then-print-then-reparse agreement on a spread of `(p, k)` pairs, plus a deliberate-corruption negative control that is correctly refused | Does not test the Lean-side scanner/parser in `ScannerState.lean`; a separate, Python-only parser/printer pair, exercised only at the tested `(p, k)` values | N/A (test harness, not a formal statement) |
 
+## Part III: the parse-level byte-tamper theorem (cloud-checked, not yet staged in this repository)
+
+This theorem is checked in the author's private development lab and on a
+documented cloud host, not in this repository's `witness-kernel/` package: it
+bears on the same encoder-to-DIMACS trust boundary Part II audits, but its
+source has not yet been independently replayed on this note's author's own
+local machine and is not shipped alongside the 13 modules listed there.
+`README.md`'s "Verification tiers" section defines its tier,
+kernel-checked-on-cloud, distinct from kernel-certified for exactly that
+reason.
+
+| Claim | Formal statement | What the check covers | What it does not cover | Hereditary definitions |
+|---|---|---|---|---|
+| A single flipped literal in the production DIMACS bytes is caught by parsing, not silently accepted | `tampered_production117_parse_fails`, `ChainCloseTamper.lean:23` (private lab; imports the frozen target `ChainTamperStage.lean`) | For one specific one-byte tamper (byte 0 of `chunk00`, the first of the production stream's nineteen scan chunks), the tampered scan is proved to diverge from the untampered target. Checked kernel-checked-on-cloud: exit 0, 32 seconds, peak resident set size about 8.0 GiB, exactly the permitted axiom set `[propext, Classical.choice, Quot.sound]`; a fresh `WitnessKernel` build on the same host printed no axiom outside that set across every checked declaration | Tests only this one tamper position; does not generalize to a tamper at an arbitrary byte or to multi-byte tampers, and is not a general parser-soundness theorem. Not independently replayed on this note's own local machine, so not described as kernel-certified. Does not by itself close the byte-to-specification bridge in Part II, which remains open | `tamperedState01`&ndash;`tamperedState19` (the nineteen-state scan) and the eighteen-step transition/survival chain, `ChainTamperStage.lean`; built on the generic resumable-parser theory in `ScannerState.lean`, audited in Part II above |
+
 ## What this table is not
 
 This is a statement-and-scope audit, not a proof-body audit: it does not
 substitute for reading the referenced files, and it does not certify that
 these are the only trust boundaries in the packet. Toolchain pin, axiom
 prints, and the independent kernel re-check for these 13 modules are in
-`witness-kernel/README.md`.
+`witness-kernel/README.md`. Part III's theorem is checked separately, at the
+tier stated there, and is not part of that 13-module recheck.

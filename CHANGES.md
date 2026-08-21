@@ -88,6 +88,22 @@
   The theorem's statement and axioms are unchanged; what is new is the
   independent re-verification of the recorded original elaboration.
 
+# 2026-08-21: parse-level byte-tamper theorem, checked on cloud
+
+- **A new theorem in the SAT-encoding verification chain.**
+  `tampered_production117_parse_fails` (`ChainCloseTamper.lean`) shows a
+  single flipped literal in the production DIMACS bytes is caught by
+  parsing rather than silently accepted. It is checked at a new tier,
+  kernel-checked-on-cloud: checked on a documented cloud host (region
+  `us-east-1`, instance type `r8g.16xlarge`), not yet independently
+  replayed on this note's own local machine, so it is not described as
+  kernel-certified. Direct elaboration of the target measured 32 seconds at
+  a peak of about 8.0 GiB; an earlier apparent reading near 40 GiB was later
+  attributed to a one-time build of a separate dependency, not the target
+  theorem's own cost. `README.md`'s "Verification tiers" section and
+  `statement-audit.md`'s new Part III give the exact tier definition, the
+  formal statement, and its scope.
+
 <!-- The "Changes from v1 to staged v2" and "Changes from published v2 to
      staged v3" blocks are not repeated here: the repository's root
      `CHANGES.md` already carries the v1-to-v2 history, and `CHANGES-v3.md`

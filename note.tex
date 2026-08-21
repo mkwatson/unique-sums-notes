@@ -362,6 +362,17 @@ method; the tiers in this table describe the evidence retained here.
 The checking script redoes the small cases feasible in pure Python and verifies
 the displayed witnesses at $41,43,47,53,59$.
 
+A parse-level byte-tamper theorem now closes one part of the search
+machinery's own encoding-to-DIMACS-byte trust boundary (audited in
+\texttt{statement-audit.md}): a single flipped literal in the production
+DIMACS bytes is caught by parsing rather than silently accepted. Its exact
+tier is kernel-checked-on-cloud: checked on a documented cloud host, not yet
+independently replayed on this note's own local machine, so it is stated at
+that tier and not as kernel-certified. Direct elaboration of the target
+statement measured 32 seconds at a peak of about 8.0~GiB; an earlier apparent
+reading near 40~GiB was later attributed to a one-time build of a separate
+dependency, not to the target theorem's own cost.
+
 \section*{Checking}
 
 Run

@@ -53,6 +53,11 @@ Every claim is labeled. The vocabulary, strongest first:
 - **kernel-certified**: the exact statement is proved in Lean 4; zero sorries,
   no new axioms, and `#print axioms` shows at most
   `[propext, Classical.choice, Quot.sound]`.
+- **kernel-checked-on-cloud**: the same zero-sorries, no-new-axioms, permitted-
+  axiom-set discipline as kernel-certified, but checked so far only on a
+  documented cloud host, not yet independently replayed on this note's own
+  local machine, so it is not described as kernel-certified. One theorem is
+  at this tier so far; see below and `statement-audit.md`.
 - **DRAT-certified**: an exhaustive search whose unsatisfiability certificate
   is retained and replayed by an independent proof checker. The encoding,
   the checker, and the statement bridge remain trusted surfaces, and the
@@ -68,6 +73,18 @@ Every claim is labeled. The vocabulary, strongest first:
 - **tested**: finite differential testing with negative controls. Test
   results are reported as found, including the four mutation-test survivors
   in `encoding-tests/`, each traced to a provably redundant clause.
+
+A parse-level byte-tamper theorem
+(`BedertLab.ChainCloseTamper.tampered_production117_parse_fails`) shows a
+single flipped literal in the production DIMACS bytes is caught by parsing
+rather than silently accepted. It is kernel-checked-on-cloud: checked on a
+documented cloud host (region `us-east-1`, instance type `r8g.16xlarge`),
+with direct elaboration of the target measured at 32 seconds and a peak of
+about 8.0 GiB; an earlier apparent reading near 40 GiB was later attributed to
+a one-time build of a separate dependency, not the target theorem's own
+cost. It has not yet been independently replayed on this note's own local
+machine, so it is not described as kernel-certified. `statement-audit.md`
+gives the exact formal statement and scope.
 
 Downgrades are recorded in place. One Lean module, the one-log theorem's
 19-module closure, was freshly verified on a documented 64 GiB host; the
