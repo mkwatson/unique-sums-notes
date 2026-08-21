@@ -5,7 +5,6 @@
 \emergencystretch=1.5em
 
 \newcommand{\ZZ}{\mathbb Z}
-\newcommand{\CC}{\mathbb C}
 \newcommand{\tier}[1]{\par\smallskip\noindent\textsc{Verification: #1.}\ }
 \theoremstyle{plain}
 \newtheorem*{theorem}{Theorem}
@@ -14,17 +13,27 @@
 
 \title{Remarks on Bedert's ``On unique sums in Abelian groups''}
 \author{Mark Watson}
-\date{29 July 2026}
+\date{18 August 2026}
 
 \begin{document}
 \maketitle
 
 This note collects corrections, sharpenings, finite-group results, and data
-related to Bedert's paper [B]. Parts II and III contain observations obtained
+related to Bedert's paper [B]. Its controlling purpose is verification: every
+item below was produced while checking, extending, or reproducing [B]'s
+argument, and each is presented with its own verification tier rather than as
+one combined new result. Parts II and III contain observations obtained
 in the course of checking the argument. They are offered as supplements to
 the paper, not as claims about what its author intended to optimize. For a
 finite subset $A$ of an Abelian group, [B] calls $a_1+a_2$ a unique sum when
 its only ordered representations are $(a_1,a_2)$ and $(a_2,a_1)$.
+
+For $A\subset\ZZ/p\ZZ$, Scheinerman [S, Definitions 3.1--3.2] had earlier
+treated the same condition and, writing $\nu(A)$ for the minimum ordered
+representation count on $A+A$, stated that $A$ is unique-sum-free exactly
+when $\nu(A)\geq3$. Green records that Andrew Granville (personal
+communication) and Swastik Kopparty (Harvard 2017 open problems session)
+each asked him this prime-cyclic minimum question [G, Problem 27].
 
 \part{Corrections and scope}
 
@@ -71,8 +80,8 @@ $A\subset\ZZ/p\ZZ$ with
 \]
 Hence $m(p)\leq4(\log_2p)^2$. Thus the order of growth in [B, Theorem 5]
 already follows from [LS]. Bedert's construction improves the constant and
-is more direct. The author has confirmed this observation and intends to add
-a note.
+is more direct. The author has confirmed this observation.
+\tier{source-grounded consequence of published theorems}
 
 \section{A redundant factor in Proposition 1}
 
@@ -100,6 +109,7 @@ The definition at [B, line 282] makes the empty set balanced, while
 Proposition 3 asks for $g\in-B$ for every balanced $B$. The repair is to
 require balanced sets to be nonempty in the definition, or in the
 propositions that use such an element.
+\tier{source-grounded definitional correction}
 
 \part{The general-group question}
 
@@ -152,6 +162,8 @@ in \texttt{mg-census-through-52.json}, whose own SHA-256 is
 \]
 The manifest does not record proof byte counts, so no byte-size claim is made
 here.
+This census tests and extends to noncyclic groups the cyclic conjecture stated
+by Scheinerman [S, Conjecture 3.40].
 
 \section{A double-cyclic conjecture}
 
@@ -161,11 +173,13 @@ For every odd prime $p$,
                          m(C_{2p})=m(C_p).           \tag{3}
 \]
 \end{conjecture}
+This is the $n=2p$ case of Scheinerman's published conjecture
+$\mu(n)=\min_{q\mid n,\ q\text{ prime}}\mu(q)$ [S, Conjecture 3.40].
 The following evidence and reduction do not prove (3).
 
 First, a DRAT-certified exact search shows that every minimum set in
 $C_2\times C_p$ lies in one parity fibre for
-$p=3,5,7,11,13,17,19,23$. Second, write
+$p=3,5,7,11,13,17,19,23,29$. Second, write
 \[
 A_e=\{x:(e,x)\in A\},\quad B=A_0\cup A_1,\quad
 D=A_0\cap A_1.
@@ -184,9 +198,80 @@ $C_2\times C_{11}$, the full double lift of
 \]
 has no unique sum, although its projection does. This counterexample is
 kernel-certified in \texttt{Dcyc.lean}. It is not minimum, so it does not
-refute (3).
+refute (3). It is affinely equivalent to Scheinerman's example
+[S, Section 3.6].
 
 \part{Sharpenings of the prime-cyclic argument}
+
+For comparison, if $\alpha(p)$ denotes the minimum cardinality of a balanced
+subset of $\ZZ/p\ZZ$, Nedev proved
+\[
+             \alpha(p)\geq\log_2p+3-\log_2 3
+\]
+for every odd prime $p$ [N, Corollary 9]. Every unique-sum-free set in
+$\ZZ/p\ZZ$ is balanced, and therefore
+\[
+             m(p)\geq\alpha(p)\geq\log_2p+3-\log_2 3.
+\]
+This transfer uses only the inclusion of the unique-sum-free sets among the
+balanced sets; it does not identify the two problems. Balancedness constrains
+the diagonal sums $2x$, whereas the unique-sum-free condition constrains every
+sum in $A+A$. The transferred bound is weaker than the asymptotic lower bound
+in [B].
+\tier{published theorem plus elementary transfer}
+
+\section{A registered exponent-two lower bound}
+
+Palomar Registry entry PALOMAR-2026-08-18-000003 v1 records Xinjie He's Lean
+formalization of a theorem from his own working draft. For all sufficiently
+large primes $p$, it proves
+\[
+                 m(p)\geq c\left(\frac{\log p}{\log\log p}\right)^2
+\]
+for an absolute constant $c>0$. Together with the published upper bound
+$m(p)\ll(\log p)^2$, this determines the exponent of $\log p$ up to lower-order
+factors.
+
+\tier{kernel-replayed on our hardware; replay log and axiom prints in the README}
+This tier applies to the formal theorem and not to a line-by-line referee review
+of the proof. The Palomar entry is a registered formal artifact, not a
+peer-reviewed publication. Its source describes the mathematics as the author's
+working draft; no separate preprint registration is asserted here. The immutable
+entry is
+\href{https://palomar-registry.org/entry?id=PALOMAR-2026-08-18-000003\&version=1}
+{PALOMAR-2026-08-18-000003 v1}.
+
+\section{The subsequent Cao--Yuan preprint}
+
+Cao and Yuan [CY] put $G_p:=\mathbb Z/p\mathbb Z$. For a finite Abelian group
+$G$ with $|G|\geq3$, they define $m(G)$ as the minimum cardinality of a subset
+$A\subseteq G$, with $|A|\geq2$, having no unique sum. Their main theorem
+states:
+\begin{theorem}[Cao--Yuan, preprint]
+For every prime $p$, every set $A\subseteq G_p$, with $|A|\geq2$ and no
+unique sum, satisfies
+\[
+ |A|\geq c_*\,\log p\,\log\log p.
+\]
+Consequently,
+\[
+ m(p)\gg \log p\,\log\log p.
+\]
+\end{theorem}
+Here $c_*=1/40000000010006048640$ in their explicit statement. The source is
+arXiv:2608.06728v1, submitted 7 August 2026, and is a preprint. Its source
+reports a Lean 4 check, but the arXiv source bundle contains no Lean artifact;
+that check has not been independently kernel-verified here.
+
+Their exact theorem and the exact theorem below are overlapping but
+incomparable. The former bounds $|A|$ and uses a level-four additive dimension
+in its structural proposition; the latter bounds Bedert's
+$K(A)=|A|/\dim A$ with a particular constant and additional displayed
+hypotheses. Neither exact statement implies the other as stated. For the
+derived asymptotic role in bounding $m(p)$, however, the Cao--Yuan preprint's
+$\log p\log\log p$ lower bound strictly dominates the bound derived from the
+theorem below. No theorem stated in this note is refuted.
+\tier{Cao--Yuan: unrefereed preprint; comparison: source-grounded adjudication}
 
 \section{A one-log improvement}
 
@@ -202,12 +287,11 @@ the formal statement:
              K(A)>\sqrt{M/404}.                 \tag{1}
 \]
 This is a genuine asymptotic improvement, replacing the triple logarithm
-under the square root by a double logarithm. It is numerically vacuous at
-every computable prime: the free inequality $K(A)\geq1$ dominates (1) below
+under the square root by a double logarithm. The free inequality
+$K(A)\geq1$ dominates (1) whenever
 \[
-                         p>2^{\,2^{404}}.
+                         p<2^{\,2^{404}}.
 \]
-Both facts are part of the claim.
 
 There are two formal statements. The statement in
 \texttt{ObjectLayer/O7Headline.lean} is
@@ -216,14 +300,19 @@ conditional on the stated Lev rectification interface \texttt{hBLR}. In that
 formalization we do not establish this hypothesis, and nothing in the development supplies an instance of it. The extracted theorem
 \texttt{sqrt\_improvement\_from\_isUSF\_internal} has the identical remaining
 hypotheses and conclusion but no \texttt{hBLR} binder.
-\tier{kernel-certified, unconditional}
-Its 19-module import closure is included with this note and prints exactly
-\texttt{[propext, Classical.choice, Quot.sound]}. The associated
-satisfiability check supplies a concrete model of the arithmetic hypotheses,
-so the unconditional statement is not vacuous merely by inconsistent
-numeric assumptions. The paper itself says that the simplest sufficient
+\tier{kernel-certified per the recorded original elaboration; ``unconditional''
+only in the absence of the \texttt{hBLR} binder; not freshly re-verifiable on
+the present 16 GiB host; import closure and axiom print in the README}
+The associated satisfiability check supplies a concrete model of the arithmetic
+hypotheses, so the unconditional statement is not vacuous merely by
+inconsistent numeric assumptions. The paper itself says that the simplest sufficient
 form of this slowly growing factor was chosen and that its exact shape was
 not optimized [B, after Theorem 3].
+As a contribution to the asymptotic lower bound for $m(p)$, this result is
+superseded in role by both later bounds in this note: the Palomar theorem
+above already gives the strongest asymptotic exponent, and the Cao--Yuan
+preprint [CY] gives an intermediate one. Its exact theorem, formal artifact,
+and verification tier are unchanged.
 
 \section{Sharpness of the simultaneous-selector threshold}
 
@@ -238,7 +327,8 @@ $2^{k-1}<p$. The general upper obstruction is
  \{0\}\cup\{\lceil p/2^i\rceil:1\leq i\leq\lceil\log_2p\rceil\}.
 \]
 \tier{exhaustive computation at 29 primes across five complete bands, plus a
-hand proof of the general upper bound with machine-checked algebraic identities}
+hand proof of the general upper bound with machine-checked algebraic
+identities; not kernel-certified}
 The exact computations cover all primes in the five bands from $(4,8)$
 through $(64,128)$. In particular, all $234{,}531{,}275$ seven-subsets pass
 at $p=127$, while an eight-subset fails. The rectification threshold used
@@ -247,7 +337,7 @@ $2^{|S|}\leq p$ hypothesis is exactly one element, not a change of scale.
 
 \part{Data}
 
-\section{Exact values of $m(p)$}
+\section{Exact values of \texorpdfstring{$m(p)$}{m(p)}}
 
 \[
 \begin{array}{c|rrrrrrrrrrrrrrrr}
@@ -264,10 +354,11 @@ $41,43,47$&DRAT-certified optimality and verified witness\\
 $53,59$&exact by exhaustion and verified witness; not DRAT-certified
 \end{tabular}
 \end{center}
-The requested $p=53$ cloud metadata object was not present when this version
-was staged, so its tier has not been upgraded. The checking script redoes the
-small cases feasible in pure Python and verifies the displayed witnesses at
-$41,43,47,53,59$.
+The same sixteen values were printed earlier in Scheinerman's Table 3.1 [S].
+That source gives witnesses but does not state an optimality-verification
+method; the tiers in this table describe the evidence retained here.
+The checking script redoes the small cases feasible in pure Python and verifies
+the displayed witnesses at $41,43,47,53,59$.
 
 \section*{Checking}
 
@@ -279,18 +370,56 @@ Run
 \]
 The principal Lean axiom prints should contain exactly
 \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
+This command freshly rebuilds every module in the note except the internal
+one-log theorem's closure (``A one-log improvement'' above), which is included
+for inspection but, per its stated tier there, is not freshly re-verifiable on
+a 16~GiB host; see the README for that module's import-closure record and
+axiom print.
 
-\begin{thebibliography}{LS}
+\section*{AI tool disclosure}
+
+The mathematics in this note, including its proofs, counterexamples, and
+verification code, was produced in substantial part by AI tools (Claude and
+OpenAI Codex models) working under this note's author's direction. Trust in
+the results therefore rests not on how they were drafted but on the
+verification artifacts attached to each claim. Kernel-certified statements
+are checked by the Lean kernel, and where stated, independently re-checked by
+a second kernel pass; computational claims carry retained certificates,
+including DRAT certificates checked by an independent checker; and quoted
+results were verified against the cited sources. This note's author directed
+the work, made every judgment call about what to claim and at what
+verification tier, and retains sole responsibility for its correctness.
+
+\begin{thebibliography}{CY}
 \bibitem[B]{bedert} B.~Bedert, \emph{On unique sums in Abelian groups},
 Combinatorica \textbf{44}(2) (2024), 269--298.
 DOI: \href{https://doi.org/10.1007/s00493-023-00069-w}{10.1007/s00493-023-00069-w};
 arXiv: \href{https://arxiv.org/abs/2303.15134}{2303.15134}.
+\bibitem[CY]{cao-yuan} J.-L.~Cao and Y.~Yuan, \emph{A Second-Logarithm Lower
+Bound for Sets with No Unique Sums}, preprint, 2026.
+arXiv: \href{https://arxiv.org/abs/2608.06728}{2608.06728}.
+\bibitem[G]{green} B.~Green, \emph{100 Open Problems}, December 2025 version,
+Problem 27. Author-hosted living list:
+\href{https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf}
+{people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf}.
 \bibitem[L]{lev} V.~F.~Lev, \emph{The rectifiability threshold in Abelian
 groups}, Combinatorica \textbf{28} (2008), 491--497.
+DOI: \href{https://doi.org/10.1007/s00493-008-2299-8}
+{10.1007/s00493-008-2299-8}.
 \bibitem[LS]{ls} T.~{\L}uczak and T.~Schoen, \emph{On a problem of Konyagin},
 Acta Arith.\ \textbf{134}(2) (2008), 101--109.
+DOI: \href{https://doi.org/10.4064/aa134-2-1}{10.4064/aa134-2-1}.
+\bibitem[N]{nedev-lower} Z.~Nedev, \emph{Lower bound for balanced sets},
+Theoret. Comput. Sci.\ \textbf{460} (2012), 89--93.
+DOI: \href{https://doi.org/10.1016/j.tcs.2012.06.016}
+{10.1016/j.tcs.2012.06.016}.
 \bibitem[P]{pajor} A.~Pajor, \emph{Sous-espaces $l_1^n$ des espaces de Banach},
 Travaux en Cours 16, Hermann, Paris, 1985.
+\bibitem[S]{scheinerman} D.~Scheinerman, \emph{Several problems in linear
+algebraic and additive combinatorics}, Ph.D. dissertation, Rutgers, The State
+University of New Jersey, 2019.
+DOI: \href{https://doi.org/10.7282/t3-1w2k-jr68}
+{10.7282/t3-1w2k-jr68}.
 \end{thebibliography}
 
 \end{document}

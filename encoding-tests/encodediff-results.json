@@ -1,0 +1,456 @@
+{
+  "tier": "TESTED, NOT PROVED",
+  "limit": 13,
+  "primes": [
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "gloss": {
+    "p": 11,
+    "set": [
+      0,
+      1,
+      2,
+      4,
+      7
+    ],
+    "ordered_counts": [
+      3,
+      2,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      3,
+      2,
+      0
+    ],
+    "usf": false
+  },
+  "even_control": {
+    "n": 12,
+    "set": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      8
+    ],
+    "ordered_counts": [
+      2,
+      4,
+      5,
+      4,
+      4,
+      4,
+      5,
+      4,
+      6,
+      4,
+      3,
+      4
+    ],
+    "ordered_criterion": false,
+    "campaign_unordered_usf": true,
+    "balanced": false
+  },
+  "cases": [
+    {
+      "p": 3,
+      "k": 2,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 3,
+      "k": 3,
+      "satisfying": 1,
+      "sha256": "c0be322c1ad6af50f418b96232d98fe25a36d5d0a557291833f8248f2084b8ef",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 5,
+      "k": 2,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 5,
+      "k": 3,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 5,
+      "k": 4,
+      "satisfying": 5,
+      "sha256": "3c828ca2afd731918b7d64ec362f46ac77805c1b4729ef230ec4a90a2620ff88",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 5,
+      "k": 5,
+      "satisfying": 1,
+      "sha256": "6484c68c0c85987f9beb3db42175c46955a8abe05170239580fcd1ff8b514452",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 7,
+      "k": 2,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 7,
+      "k": 3,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 7,
+      "k": 4,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 7,
+      "k": 5,
+      "satisfying": 21,
+      "sha256": "76a8d6bde7180f0fadb5ea7e7066ad4257ffc25fd569e74eb471f510f9a57bd4",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 7,
+      "k": 6,
+      "satisfying": 7,
+      "sha256": "66f4797ead77aafb0806e64a0d44c94253b377e47fa3f015b1f3e46bfeb62862",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 7,
+      "k": 7,
+      "satisfying": 1,
+      "sha256": "594a7c1b42ceaed6f882eee1f0d362e8b307fb3627533e4dd314ce3cf6ad94d6",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 11,
+      "k": 2,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 11,
+      "k": 3,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 11,
+      "k": 4,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 11,
+      "k": 5,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 11,
+      "k": 6,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 11,
+      "k": 7,
+      "satisfying": 330,
+      "sha256": "abd3c26feef42a3670b8dca6c2ee7f257bf5895e6aec95b11108f7a3fc8a9046",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 11,
+      "k": 8,
+      "satisfying": 165,
+      "sha256": "2accbb18194a0c00a3bc90d077347819db357980163c83a1e1d476189f34877d",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 11,
+      "k": 9,
+      "satisfying": 55,
+      "sha256": "70f1eda47260a37d68d4d6917c5938175628ac7a3b5b3158fbec0195164f3777",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 11,
+      "k": 10,
+      "satisfying": 11,
+      "sha256": "31991fc814c46d1342de116e06cacfa270f7c62d314c0f519117fbf407939457",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 11,
+      "k": 11,
+      "satisfying": 1,
+      "sha256": "e6cf777272c201d518e2f563331986ca64d7b7d5aa34d7dcd5e0a5f0109d605f",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 2,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 3,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 4,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 5,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 6,
+      "satisfying": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 7,
+      "satisfying": 26,
+      "sha256": "f66b7ea0a6fb3f65705751e2ed2b60d898a3a3a02fa3003b4d43bffc48f7438b",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 8,
+      "satisfying": 1287,
+      "sha256": "de1ba6c531ef7a9431bd6b9d7b1c751c99cacbca087f5a90f559dc15ab9641e8",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 9,
+      "satisfying": 715,
+      "sha256": "062f9e72287125736bc435f35366217409733152a44fd888c6f645ac43f9f4b7",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 10,
+      "satisfying": 286,
+      "sha256": "5f5ae46948e7fcc70d35ae7ef61b763e1ae78d03b31b584c2641803422ad33c9",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 11,
+      "satisfying": 78,
+      "sha256": "497607afe55ad61e8369d0e285bd5a7458b335bf965367be6bfc0962b270de1f",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 12,
+      "satisfying": 13,
+      "sha256": "22638d076a00fab7087dfa58b5f4b5500958d58acb01b01d34065bf77a1152f8",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    },
+    {
+      "p": 13,
+      "k": 13,
+      "satisfying": 1,
+      "sha256": "a9904728ca6f48fbdce33ba8bd1b3d8037ef5895411d21398d998abbf0e4fbe0",
+      "direct": "agree",
+      "cpsat": "agree",
+      "each_other": "agree"
+    }
+  ],
+  "mutations": {
+    "forbid-one-not-two": {
+      "detected": true,
+      "check": "oracle truth-table mismatch",
+      "p": 11,
+      "k": 5,
+      "witness": [
+        0,
+        1,
+        2,
+        4,
+        7
+      ],
+      "direction": "false SAT / too permissive"
+    },
+    "forbid-two-not-one": {
+      "detected": true,
+      "check": "oracle truth-table mismatch",
+      "p": 11,
+      "k": 6,
+      "witness": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7
+      ],
+      "direction": "false SAT / too permissive"
+    },
+    "drop-diagonals": {
+      "detected": true,
+      "check": "oracle truth-table mismatch",
+      "p": 3,
+      "k": 3,
+      "witness": [
+        0,
+        1,
+        2
+      ],
+      "direction": "false UNSAT / too restrictive"
+    },
+    "cardinality-off-by-one": {
+      "detected": true,
+      "check": "oracle truth-table mismatch",
+      "p": 3,
+      "k": 3,
+      "witness": [
+        0,
+        1,
+        2
+      ],
+      "direction": "false UNSAT / too restrictive"
+    },
+    "wrong-modulus": {
+      "detected": true,
+      "check": "oracle truth-table mismatch",
+      "p": 3,
+      "k": 2,
+      "witness": [
+        0,
+        2
+      ],
+      "direction": "false SAT / too permissive"
+    },
+    "ignore-wraparound": {
+      "detected": true,
+      "check": "oracle truth-table mismatch",
+      "p": 3,
+      "k": 3,
+      "witness": [
+        0,
+        1,
+        2
+      ],
+      "direction": "false UNSAT / too restrictive"
+    }
+  },
+  "controls": {
+    "model_decodes_cpsat_passes": 3004,
+    "model_decodes_kissat_passes": 18,
+    "witness_satisfies_encoder_checks": 6008
+  },
+  "elapsed_seconds": 141.905
+}

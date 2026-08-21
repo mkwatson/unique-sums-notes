@@ -1,0 +1,24 @@
+{
+  "control_count": 3,
+  "results": [
+    {
+      "failure_stage": "LEGITIMACY",
+      "firing_count": 1,
+      "name": "bad-permutation",
+      "reason": "evidence[0].permutation: bad permutation outside certified group"
+    },
+    {
+      "failure_stage": "INFEASIBILITY",
+      "firing_count": 1,
+      "name": "wrong-arity-infeasibility",
+      "reason": "wrong-arity infeasibility record"
+    },
+    {
+      "failure_stage": "COMPLETENESS",
+      "firing_count": 1,
+      "name": "deleted-orbit",
+      "reason": "root partition incomplete"
+    }
+  ],
+  "total_firing_count": 3
+}

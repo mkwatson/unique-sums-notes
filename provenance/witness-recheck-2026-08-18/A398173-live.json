@@ -1,0 +1,62 @@
+[
+	{
+		"number": 398173,
+		"data": "3,4,5,7,7,8,9,10,11,11,12,13,13,13,14,15,15,16,16,16",
+		"name": "a(n) is the minimum size of a subset of Z/pZ with at least 2 elements and no unique sum, where p is the n-th odd prime.",
+		"comment": [
+			"For a subset A of Z/pZ, an element g of A + A is called a unique sum of A if there is exactly one pair {a, b} of elements of A, a = b allowed, with a + b = g, and A has no unique sum if no element of A + A is a unique sum. For odd p this is equivalent to every element of A + A having at least 3 representations as an ordered sum a + b with a, b in A: a single pair {a, b} yields one ordered sum when a = b and two when a != b, and two different pairs {a, a}, {b, b} cannot yield the same sum since doubling is injective in Z/pZ for odd p. The minimum in the name is denoted m(p) in the literature.",
+			"Ben Green's \"100 Open Problems\" includes the problem of estimating m(p) as Problem 27 and credits the question to Andrew Granville and Swastik Kopparty.",
+			"The odd primes are the natural index set: in Z/2Z the only subset with at least 2 elements is {0, 1}, where 0 + 1 = 1 has just 2 ordered representations, so no such subset exists for p = 2."
+		],
+		"link": [
+			"B. Bedert, \u003ca href=\"https://doi.org/10.1007/s00493-023-00069-w\"\u003eOn unique sums in Abelian groups\u003c/a\u003e, Combinatorica, 44 (2024), 269-298; also \u003ca href=\"https://arxiv.org/abs/2303.15134\"\u003earXiv:2303.15134\u003c/a\u003e [math.CO], 2023.",
+			"Ben Green, \u003ca href=\"https://people.maths.ox.ac.uk/greenbj/papers/open-problems.pdf\"\u003e100 Open Problems\u003c/a\u003e (see Problem 27).",
+			"T. Łuczak and T. Schoen, \u003ca href=\"https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/134/2/83513/on-a-problem-of-konyagin\"\u003eOn a problem of Konyagin\u003c/a\u003e, Acta Arith., 134 (2008), 101-109.",
+			"E. G. Straus, \u003ca href=\"https://doi.org/10.1016/0022-314X(76)90019-6\"\u003eDifferences of residues (mod p)\u003c/a\u003e, J. Number Theory, 8 (1976), 40-42.",
+			"Mark Watson, \u003ca href=\"https://github.com/mkwatson/unique-sums-notes\"\u003eUnique sums notes\u003c/a\u003e (notes on Bedert's paper, with a machine-checked proposition)."
+		],
+		"formula": [
+			"a(n) \u003e= w(p)*log(p) for some function w(p) tending to infinity with p, where p is the n-th odd prime; proved by Bedert (2024).",
+			"a(n) \u003c= C*(log(p))^2 for some constant C; proved by Bedert (2024), and also follows from Łuczak and Schoen (2008), Theorem 2, together with Straus (1976)."
+		],
+		"example": [
+			"a(2) = 4: for p = 5 the set {0, 1, 2, 3} works, since the ordered representation counts of the sums 0, 1, 2, 3, 4 (mod 5) are 3, 3, 3, 4, 3 respectively, e.g., 3 = 0+3 = 1+2 = 2+1 = 3+0; so a(2) \u003c= 4. Checking all ten 3-element subsets of Z/5Z shows none works, so a(2) = 4.",
+			"a(15) = 14: {0, 1, 5, 7, 14, 16, 18, 28, 32, 35, 36, 39, 43, 51}.",
+			"a(16) = 15: {0, 1, 2, 3, 4, 5, 9, 10, 16, 25, 27, 32, 42, 44, 48}.",
+			"a(17) = 15: {0, 1, 2, 3, 4, 6, 15, 21, 22, 24, 42, 49, 55, 56, 58}.",
+			"a(18) = 16: {0, 1, 2, 3, 4, 5, 6, 7, 11, 14, 15, 25, 26, 50, 53, 54}.",
+			"a(19) = 16: {0, 1, 2, 3, 4, 5, 7, 8, 12, 31, 45, 46, 57, 59, 61, 64}.",
+			"a(20) = 16: {0, 1, 2, 3, 4, 5, 8, 9, 13, 21, 23, 25, 29, 44, 45, 65}."
+		],
+		"program": [
+			"(Python)",
+			"# Exhaustive check from the definition; feasible through about p = 13.",
+			"from itertools import combinations",
+			"def m(p):",
+			"    for k in range(2, p + 1):",
+			"        for A in combinations(range(p), k):",
+			"            c = [0] * p",
+			"            for a in A:",
+			"                for b in A:",
+			"                    c[(a + b) % p] += 1",
+			"            if all(v == 0 or v \u003e= 3 for v in c):",
+			"                return k",
+			"print([m(p) for p in (3, 5, 7, 11, 13)])"
+		],
+		"xref": [
+			"Cf. A065091 (the odd primes), A211316 (maximum size of a sum-free subset of Z/nZ), A392461, A396704 (extremal sets with bounded representation multiplicities)."
+		],
+		"keyword": "nonn,hard,more,changed",
+		"offset": "1,1",
+		"author": "_Mark Watson_, Jul 22 2026",
+		"ext": [
+			"a(12)-a(14) from _Sean A. Irvine_, Jul 27 2026",
+			"a(15) from _Paweł Kwaczyński_, Jul 29 2026",
+			"a(16)-a(20) from _Paweł Kwaczyński_, Aug 08 2026"
+		],
+		"references": 0,
+		"revision": 30,
+		"time": "2026-08-15T12:47:35-04:00",
+		"created": "2026-07-27T23:12:16-04:00"
+	}
+]

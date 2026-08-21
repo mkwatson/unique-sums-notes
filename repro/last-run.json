@@ -1,0 +1,91 @@
+{
+  "failing_control_firing_count": 1,
+  "rows": [
+    {
+      "claim": "ORDERED-COUNT-TRAP",
+      "input_sha256": "a137c0526e2a6dac2cce29ac3424e3245b8dd948642b187d9db340d9199e6b88",
+      "output": {
+        "ordered_counts": [
+          3,
+          2,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          3,
+          2,
+          0
+        ],
+        "usf": false
+      },
+      "output_sha256": "8086ae714decc56cacafea1d391d6a3362308fbffe6ecf578570c323ee2da71d",
+      "seconds": 4.624947905540466e-06,
+      "status": "PASS"
+    },
+    {
+      "claim": "DELIBERATE-FAILING-CONTROL",
+      "input_sha256": "f9e63683b64752f761d1a2bca5935c328874a2504b65114481de44959a6f5044",
+      "output": {
+        "actual_usf": false,
+        "comparison_matches": false
+      },
+      "output_sha256": "6b3f8e58957567634cdc2872237d2aec7d91492c19ea252ae552965cba5f5e84",
+      "seconds": 2.9171351343393326e-06,
+      "status": "EXPECTED-FAIL"
+    },
+    {
+      "claim": "DELIVERABLE-VERIFY-LEGACY-SUITE",
+      "input_sha256": "e7e5b6dac94bf70b9ee6f8d59c9ecd6d078e8b18e29023ce7bf33f202636a586",
+      "output": {
+        "returncode": 0,
+        "stdout": "Section 1: Q = 2 admissible for p >= 2^22.\nSection 2: chain holds and is at least as tight on 8 families;\n          Vandermonde step holds for all n <= 29;\n          both sides equal (k+1)^d on Bedert's extremal.\nObservations: growth bound holds for all schedules with j <= 14.\nObservations: two-rate budget multiplies the constant by 3^(1/4) = 1.3161.\nObservations: loss factors 4.2 vs 31.5 at M = 2^64; omega crossover near log log p = 5e4.\nObservations: counterexample verified; separation ratio grows (>= 1, 10, 60 at d = 32, 512, 4096).\nObservations: m(p) reproduced for p <= 19: {3: 3, 5: 4, 7: 5, 11: 7, 13: 7, 17: 8, 19: 9}\nObservations: balanced-set minima reproduced for p <= 19: {3: 3, 5: 4, 7: 5, 11: 5, 13: 6, 17: 6, 19: 6}\nSection 1: complete C_12 table and failed midpoint witnesses verified.\nSection 5: frontier witnesses verified for p = 41, 43, 47, 53, 59.\nPart III: finite-group minima reproduced: {(2,): None, (3,): 3, (4,): 4, (2, 2): 4, (6,): 3, (8,): 4, (2, 4): 4, (9,): 3, (12,): 3}\nPart III: C_2 x C_11 projection counterexample verified.\n"
+      },
+      "output_sha256": "a804dbfea9412e4bd0445d041af0f3994efe59eadc3b4dc9f4d1aa2807a8934e",
+      "seconds": 52.9969144591596,
+      "status": "PASS"
+    },
+    {
+      "claim": "CENSUS-52-MANIFEST-AND-WITNESSES",
+      "input_sha256": "baa1a286d6207aaeebee3636a124ad92bcc458b82d60839e559a2e50c290e086",
+      "output": {
+        "formula_matches": 114,
+        "proof_verified_flags": 114,
+        "witnesses_recounted": 113
+      },
+      "output_sha256": "b88ee1df3df5c921e8c8457237a3990031b051f6f08ea3d4e261ab1b008671b2",
+      "seconds": 0.0032291249372065067,
+      "status": "PASS"
+    },
+    {
+      "claim": "ONE-LOG-NUMERICAL-CROSSOVER",
+      "input_sha256": "1453cc79f0c3eb1d5501ce738401d29738bf6d4c8cb51cec7cfa1916ded709d5",
+      "output": {
+        "boundary_checks": {
+          "403": true,
+          "404": true,
+          "405": true
+        },
+        "strictly_nonvacuous_iff_M_gt": 404,
+        "threshold_M": 404
+      },
+      "output_sha256": "741d9340d4b3973210fb0d986f8376daca043afe5fcb710f5c54f0e10a5d0f43",
+      "seconds": 8.417060598731041e-06,
+      "status": "PASS"
+    },
+    {
+      "claim": "SELECTOR-P127-EXPLICIT-FAILURE",
+      "input_sha256": "49c36b84f7deab187c5fe5c348aea0327552223d5b6b513a6f225742516db157",
+      "output": {
+        "midpoint_constraints": 7,
+        "normalized_seven_subset_count": 234531275,
+        "satisfying_linear_orders": 0
+      },
+      "output_sha256": "0b2295f5f05cf5553afdff0ef57164dc80d636f32ae210e142627075fa7f31e7",
+      "seconds": 0.025087624788284302,
+      "status": "PASS"
+    }
+  ],
+  "unexpected_failure_count": 0
+}

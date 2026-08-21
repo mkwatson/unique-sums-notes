@@ -1,0 +1,4 @@
+shard59_13 COMBINED usf_sets=0 affine_classes=0 nodes_sum=23413328571 shards=6
+shard59_13 wall=3620s ALL_SHARDS_COMPLETE
+noprune_59_13 rc=0 wall=8098s out=[59 13 0 0 43183019880] err=[]
+enum59_14 rc=0 wall=27226s out=[59 14 0 0 157121096646] err=[]

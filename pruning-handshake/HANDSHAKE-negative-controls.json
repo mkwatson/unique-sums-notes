@@ -1,0 +1,24 @@
+{
+  "control_count": 3,
+  "results": [
+    {
+      "failure_stage": "LEGITIMACY",
+      "firing_count": 1,
+      "name": "non-group-map",
+      "reason": "discard[0]: element outside certified unit-affine group"
+    },
+    {
+      "failure_stage": "LEGITIMACY",
+      "firing_count": 1,
+      "name": "non-retained-target",
+      "reason": "discard[0]: target is not declared retained"
+    },
+    {
+      "failure_stage": "COMPLETENESS",
+      "firing_count": 1,
+      "name": "deleted-orbit",
+      "reason": "root partition incomplete: {\"duplicate_states\": 0, \"extra_states\": 0, \"missing_classifications\": 0, \"missing_states\": 55}"
+    }
+  ],
+  "total_firing_count": 3
+}

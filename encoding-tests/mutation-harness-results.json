@@ -1,0 +1,1076 @@
+{
+  "tier": "TESTED, SINGLE-ARM, NOT KERNEL-CERTIFIED",
+  "method": "exhaustive projected-satisfying-assignment differential test with independent Minisat22 and CaDiCaL 1.9.5 engines against a brute-force USF oracle",
+  "production_encoder": "usf_encode_pinned.py",
+  "production_encoder_sha256": "2eeec8ec926f80ee0d9db55a4f396acc3fe92110cc9bfc78908260a53b1c9003",
+  "limit": 13,
+  "primes": [
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "sizes": "every 2 <= k <= p",
+  "baseline_cases": [
+    {
+      "p": 3,
+      "k": 2,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "437f6c313b48b76f80c6bb0ab196d2d433372a845a9de559db1b376e72f3d390"
+    },
+    {
+      "p": 3,
+      "k": 3,
+      "projected_satisfying_assignments": 1,
+      "cnf_sha256": "3d7110b6bbda007fbc67d4c4b6aa9f9951075dd877b628f79e30467bf179e54f"
+    },
+    {
+      "p": 5,
+      "k": 2,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "5d1012d999b8f873d0bf2e374c00761c585f048ef77a5c6b92c593917158e603"
+    },
+    {
+      "p": 5,
+      "k": 3,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "67cd86ad81e653c6301b67974b9dcf72a645f05a5c473eafb285ca7b18dc788e"
+    },
+    {
+      "p": 5,
+      "k": 4,
+      "projected_satisfying_assignments": 3,
+      "cnf_sha256": "7062eed1e07218b4a84e5424d1164e247851699f14759f0684757aecaa76a789"
+    },
+    {
+      "p": 5,
+      "k": 5,
+      "projected_satisfying_assignments": 1,
+      "cnf_sha256": "c4e7ce5ec9ee7601b15efc4224a867065f819e6c6bbb135abd18613f5b39f1df"
+    },
+    {
+      "p": 7,
+      "k": 2,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "93046107868bdde26c82ca9ee6fa8d5dcb44f8fcc280d0805be8d88bca64d2a9"
+    },
+    {
+      "p": 7,
+      "k": 3,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "6f718bec1fa7950126b049bb4b745ac75b736e554af7cf5134fa7b620f80198c"
+    },
+    {
+      "p": 7,
+      "k": 4,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "c9a7029929d6e3058baf124420702f9080561c5ee0f1a101e4bdcdd213972a35"
+    },
+    {
+      "p": 7,
+      "k": 5,
+      "projected_satisfying_assignments": 10,
+      "cnf_sha256": "6d77962ba09b6507e2a04ccdf5e25c5ba727e626fd4a30011bd0db35d8f03375"
+    },
+    {
+      "p": 7,
+      "k": 6,
+      "projected_satisfying_assignments": 5,
+      "cnf_sha256": "8ac484899d0c6882e6c4d0c27ad2303f91c7b5372b035e4e54a505a9733ae2af"
+    },
+    {
+      "p": 7,
+      "k": 7,
+      "projected_satisfying_assignments": 1,
+      "cnf_sha256": "3ba9f558c13046da26be186be2c177a80d62948ffc983db3ca51ed0d8701e624"
+    },
+    {
+      "p": 11,
+      "k": 2,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "14b13fa94e718af99a10e580370a109ab63bff170c312c848804569c5a714d6d"
+    },
+    {
+      "p": 11,
+      "k": 3,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "53d4b43405f280f3a1e6a17417595e01c0fda8b3fc63e72872dead9eca86aabe"
+    },
+    {
+      "p": 11,
+      "k": 4,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "051566501735e708525c99aa2f0764ffb43757757ae4eaddb0811fbe54e70a4f"
+    },
+    {
+      "p": 11,
+      "k": 5,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "a4813384c5e7a3eb8a9e41cc0570b70e76c11a217e1cf4969129dca774e41c74"
+    },
+    {
+      "p": 11,
+      "k": 6,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "2122140eeca887af2aaff6283b8f13594ceb13e8e5020e921aaa4bd56dcc3462"
+    },
+    {
+      "p": 11,
+      "k": 7,
+      "projected_satisfying_assignments": 126,
+      "cnf_sha256": "852c07b1a777ced973b7b3d3563125ff53afb32ef6017d2a8b9f286d8c45f203"
+    },
+    {
+      "p": 11,
+      "k": 8,
+      "projected_satisfying_assignments": 84,
+      "cnf_sha256": "56e4a240ee58abde8fe7d61b05710f0d5e428632b673a6e8a89750ea94a4bbf5"
+    },
+    {
+      "p": 11,
+      "k": 9,
+      "projected_satisfying_assignments": 36,
+      "cnf_sha256": "49efe0985c0f31bcf2785d5487d04e67224889eeda37627ae2814b73a95c2c01"
+    },
+    {
+      "p": 11,
+      "k": 10,
+      "projected_satisfying_assignments": 9,
+      "cnf_sha256": "87e529f9b882883b8edb4f4ea8e11efb6fd2ccad8df690ea87983ca5b52ab596"
+    },
+    {
+      "p": 11,
+      "k": 11,
+      "projected_satisfying_assignments": 1,
+      "cnf_sha256": "a6c1282920602e819ab90c69f7330d2346277a9579b00b9944bb56ddf4fe175d"
+    },
+    {
+      "p": 13,
+      "k": 2,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "530e504a0736ae4116a9bdbef94fb21bb0d1fec46abb02941b5e1a0c1b879b34"
+    },
+    {
+      "p": 13,
+      "k": 3,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "962e80c684156029dcd187727ebb39657b9058e6c65379d2d1f1f65796f11eed"
+    },
+    {
+      "p": 13,
+      "k": 4,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "1a637fd2f6d685fe5524d799d11a5d7901c5eda310f2d99b6cf4de15e5c979c0"
+    },
+    {
+      "p": 13,
+      "k": 5,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "4814a17dd87d18dcf3e0c5923f87a60dae687d5cdccdf40db349d258d359221f"
+    },
+    {
+      "p": 13,
+      "k": 6,
+      "projected_satisfying_assignments": 0,
+      "cnf_sha256": "89e6fa1d904ad540eb5a1ea22494bfe229ed10f5a2731dead702e81aed0d3379"
+    },
+    {
+      "p": 13,
+      "k": 7,
+      "projected_satisfying_assignments": 7,
+      "cnf_sha256": "3d6938ed95d3ffe0642343799c27ccfed4ebb3683423b28b8f7ecf6ff83b7eea"
+    },
+    {
+      "p": 13,
+      "k": 8,
+      "projected_satisfying_assignments": 462,
+      "cnf_sha256": "4fa110733beca1267f627db04721b44c95be5d5678fe2b5f3d54dcedbd7d9028"
+    },
+    {
+      "p": 13,
+      "k": 9,
+      "projected_satisfying_assignments": 330,
+      "cnf_sha256": "d46fce30958d5c0b922d0b5013496a3fe8dc42258dfb96ba61dd4a139470c820"
+    },
+    {
+      "p": 13,
+      "k": 10,
+      "projected_satisfying_assignments": 165,
+      "cnf_sha256": "5f1812df70d5506f531d9647176df79b010752f776833396014799a14828f842"
+    },
+    {
+      "p": 13,
+      "k": 11,
+      "projected_satisfying_assignments": 55,
+      "cnf_sha256": "e62ea951c00c42833ec67116dbc35580c178dd12e9d5217040af606d38cab760"
+    },
+    {
+      "p": 13,
+      "k": 12,
+      "projected_satisfying_assignments": 11,
+      "cnf_sha256": "1a8542392a872d1661d1a4f5790189d8e70a7f2ba816bee6c98ec479e86e23ad"
+    },
+    {
+      "p": 13,
+      "k": 13,
+      "projected_satisfying_assignments": 1,
+      "cnf_sha256": "13ddca886e1bcad50c2d706f540f2312921034a90f115d0a22405b7eae7b43eb"
+    }
+  ],
+  "baseline_suite_cnf_sha256": "7e1b483a25e26dd8a445e722ebc7ee2788b65c3274c37741d3a36d8be5820666",
+  "baseline_clause_identity": "PASS",
+  "baseline_oracle_agreement": "PASS",
+  "mutation_count": 34,
+  "category_counts": {
+    "clause deletion": 9,
+    "literal flip": 10,
+    "bound off-by-one": 7,
+    "comparator swap": 8
+  },
+  "caught": 30,
+  "survived": 4,
+  "all_mutant_cnf_signatures_distinct": true,
+  "mutations": [
+    {
+      "identifier": "D01",
+      "category": "clause deletion",
+      "description": "delete the x_0 pin unit clause",
+      "before": "cnf.add(x(0))",
+      "after": "<deleted>",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 5,
+        "k": 4,
+        "set": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "7433fe094b450a100df0afc4ea23062e7489e0040c33de35186e74e7677f8d39"
+    },
+    {
+      "identifier": "D02",
+      "category": "clause deletion",
+      "description": "delete the x_1 pin unit clause",
+      "before": "cnf.add(x(1))",
+      "after": "<deleted>",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 5,
+        "k": 4,
+        "set": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "ce5b2c2dfbc1551f9d4146a3e1199cd4f908cda67572a0e361f2cdc3b7d4d6c7"
+    },
+    {
+      "identifier": "D03",
+      "category": "clause deletion",
+      "description": "delete every y -> x_a clause",
+      "before": "cnf.add(-y, x(a))",
+      "after": "<deleted>",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 7,
+        "k": 4,
+        "set": [
+          0,
+          1,
+          3,
+          6
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "17c36824870562861aec0fa2b62073a4c8a95bc827bb301fca632c4b1bc9ba13"
+    },
+    {
+      "identifier": "D04",
+      "category": "clause deletion",
+      "description": "delete every y -> x_b clause",
+      "before": "cnf.add(-y, x(b))",
+      "after": "<deleted>",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 5,
+        "k": 3,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "245b2562465b9c9c313eaebd01692feffad44dc5be2cac0c88fa56efd7b30b20"
+    },
+    {
+      "identifier": "D05",
+      "category": "clause deletion",
+      "description": "delete every (x_a and x_b) -> y clause",
+      "before": "cnf.add(-x(a), -x(b), y)",
+      "after": "<deleted>",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 11,
+        "k": 5,
+        "set": [
+          0,
+          1,
+          2,
+          4,
+          7
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "fcf3aacd27c7c7b2dbd9c6a8e1278fe3ecdd7a047e0b6ccb1d5242ddce9edc79"
+    },
+    {
+      "identifier": "D06",
+      "category": "clause deletion",
+      "description": "delete the complete R=1-forbidding clause family",
+      "before": "cnf.add(-x(h), *ys)",
+      "after": "<deleted>",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 11,
+        "k": 6,
+        "set": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "d7d03e242626dac0ca729d71b138db058ca1a4b907a5e6426b8b6dcbef866645"
+    },
+    {
+      "identifier": "D07",
+      "category": "clause deletion",
+      "description": "delete the complete R=2-forbidding clause family",
+      "before": "for j, yj in enumerate(ys): cnf.add(...)",
+      "after": "<deleted>",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 11,
+        "k": 5,
+        "set": [
+          0,
+          1,
+          2,
+          4,
+          7
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "f9080b51602a97c892da9e57dcfa79cf643c49c4471f59fd8fa8bc4e6bd5f113"
+    },
+    {
+      "identifier": "D08",
+      "category": "clause deletion",
+      "description": "delete the upper cardinality-counter clause family",
+      "before": "seq_counter_atmost(cnf, mem, k)",
+      "after": "<deleted>",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 2,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "f751838b20912cc3ad2620fc517d9044e6c01fe3556386e7cd9b45d26f24f14b"
+    },
+    {
+      "identifier": "D09",
+      "category": "clause deletion",
+      "description": "delete the lower cardinality-counter clause family",
+      "before": "seq_counter_atmost(cnf, [-v for v in mem], p - k)",
+      "after": "<deleted>",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 5,
+        "k": 5,
+        "set": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "1c602c0d21bc1c441b95e6c53fe75d474d9262b083fddeb6e156f0a4b55aea49"
+    },
+    {
+      "identifier": "L01",
+      "category": "literal flip",
+      "description": "flip -y in the first y -> x_a clause",
+      "before": "(-y, x(a))",
+      "after": "(y, x(a))",
+      "verdict": "SURVIVED",
+      "caught_by": null,
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "bd5ff769b8b8e7ada775491e6fde210422014a6dbdfe36384b7fb8a9ca5e5436"
+    },
+    {
+      "identifier": "L02",
+      "category": "literal flip",
+      "description": "flip x_a in the first y -> x_a clause",
+      "before": "(-y, x(a))",
+      "after": "(-y, -x(a))",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 3,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": true,
+        "actual": false,
+        "direction": "false UNSAT / too restrictive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "b9add1a00af05cad8bffabb3e4c1a36192fb895998306ef03fc7ee5d2c8e0b3e"
+    },
+    {
+      "identifier": "L03",
+      "category": "literal flip",
+      "description": "flip -y in the first y -> x_b clause",
+      "before": "(-y, x(b))",
+      "after": "(y, x(b))",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 11,
+        "k": 6,
+        "set": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          9
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "858c8bac3427ce6fb9ba4d167507bee91270eac8f3514c7061e33743c4d226e3"
+    },
+    {
+      "identifier": "L04",
+      "category": "literal flip",
+      "description": "flip x_b in the first y -> x_b clause",
+      "before": "(-y, x(b))",
+      "after": "(-y, -x(b))",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 3,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": true,
+        "actual": false,
+        "direction": "false UNSAT / too restrictive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "cb5e46211ba87f9b0fad88fca1d18917cfa4d3f6dd8c5e046b701467cf56eec6"
+    },
+    {
+      "identifier": "L05",
+      "category": "literal flip",
+      "description": "flip -x_a in the first endpoints -> y clause",
+      "before": "(-x(a), -x(b), y)",
+      "after": "(x(a), -x(b), y)",
+      "verdict": "SURVIVED",
+      "caught_by": null,
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "e711fccd64c36d0e59eb7b18c9e4d14f9341fc91584e90f478ec3509a20d0283"
+    },
+    {
+      "identifier": "L06",
+      "category": "literal flip",
+      "description": "flip -x_b in the first endpoints -> y clause",
+      "before": "(-x(a), -x(b), y)",
+      "after": "(-x(a), x(b), y)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 5,
+        "k": 4,
+        "set": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "expected": true,
+        "actual": false,
+        "direction": "false UNSAT / too restrictive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "d1d1533ff699973a6f7bfe7db19cf2feee7d637f027061b590769985d6aebf24"
+    },
+    {
+      "identifier": "L07",
+      "category": "literal flip",
+      "description": "flip y in the first endpoints -> y clause",
+      "before": "(-x(a), -x(b), y)",
+      "after": "(-x(a), -x(b), -y)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 3,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": true,
+        "actual": false,
+        "direction": "false UNSAT / too restrictive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "e0df6c7c6800aa70b1ffee08aca0c3bdbb0baa7b0a3bac9df39effd1a6119232"
+    },
+    {
+      "identifier": "L08",
+      "category": "literal flip",
+      "description": "flip -x_h in the first R=1 clause",
+      "before": "(-x(h), *ys)",
+      "after": "(x(h), *ys)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 11,
+        "k": 6,
+        "set": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          9
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "51deed33b01b77eb3669b9799c9cbbc89f9962416f2f42fd0f3ae01e978411e9"
+    },
+    {
+      "identifier": "L09",
+      "category": "literal flip",
+      "description": "flip x_h in the first R=2 clause",
+      "before": "(x(h), -yj, *others)",
+      "after": "(-x(h), -yj, *others)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 3,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": true,
+        "actual": false,
+        "direction": "false UNSAT / too restrictive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "cad39d7893ac7dad145809f2fe36192e3a74dda158224a6c289f1b649f3766f3"
+    },
+    {
+      "identifier": "L10",
+      "category": "literal flip",
+      "description": "flip -y_j in the first R=2 clause",
+      "before": "(x(h), -yj, *others)",
+      "after": "(x(h), yj, *others)",
+      "verdict": "SURVIVED",
+      "caught_by": null,
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "4bee461800d544dcc0ed6ba7f68f1b9b102a0a5f131c79537d1e76d7a2378e26"
+    },
+    {
+      "identifier": "B01",
+      "category": "bound off-by-one",
+      "description": "raise the upper cardinality bound by one",
+      "before": "atmost(mem, k)",
+      "after": "atmost(mem, k + 1)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 2,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "e9b501cf3eee09d8e098c27fb9683ffb77a3906df09f9691ab9d6abb0c5683d4"
+    },
+    {
+      "identifier": "B02",
+      "category": "bound off-by-one",
+      "description": "lower the upper cardinality bound by one",
+      "before": "atmost(mem, k)",
+      "after": "atmost(mem, k - 1)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 3,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": true,
+        "actual": false,
+        "direction": "false UNSAT / too restrictive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "988869da467285af19df9b13037e2647a5cf5c6b8324a5615c7b6a58cd32ed75"
+    },
+    {
+      "identifier": "B03",
+      "category": "bound off-by-one",
+      "description": "raise the complement cardinality bound by one",
+      "before": "atmost(not mem, p - k)",
+      "after": "atmost(not mem, p - k + 1)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 5,
+        "k": 5,
+        "set": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "af3efe91b13cdc30381d9fce70d86e1052810baab6199ab5373c8e0c72dc504b"
+    },
+    {
+      "identifier": "B04",
+      "category": "bound off-by-one",
+      "description": "lower the complement cardinality bound by one",
+      "before": "atmost(not mem, p - k)",
+      "after": "atmost(not mem, p - k - 1)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 3,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": true,
+        "actual": false,
+        "direction": "false UNSAT / too restrictive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "bbb1919a86fbfd8b937b6782373a2ecfd25eb31e11f2fd548a5224d000ffee8b"
+    },
+    {
+      "identifier": "B05",
+      "category": "bound off-by-one",
+      "description": "omit the final sum fibre",
+      "before": "for s in range(p)",
+      "after": "for s in range(p - 1)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 11,
+        "k": 6,
+        "set": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "e0e710c77d6002f43a091fe89d0754bf6b7d37f4da9b32604ade6342f50d3f12"
+    },
+    {
+      "identifier": "B06",
+      "category": "bound off-by-one",
+      "description": "omit the final row of the upper sequential counter",
+      "before": "for i in range(1, n)",
+      "after": "for i in range(1, n - 1)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 2,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "7135edd00fc50706f072fbc73eca7569d77f2fd942df864558ee99d6b720ed9c"
+    },
+    {
+      "identifier": "B07",
+      "category": "bound off-by-one",
+      "description": "omit the final row of the lower sequential counter",
+      "before": "for i in range(1, n)",
+      "after": "for i in range(1, n - 1)",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 7,
+        "k": 6,
+        "set": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "169e0a70fceb90da5cfe9e4e5a1c6decc0c1cdabcdae10870fef5f3c64506e36"
+    },
+    {
+      "identifier": "C01",
+      "category": "comparator swap",
+      "description": "invert the diagonal-pair skip test",
+      "before": "if a == b: continue",
+      "after": "if a != b: continue",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 2,
+        "set": [
+          0,
+          1
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "93247378531881b2d728b5e44a13822d11a5de2b06015b7e1509de5c522a7a86"
+    },
+    {
+      "identifier": "C02",
+      "category": "comparator swap",
+      "description": "replace diagonal equality by a < b in the skip test",
+      "before": "if a == b: continue",
+      "after": "if a < b: continue",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 11,
+        "k": 6,
+        "set": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "3015616cff108f7a16a741b57b63ba2b6001a5e50a61855df449d34c2cad5bfc"
+    },
+    {
+      "identifier": "C03",
+      "category": "comparator swap",
+      "description": "replace diagonal equality by a > b in the skip test",
+      "before": "if a == b: continue",
+      "after": "if a > b: continue",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 11,
+        "k": 6,
+        "set": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "e2310d726bfce1872669ffc23ba4c9170244ced1ca268b32f408f7e249c3b101"
+    },
+    {
+      "identifier": "C04",
+      "category": "comparator swap",
+      "description": "invert the seen-pair membership test",
+      "before": "if key in seen: continue",
+      "after": "if key not in seen: continue",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 3,
+        "k": 3,
+        "set": [
+          0,
+          1,
+          2
+        ],
+        "expected": true,
+        "actual": false,
+        "direction": "false UNSAT / too restrictive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "fa78947c05bb88e815fb9cd488c3d65004ecfb82443e9c61967541858798fe79"
+    },
+    {
+      "identifier": "C05",
+      "category": "comparator swap",
+      "description": "retain only y_j, rather than every other y, in R=2 clauses",
+      "before": "if m != j",
+      "after": "if m == j",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 11,
+        "k": 5,
+        "set": [
+          0,
+          1,
+          2,
+          4,
+          7
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "85c92095816a8036981c1b93c9d47501c23c3a1165cf4f795f8c7be78d4b8d88"
+    },
+    {
+      "identifier": "C06",
+      "category": "comparator swap",
+      "description": "retain only later y variables in R=2 clauses",
+      "before": "if m != j",
+      "after": "if m > j",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 5,
+        "k": 4,
+        "set": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "expected": true,
+        "actual": false,
+        "direction": "false UNSAT / too restrictive"
+      },
+      "first_cnf_difference": {
+        "p": 5,
+        "k": 2
+      },
+      "suite_cnf_sha256": "850a0717eef1447ec4d8e01774c7a0896d9f66e79f5a688e02186849722dfcd4"
+    },
+    {
+      "identifier": "C07",
+      "category": "comparator swap",
+      "description": "change the pin guard from k >= 2 to k > 2",
+      "before": "if k >= 2",
+      "after": "if k > 2",
+      "verdict": "SURVIVED",
+      "caught_by": null,
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 2
+      },
+      "suite_cnf_sha256": "08803592871c965082566eab32fe15cd0254a68795247cdefff752664da8c072"
+    },
+    {
+      "identifier": "C08",
+      "category": "comparator swap",
+      "description": "change the pin guard from k >= 2 to k <= 2",
+      "before": "if k >= 2",
+      "after": "if k <= 2",
+      "verdict": "CAUGHT",
+      "caught_by": {
+        "p": 5,
+        "k": 4,
+        "set": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "expected": false,
+        "actual": true,
+        "direction": "false SAT / too permissive"
+      },
+      "first_cnf_difference": {
+        "p": 3,
+        "k": 3
+      },
+      "suite_cnf_sha256": "16e29d2ee94f823521f63b6427c44a234e193a45f91bbf12ac5f5c4fa6640e7a"
+    }
+  ],
+  "elapsed_seconds": 4.123
+}

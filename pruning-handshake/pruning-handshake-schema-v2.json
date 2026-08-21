@@ -1,0 +1,93 @@
+{
+  "format": "pruning-handshake-schema",
+  "schema_version": 2,
+  "stream_encoding": "UTF-8 JSON Lines; one JSON object per line",
+  "closed_records": true,
+  "record_order": [
+    "header exactly once",
+    "partition_node zero or more times",
+    "canonical_form_witness, group_element_discard, or numeric_infeasibility zero or more times",
+    "end exactly once"
+  ],
+  "common_semantics": {
+    "state": "A strictly increasing list of k distinct residues in [0, modulus).",
+    "node_id": "A stream-unique, nonempty engine-chosen string.",
+    "path": "Nonempty engine decisions from the declared root to this cell; identity only.",
+    "subtree_id": "A nonempty engine-chosen subtree identity; identity only.",
+    "fingerprint": "Lowercase SHA-256 of the compact canonical JSON encoding of canonical_state."
+  },
+  "profiles": {
+    "canonical_augmentation": "Log one canonical_form_witness for every classified node. The live DFS names no retained partner. The replayer builds fingerprint -> retained node after the complete stream is loaded, then pairs discarded witnesses offline.",
+    "direct_group_element": "Alternative for engines that already compute a discard-to-retained mapping; emit group_element_discard.",
+    "numeric_infeasibility": "For singleton-deficit pruning; emit numeric_infeasibility. This is not a symmetry claim."
+  },
+  "records": {
+    "header": {
+      "required": {
+        "record_type": "literal header",
+        "format": "literal pruning-handshake",
+        "schema_version": "literal integer 2",
+        "action": {"kind": "literal unit_affine_cyclic", "modulus": "integer >= 2"},
+        "root_partition": {"kind": "literal all_k_subsets", "k": "integer in [0, modulus]", "root_id": "nonempty string", "expected_cell_count": "binomial(modulus,k)"}
+      }
+    },
+    "partition_node": {
+      "required": {"record_type": "literal partition_node", "node_id": "stream-unique ID", "path": "path identity", "subtree_id": "subtree identity", "state": "exact singleton cell state"}
+    },
+    "canonical_form_witness": {
+      "required": {
+        "record_type": "literal canonical_form_witness",
+        "node_id": "ID of a partition_node",
+        "disposition": "literal retained or discarded",
+        "permutation": {"multiplier": "unit u modulo modulus", "translation": "residue t modulo modulus"},
+        "canonical_state": "sorted image of the node state under permutation",
+        "fingerprint": "SHA-256 of canonical_state"
+      },
+      "offline_pairing": "After all records validate, retained witnesses are indexed by fingerprint. Each discarded witness must have exactly one retained fingerprint bucket and an equal canonical_state. A discard-to-retained map is reconstructed as inverse(retained permutation) after discard permutation."
+    },
+    "group_element_discard": {
+      "required": {
+        "record_type": "literal group_element_discard",
+        "source_node_id": "discarded partition_node ID",
+        "retained_target_node_id": "node ID classified retained by canonical_form_witness",
+        "element": {"multiplier": "unit u modulo modulus", "translation": "residue t modulo modulus"},
+        "mapped_state": "sorted group image, equal to retained target state"
+      }
+    },
+    "numeric_infeasibility": {
+      "required": {
+        "record_type": "literal numeric_infeasibility",
+        "node_id": "discarded partition_node ID",
+        "bound_kind": "literal singleton_deficit",
+        "arity": "integer equal to modulus",
+        "representation_counts": "ordered-pair count vector, length arity",
+        "deficits": "entry i is 0 when count is 0 or >=3, otherwise 3-count",
+        "remaining_additions": "nonnegative integer",
+        "max_repairs_per_addition": "nonnegative integer",
+        "required_repairs": "sum(deficits)",
+        "available_repairs": "remaining_additions * max_repairs_per_addition"
+      },
+      "acceptance": "The replayer recounts the node and accepts the prune only when required_repairs > available_repairs. The producer must choose and document a sound max_repairs_per_addition bound for its engine; v2 mechanically checks the logged arithmetic and exact leaf case."
+    },
+    "end": {
+      "required": {
+        "record_type": "literal end",
+        "partition_node_count": "number of partition_node records",
+        "retained_count": "number of retained classifications",
+        "canonical_discard_count": "number of discarded canonical witnesses",
+        "group_discard_count": "number of direct group records",
+        "infeasibility_count": "number of numeric infeasibility records"
+      }
+    }
+  },
+  "verdicts": {
+    "legitimacy": "Schema, identities, group membership, canonical images, fingerprints, direct mappings, and record counts.",
+    "completeness": "Every root-partition cell appears exactly once and is classified exactly once; every canonical discard pairs offline to a retained canonical form.",
+    "infeasibility": "Every numeric record has correct arity, exact recount/deficits, correct arithmetic, and a strict deficit bound."
+  },
+  "non_guarantees": [
+    "Opaque path and subtree identifiers do not prove traversal coverage; v2 coverage uses explicit states.",
+    "For remaining_additions > 0, soundness of max_repairs_per_addition is an engine-specific trust boundary unless separately certified.",
+    "No search predicate, encoder, serializer, SAT verdict, or encoding-faithfulness bridge is checked."
+  ]
+}

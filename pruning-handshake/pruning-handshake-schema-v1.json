@@ -1,0 +1,83 @@
+{
+  "format": "pruning-handshake-schema",
+  "schema_version": 1,
+  "stream_encoding": "UTF-8 JSON Lines; one JSON object per line",
+  "record_order": [
+    "header exactly once",
+    "partition_node zero or more times",
+    "retained zero or more times",
+    "discard zero or more times",
+    "end exactly once"
+  ],
+  "closed_records": true,
+  "common_semantics": {
+    "state": "A strictly increasing list of k distinct residues in [0, modulus).",
+    "node_id": "A stream-unique, nonempty engine-chosen string.",
+    "path": "A list of nonempty strings identifying the engine decisions from the declared root to this cell; identity only, not trusted evidence of coverage.",
+    "subtree_id": "A nonempty engine-chosen string identifying the subtree containing the cell; identity only, not trusted evidence of coverage."
+  },
+  "records": {
+    "header": {
+      "required": {
+        "record_type": "literal header",
+        "format": "literal pruning-handshake",
+        "schema_version": "literal integer 1",
+        "action": {
+          "kind": "literal unit_affine_cyclic",
+          "modulus": "integer >= 2"
+        },
+        "root_partition": {
+          "kind": "literal all_k_subsets",
+          "k": "integer in [0, modulus]",
+          "root_id": "nonempty string naming the root",
+          "expected_cell_count": "integer equal to binomial(modulus, k)"
+        }
+      }
+    },
+    "partition_node": {
+      "required": {
+        "record_type": "literal partition_node",
+        "node_id": "stream-unique node ID",
+        "path": "path identity",
+        "subtree_id": "subtree identity",
+        "state": "the exact singleton cell state"
+      }
+    },
+    "retained": {
+      "required": {
+        "record_type": "literal retained",
+        "node_id": "ID of a declared partition_node"
+      }
+    },
+    "discard": {
+      "required": {
+        "record_type": "literal discard",
+        "source_node_id": "ID of the discarded partition_node",
+        "source_state": "copy of the source partition_node state",
+        "element": {
+          "multiplier": "integer representative u with 0 <= u < modulus and gcd(u, modulus)=1",
+          "translation": "integer representative t with 0 <= t < modulus"
+        },
+        "mapped_state": "the sorted image {u*x+t mod modulus : x in source_state}",
+        "retained_target_node_id": "ID declared by a retained record",
+        "retained_target_state": "copy of the retained target partition_node state",
+        "source_path": "copy of the source partition_node path",
+        "source_subtree_id": "copy of the source partition_node subtree_id"
+      }
+    },
+    "end": {
+      "required": {
+        "record_type": "literal end",
+        "partition_node_count": "integer equal to the number of partition_node records",
+        "retained_count": "integer equal to the number of retained records",
+        "discard_count": "integer equal to the number of discard records"
+      }
+    }
+  },
+  "replay_guarantee": "If LEGITIMACY and COMPLETENESS are both ACCEPTED, every discarded cell maps by a unit-affine group element to a declared retained cell, and the declared retained cells meet every affine orbit in the stated all-k-subsets root partition.",
+  "non_guarantees": [
+    "The retained target need not be canonical or unique within its orbit.",
+    "Opaque path and subtree identifiers do not prove traversal coverage; v1 coverage comes from exact explicit states.",
+    "No search predicate, encoder, serializer, DIMACS byte stream, SAT verdict, or encoding-faithfulness bridge is checked."
+  ]
+}
