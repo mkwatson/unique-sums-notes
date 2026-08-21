@@ -58,6 +58,36 @@
   prose could be read too broadly.
 - Updated the note date and bibliography without altering the frozen v3 tree.
 
+# 2026-08-21: certified tier upgrade for m(53) and m(59); a closure replay
+
+- **Certified tier upgrade for $m(53)=14$ and $m(59)=15$.** Each value moves
+  from "exact by exhaustion, not DRAT-certified" to a solver-certified
+  tier.
+  New DRAT/LRAT certificates close the previously uncertified exclusion
+  legs: the size-13 exclusion at $p=53$ and the size-14 exclusion at
+  $p=59$, each via an exhaustive cube partition, every cube UNSAT, every
+  per-cube proof generated and checked at generation time, and a hash-bound
+  LRAT retained and independently re-checked. The raw DRAT was generated
+  and checked but discarded rather than kept; the LRAT is the retained,
+  re-checked artifact. `note.tex`'s exact-value table and the top-level
+  verification-tier section state this precisely. The original
+  exact-by-exhaustion evidence in `provenance/` is unaffected and stands as
+  its own, separate confirmation channel. Only the verification tier
+  changes; the values themselves stay the same.
+- **A fresh replay of the one-log theorem's 19-module closure.** The
+  closure was previously recorded only at the tier "recorded original
+  elaboration," because it exceeds the memory of the 16 GiB host it was
+  written on. An independent replay of the full closure on a documented 64
+  GiB host has since completed: the target elaboration finished in 14
+  seconds with a measured peak resident set size of about 7.3 GiB, all
+  three required declarations printed exactly `[propext, Classical.choice,
+  Quot.sound]`, an independent positive control (`WitnessKernel.lean`)
+  passed, and a doctored negative control was correctly rejected by Lean.
+  The top-level readme states this measured replay directly; the full
+  host, command sequence, and control record is in `repro/BIGREPLAY.md`.
+  The theorem's statement and axioms are unchanged; what is new is the
+  independent re-verification of the recorded original elaboration.
+
 <!-- The "Changes from v1 to staged v2" and "Changes from published v2 to
      staged v3" blocks are not repeated here: the repository's root
      `CHANGES.md` already carries the v1-to-v2 history, and `CHANGES-v3.md`

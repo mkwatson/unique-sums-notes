@@ -58,17 +58,23 @@ Every claim is labeled. The vocabulary, strongest first:
   the checker, and the statement bridge remain trusted surfaces, and the
   `witness-kernel/` and `encoding-tests/` directories are the audit of
   exactly those surfaces.
+- **solver-certified**: the same exhaustive-search-plus-independent-checker
+  structure as DRAT-certified, with one nuance: the retained, hash-bound
+  certificate is an LRAT proof rather than the raw DRAT, which is generated
+  and checked at generation time but not kept. $m(53)$ and $m(59)$ are at
+  this tier; `note.tex`'s exact-value table states the same nuance.
 - **exact by exhaustion**: a completed search whose code and outputs are
-  retained but which produced no independent certificate. $m(53)$ and $m(59)$
-  are at this tier and are never described as certified.
+  retained but which produced no independent certificate.
 - **tested**: finite differential testing with negative controls. Test
   results are reported as found, including the four mutation-test survivors
   in `encoding-tests/`, each traced to a provably redundant clause.
 
-Downgrades are recorded in place. One Lean module (the one-log theorem's
-19-module closure) is included at the tier "recorded original elaboration"
-because it exceeds the memory of the 16 GiB host it was written on; the
-checking section of the note says exactly which command verifies which tier.
+Downgrades are recorded in place. One Lean module, the one-log theorem's
+19-module closure, was freshly verified on a documented 64 GiB host; the
+exact host, command, measured peak memory, positive and negative controls,
+and replay recipe are recorded in [`repro/BIGREPLAY.md`](repro/BIGREPLAY.md).
+The checking section of the note says exactly which command verifies which
+tier.
 
 [`statement-audit.md`](statement-audit.md) gives the exact formal statement,
 file, and line for every theorem cited above and in `note.tex`, alongside
