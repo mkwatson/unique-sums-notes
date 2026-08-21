@@ -150,6 +150,58 @@ in the block above, the census extension, and the presentation fixes.
   in its opening and again in its section 7. The manifests were left in the
   predicate their certificates were produced under.
 
+# 2026-08-21: a general finite-group encoding layer
+
+- **New directory `encoding-general/`.** The reference-encoder surface that
+  `witness-kernel/` audits is stated there for the carrier
+  $\mathbb{Z}/n\mathbb{Z}$ and for one fixed target, the cyclic
+  unique-sum-free predicate. The new package removes both fixed choices: the
+  carrier is any type with `AddCommGroup`, `Fintype` and `DecidableEq`, and
+  the target is any `predicate : Finset G → Prop` with
+  `DecidablePred predicate`. Five theorems are kernel-certified at that
+  generality: `eval_blockingClause_false_iff`, `satisfies_encode_iff` and
+  `exists_model_iff_exists_predicate` in `BedertLab/EncodeGen.lean`, and
+  `checkWitness_eq_true_iff` and `checkWitness_eq_false_iff` in
+  `BedertLab/EncodeGenWitness.lean`. Zero sorries, no new axioms, no
+  `native_decide`, and axiom prints within
+  `[propext, Classical.choice, Quot.sound]`. The package pins the same
+  toolchain and the same Mathlib revision as `witness-kernel/`; its
+  `lean-toolchain`, `lakefile.toml` and `lake-manifest.json` are
+  byte-identical to that package's.
+- **The controls are deliberately noncyclic and deliberately off-target.**
+  Every finite control in `BedertLab/EncodeGenControls.lean` runs on the
+  Klein four group $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$
+  against the predicate "two elements, one of them zero", which is neither a
+  cyclic group nor unique-sum-freeness. Controls run only on the case a
+  generalization came from test the special case, not the generalization.
+  A positive witness control passes, an exact serialize-parse-to-CNF
+  round-trip control passes, and five mutations are proved to fire:
+  cardinality off-by-one, an omitted blocking clause, reversed clause
+  polarity, a changed DIMACS literal index, and a corrupted DIMACS header.
+- **Two vendored prerequisites, not forks.** `BedertLab/EncodeSpec.lean` and
+  `BedertLab/ByteBridge.lean` are byte-identical copies of the
+  `witness-kernel/` modules of the same names. They are present so the new
+  directory builds on its own and so the controls reuse the existing frozen
+  DIMACS tokenizer rather than introducing a second one.
+- **What this does not do, recorded here and in both READMEs.** The encoder
+  is the exponential reference encoder only, one blocking clause per
+  falsifying subset, no auxiliary variables, and it is not the encoder any
+  search in this repository runs. The argument that the generalized predicate
+  interface lines up with the ordered representation count used elsewhere
+  here is single-arm prose with no Lean statement, so it is not
+  kernel-certified. And the production serialization bridge is untouched: the
+  round-trip control exercises the generalized raw reference fixture
+  serializer, not production bytes, so the bytes-to-specification obligation
+  that `statement-audit.md` Part II identifies as open is exactly as open
+  after this addition as before it.
+- **Audit rows added.** `statement-audit.md` gains a Part IV with one row per
+  headline theorem, the scope limits stated once for the whole part, and a
+  consequence line in the "What each claim changes" table. `README.md` gains
+  a Layout row and one sentence in the tier vocabulary.
+- **Still open: the second checker, again.** The 13-module `lean4checker`
+  replay recorded in `witness-kernel/README.md` covers that package only.
+  The new modules have not been replayed by it.
+
 <!-- The "Changes from v1 to staged v2" and "Changes from published v2 to
      staged v3" blocks are not repeated here: the repository's root
      `CHANGES.md` already carries the v1-to-v2 history, and `CHANGES-v3.md`

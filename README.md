@@ -79,7 +79,10 @@ Every claim is labeled. The vocabulary, strongest first:
   is retained and replayed by an independent proof checker. The encoding,
   the checker, and the statement bridge remain trusted surfaces, and the
   `witness-kernel/` and `encoding-tests/` directories are the audit of
-  exactly those surfaces.
+  exactly those surfaces. `encoding-general/` restates the reference-encoder
+  half of that audit for an arbitrary finite Abelian group and an arbitrary
+  decidable subset predicate, and closes none of what the other two leave
+  open.
 - **solver-certified**: the same exhaustive-search-plus-independent-checker
   structure as DRAT-certified, with one nuance: the retained, hash-bound
   certificate is an LRAT proof rather than the raw DRAT, which is generated
@@ -124,6 +127,7 @@ definitions live, so a claim can be audited without reading the proof body.
 | `verify.py` | Pure-Python recomputation of every small case and table | `python3 verify.py` |
 | `witness-kernel/` | Encoder specification and the certified parts of the encoding chain, with named trust boundaries | `lake update && lake build BedertLab.EncodeSpec` |
 | `encoding-tests/` | The pinned production encoder, a differential oracle test at $p \le 13$, and a 34-mutant harness | `python3 mutation_harness.py` |
+| `encoding-general/` | The reference-encoder surface of `witness-kernel/`, restated for any finite Abelian group and any decidable subset predicate, with noncyclic Klein-four controls and five firing mutations | `lake update && lake build BedertLab.EncodeGen BedertLab.EncodeGenWitness BedertLab.EncodeGenControls` |
 | `pruning-handshake/` | Replayable soundness evidence for symmetry pruning, with negative controls | `python3 pruning_handshake_replay.py HANDSHAKE-p11-k7-v2.jsonl` |
 | `census-schema/` | Row format and validator for an *ordered*-count finite-group census; the two `mg-census-*.json` manifests record the *unordered* count, a different predicate, and are deliberately not accepted by it (`SCHEMA.md`, sections 1 and 7) | `python3 run_controls.py` |
 | `provenance/` | Retained outputs of the $m(53)$ and $m(59)$ exhaustive runs and witness rechecks | `provenance/README.md` |

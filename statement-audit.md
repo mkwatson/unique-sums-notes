@@ -1,7 +1,8 @@
 # Statement audit
 
 This table is the audit surface a skeptical reader actually needs: for each
-theorem cited in `note.tex` or checked by `witness-kernel/`, the exact formal
+theorem cited in `note.tex` or checked by `witness-kernel/` or
+`encoding-general/`, the exact formal
 statement (file and line), what the cited check covers, what it does not
 cover, and where the hereditary definitions used by that statement live. A
 kernel checkmark certifies that a formal statement follows from the declared
@@ -59,6 +60,46 @@ reason.
 |---|---|---|---|---|
 | A single flipped literal in the production DIMACS bytes is caught by parsing, not silently accepted | `tampered_production117_parse_fails`, `ChainCloseTamper.lean:23` (private lab; imports the frozen target `ChainTamperStage.lean`) | For one specific one-byte tamper (byte 0 of `chunk00`, the first of the production stream's nineteen scan chunks), the tampered scan is proved to diverge from the untampered target. Checked kernel-checked-on-cloud: exit 0, 32 seconds, peak resident set size about 8.0 GiB, exactly the permitted axiom set `[propext, Classical.choice, Quot.sound]`; a fresh `WitnessKernel` build on the same host printed no axiom outside that set across every checked declaration | Tests only this one tamper position; does not generalize to a tamper at an arbitrary byte or to multi-byte tampers, and is not a general parser-soundness theorem. Not independently replayed on this note's own local machine, so not described as kernel-certified. Does not by itself close the byte-to-specification bridge in Part II, which remains open | `tamperedState01`&ndash;`tamperedState19` (the nineteen-state scan) and the eighteen-step transition/survival chain, `ChainTamperStage.lean`; built on the generic resumable-parser theory in `ScannerState.lean`, audited in Part II above |
 
+## Part IV: the general finite-group encoding layer (`encoding-general/BedertLab/`)
+
+Part II's chain is stated for the carrier $\mathbb{Z}/n\mathbb{Z}$ and for the fixed
+cyclic unique-sum-free target. The five theorems below are the same reference-encoder
+statements with both of those fixed choices removed: the carrier is any type with
+`AddCommGroup`, `Fintype` and `DecidableEq`, and the target is any
+`predicate : Finset G → Prop` with `DecidablePred predicate`. Like Part II, they back
+`README.md`'s Layout table rather than any claim in `note.tex`.
+
+Three limits apply to every row and are not repeated in each one. The encoder is the
+exponential reference encoder only, with one blocking clause per falsifying subset and no
+auxiliary variables; it is not the production encoder any search runs. The argument that
+this predicate interface lines up with the ordered representation count used elsewhere in
+this repository is single-arm prose with no Lean statement, so it is not kernel-certified.
+And the production serialization bridge is untouched: the round-trip control uses the
+generalized raw reference fixture serializer, not production bytes, so the
+bytes-to-specification obligation in Part II is exactly as open as before.
+
+| Claim | Formal statement | What the check covers | What it does not cover | Hereditary definitions |
+|---|---|---|---|---|
+| A full blocking clause is falsified by exactly one membership pattern, over any finite Abelian group | `eval_blockingClause_false_iff`, `encoding-general/BedertLab/EncodeGen.lean:57` | For every such group, every assignment and every subset: the clause has no satisfied literal exactly when the assignment decodes to that subset | Says nothing about any encoder built from these clauses; that is the next row | `Literal`, `Clause`, `evalLiteral`, `decode`, `blockingClause`, `EncodeGen.lean:17,23,27,41,46` |
+| The generalized reference encoder is pointwise faithful to the caller's predicate | `satisfies_encode_iff`, `encoding-general/BedertLab/EncodeGen.lean:95` | For every finite Abelian group and every decidable subset predicate: an assignment satisfies the encoded CNF exactly when its decoded subset satisfies the predicate | Does not address any compact or production encoding, which is differently structured, and does not by itself give a satisfiability statement | `Satisfies`, `decode`, `encode`, `EncodeGen.lean:31,41,51` |
+| The generalized reference encoding is equisatisfiable with the caller's predicate | `exists_model_iff_exists_predicate`, `encoding-general/BedertLab/EncodeGen.lean:120` | For every finite Abelian group and every decidable subset predicate: the CNF has a Boolean model exactly when some finite subset satisfies the predicate | Gives no bound on CNF size, which is exponential by construction, and supplies no solver-side or certificate-side guarantee | `Satisfies`, `encode`, `EncodeGen.lean:31,51` |
+| The generalized witness checker accepts exactly the valid witnesses | `checkWitness_eq_true_iff`, `encoding-general/BedertLab/EncodeGenWitness.lean:19` | Acceptance is exact for every finite Abelian group, every decidable subset predicate and every candidate subset | Establishes that a supplied witness satisfies the predicate; no minimality, lower-bound or exhaustiveness claim follows | `checkWitness`, `EncodeGenWitness.lean:14` |
+| Rejection by the generalized witness checker is exact | `checkWitness_eq_false_iff`, `encoding-general/BedertLab/EncodeGenWitness.lean:26` | Rejection is exact at the same generality, so a refused subset provably fails the predicate rather than merely failing to be recognized | Does not certify that the predicate a caller supplies is the property they meant; that correspondence is the reader's, as everywhere in this table | `checkWitness`, `EncodeGenWitness.lean:14` |
+
+The controls in `encoding-general/BedertLab/EncodeGenControls.lean` are what makes the
+five rows above evidence about the generalization rather than about the case it came
+from: they run on the noncyclic group $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$
+(`KleinFour`, line 147) against the unrelated predicate `anchoredPair` (line 156), not on
+a cyclic group and not on unique-sum-freeness. `witness_positive_control` (line 180) is
+the positive control, `klein_dimacs_round_trip_control` (line 256) proves the exact
+serialize-parse-to-CNF route returns the intended CNF, and five mutations are proved to
+fire: `cardinality_mutation_fires` (186), `omitted_blocking_clause_mutation_fires` (193),
+`polarity_mutation_fires` (203), `dimacs_literal_mutation_fires` (263) and
+`dimacs_header_mutation_fires` (271). All are kernel-certified at the tier `README.md`
+defines, with axiom prints within `[propext, Classical.choice, Quot.sound]`;
+`encoding-general/README.md` lists the exact expected lines and the command that emits
+them. Unlike the 13 modules of Part II, these have not been replayed by `lean4checker`.
+
 ## What each claim changes
 
 The tables above say what a claim is and what its check covers. This list says
@@ -78,6 +119,7 @@ that was not previously available).
 | Double-cyclic localization evidence and the $C_2\times C_{11}$ counterexample | scope repair | The counterexample closes the full-double-lift route to the double-cyclic conjecture; the localization data is a witness only and proves nothing beyond the primes searched |
 | One-log improvement | theory change, since superseded | It removed one logarithm from the published dissociation bound; its asymptotic role in bounding $m(p)$ is now superseded by Cao and Yuan and by the Palomar entry, while its own statement and tier stand |
 | The SAT-encoding chain of Part II | reusable mechanism | It names, in machine-checkable form, exactly where the encoder-to-DIMACS trust boundary sits, so a reader auditing a solver-backed claim can start from the boundary rather than from the whole pipeline |
+| The general finite-group encoding layer of Part IV | reusable mechanism | The reference-encoder correctness and witness-checking statements stop being about $\mathbb{Z}/p\mathbb{Z}$ and unique-sum-freeness, so someone encoding a different subset property over a different finite Abelian group can reuse the proofs instead of rewriting them; the trust boundary itself is unmoved |
 | The parse-level byte-tamper theorem of Part III | reusable mechanism | It converts one instance of "the bytes were not silently corrupted" from an assumption into a checked statement, at one tamper position; the boundary itself stays open |
 
 ## What this table is not
@@ -87,4 +129,6 @@ substitute for reading the referenced files, and it does not certify that
 these are the only trust boundaries in the packet. Toolchain pin, axiom
 prints, and the independent kernel re-check for these 13 modules are in
 `witness-kernel/README.md`. Part III's theorem is checked separately, at the
-tier stated there, and is not part of that 13-module recheck.
+tier stated there, and is not part of that 13-module recheck. Part IV's
+package pins the same toolchain and prints its own axiom lines, listed in
+`encoding-general/README.md`, and is likewise outside the 13-module recheck.
