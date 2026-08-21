@@ -33,7 +33,20 @@ three-line argument forcing $3x = 0$; the algebraic cores are kernel-certified
 in `Dcyc.lean`.
 A census of all 88 Abelian groups of order at most 52, plus 26 stress groups
 through order 221, matches the natural minimum-over-prime-divisors formula,
-with a retained DRAT proof for each of the 114 lower bounds.
+with a retained DRAT proof for each of the 114 lower bounds. An extension run
+on 2026-08-21 certified 36 further groups, spread over orders 54 to 72 and
+listed in [`mg-census-extension-2026-08-21.json`](mg-census-extension-2026-08-21.json).
+All 36 match the same formula and none contradicts it, and each of the 36
+lower bounds has a retained DRAT proof, replayed by `drat-trim` and again by
+the verified checker `cake_lpr`. Fifteen of the 36 appear here for the first
+time; the other 21 were already among the 26 stress groups, and the rerun
+reproduced their CNF and DRAT hashes byte for byte. The extension does not
+extend contiguity. The contiguous certified census still stops at order 52 and
+$C_{53}$ is still the first gap. The eight bare prime orders from 61 to 97
+were excluded from the run by design; of the other groups of orders 53 to 100,
+one exceeded the checker's replay limit, one was cut off by the run's own time
+cap, and the remaining 48 were never attempted. All 58 are listed in the same
+file with no certification tier.
 
 On the asymptotic side the note proves a one-log sharpening of the paper's
 dissociation bound. Within weeks, two stronger results appeared: a
@@ -52,7 +65,11 @@ Every claim is labeled. The vocabulary, strongest first:
 
 - **kernel-certified**: the exact statement is proved in Lean 4; zero sorries,
   no new axioms, and `#print axioms` shows at most
-  `[propext, Classical.choice, Quot.sound]`.
+  `[propext, Classical.choice, Quot.sound]`. Every such statement here is
+  checked by one Lean toolchain, pinned in `witness-kernel/lean-toolchain` and
+  re-checked by `lean4checker`. No second, independently implemented proof
+  assistant cross-verifies any of them, so the trust basis is one
+  implementation, not multi-verifier consensus.
 - **kernel-checked-on-cloud**: the same zero-sorries, no-new-axioms, permitted-
   axiom-set discipline as kernel-certified, but checked so far only on a
   documented cloud host, not yet independently replayed on this note's own
@@ -108,13 +125,14 @@ definitions live, so a claim can be audited without reading the proof body.
 | `witness-kernel/` | Encoder specification and the certified parts of the encoding chain, with named trust boundaries | `lake update && lake build BedertLab.EncodeSpec` |
 | `encoding-tests/` | The pinned production encoder, a differential oracle test at $p \le 13$, and a 34-mutant harness | `python3 mutation_harness.py` |
 | `pruning-handshake/` | Replayable soundness evidence for symmetry pruning, with negative controls | `python3 pruning_handshake_replay.py HANDSHAKE-p11-k7-v2.jsonl` |
-| `census-schema/` | Row format and validator for the finite-group census | `python3 run_controls.py` |
+| `census-schema/` | Row format and validator for an *ordered*-count finite-group census; the two `mg-census-*.json` manifests record the *unordered* count, a different predicate, and are deliberately not accepted by it (`SCHEMA.md`, sections 1 and 7) | `python3 run_controls.py` |
 | `provenance/` | Retained outputs of the $m(53)$ and $m(59)$ exhaustive runs and witness rechecks | `provenance/README.md` |
 | `repro/` | One deterministic command that reruns the computational claims, with a deliberately failing control that must fire | `./repro/run.sh` |
 | `mg-census-through-52.json` | Census manifest: CNF and DRAT SHA-256 hashes for all 114 groups | hashes within |
+| `mg-census-extension-2026-08-21.json` | 36 further certified groups in orders 54 to 72, with CNF, DRAT, and LRAT hashes, and the unresolved groups of orders 53 to 100 listed with no tier | hashes within |
 
 The census DRAT proofs themselves are retained locally and are not
-distributed; the manifest records their hashes. Python bytecode caches
+distributed; the manifests record their hashes. Python bytecode caches
 (`__pycache__/`, `*.pyc`), produced by running the scripts above locally, are
 excluded from the staged tree; none should appear in a push from this
 repository.

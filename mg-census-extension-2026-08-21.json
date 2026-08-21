@@ -1,0 +1,2557 @@
+{
+ "checkers": [
+  "drat-trim",
+  "cake_lpr"
+ ],
+ "complete": false,
+ "contiguous": false,
+ "convention": "unordered pairs with repetition; swapping the two entries is not a second representation",
+ "coverage": {
+  "contiguity_unchanged_by_this_run": true,
+  "contiguous_through_order": 52,
+  "excluded_bare_primes": [
+   "C61",
+   "C67",
+   "C71",
+   "C73",
+   "C79",
+   "C83",
+   "C89",
+   "C97"
+  ],
+  "first_gap": "C53",
+  "mismatches_against_formula": 0,
+  "note": "These rows are additional certified points above the contiguous census, not an extension of contiguity. Orders 53 and 73 through 100 are not covered, and every row listed under \"unresolved\" carries no certification tier.",
+  "orders_in_scope": [
+   53,
+   100
+  ],
+  "orders_with_certified_rows": [
+   54,
+   55,
+   56,
+   57,
+   58,
+   60,
+   63,
+   64,
+   65,
+   66,
+   68,
+   69,
+   70,
+   72
+  ]
+ },
+ "extends": "mg-census-through-52.json",
+ "group_count": 36,
+ "results": [
+  {
+   "first_published_here": false,
+   "group": "C54",
+   "lower": {
+    "cnf": "mg-work/C54/lower-2.cnf",
+    "cnf_sha256": "fb9b1e69bd2d32ece60c9a36a5b7dc43f8d7656238c34bda4f4e22f0c18e8a89",
+    "elapsed_seconds": 0.004094511999937822,
+    "proof": "mg-work/C54/lower-2.drat",
+    "proof_sha256": "711960933145ee2a82556486d3c2ed6344b4fb9be3c2d5444003748155a1b780",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    54
+   ],
+   "order": 54,
+   "retained": {
+    "archive_bytes": 52201,
+    "archive_sha256": "02d3c1eaa3af4225b9bf0c372eaa69849c359825a8655d730a5e02fcf4622ba1",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "fb9b1e69bd2d32ece60c9a36a5b7dc43f8d7656238c34bda4f4e22f0c18e8a89",
+    "drat_sha256": "711960933145ee2a82556486d3c2ed6344b4fb9be3c2d5444003748155a1b780",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "73689c5c315b01b5ceb7cd0189f51febaf8c56bdbca9d75dd510ddf5bf2d581f"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C54/upper-3.cnf",
+    "cnf_sha256": "f614b6c2da73ff2489c93ede22b71016ca7ec7ee3e4f977efdbf921f322f2985",
+    "elapsed_seconds": 0.03322188899983303,
+    "status": "SAT",
+    "witness": [
+     0,
+     18,
+     36
+    ]
+   },
+   "witness": [
+    0,
+    18,
+    36
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C3xC18",
+   "lower": {
+    "cnf": "mg-work/C3xC18/lower-2.cnf",
+    "cnf_sha256": "7bf26a2d7f0955369ce6c591c8be0d99e530e864dd17373e2f9419df4c972af8",
+    "elapsed_seconds": 0.004079511999862007,
+    "proof": "mg-work/C3xC18/lower-2.drat",
+    "proof_sha256": "4c859727466881e16fb5b19e7d14e7d23b52ab83973210c558c2d31966e5e0ea",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    3,
+    18
+   ],
+   "order": 54,
+   "retained": {
+    "archive_bytes": 52500,
+    "archive_sha256": "0cd02e213ca1afe4487057b478719935d02cccdebc01e50b6320aec42b7b4b0e",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "7bf26a2d7f0955369ce6c591c8be0d99e530e864dd17373e2f9419df4c972af8",
+    "drat_sha256": "4c859727466881e16fb5b19e7d14e7d23b52ab83973210c558c2d31966e5e0ea",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "fb8f8330a3e40ce7aec70d9df94274f3efc48a6747c6a2d34cc29e8fb2b658e4"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C3xC18/upper-3.cnf",
+    "cnf_sha256": "93beafebc80d6ebb04322cc9ddb30f3f10dd6ad1594bf2d1fff0761bc5287534",
+    "elapsed_seconds": 0.0036428200000955258,
+    "status": "SAT",
+    "witness": [
+     0,
+     30,
+     42
+    ]
+   },
+   "witness": [
+    0,
+    30,
+    42
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C3xC3xC6",
+   "lower": {
+    "cnf": "mg-work/C3xC3xC6/lower-2.cnf",
+    "cnf_sha256": "7d7039c88de727f6e4b6dac71ea6be155cd68e65e57487d129166e1bd147c956",
+    "elapsed_seconds": 0.004160160000083124,
+    "proof": "mg-work/C3xC3xC6/lower-2.drat",
+    "proof_sha256": "8328e397fa5cca5bbacba18a9fc05006cf1d5545e20f1539548a46adb4dda80f",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    3,
+    3,
+    6
+   ],
+   "order": 54,
+   "retained": {
+    "archive_bytes": 52480,
+    "archive_sha256": "01716cc407d528232a9a643e5d86562b02aa14339ec4399ef3917e6d928323d6",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "7d7039c88de727f6e4b6dac71ea6be155cd68e65e57487d129166e1bd147c956",
+    "drat_sha256": "8328e397fa5cca5bbacba18a9fc05006cf1d5545e20f1539548a46adb4dda80f",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "e5c676d0ce35749dd91daa1814b17ba71cffa153d20a78536c594e4ed1da7b1e"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C3xC3xC6/upper-3.cnf",
+    "cnf_sha256": "066566f252be702f4209aad1fa555966d42adf31fc648ee51bece4efb746c3d6",
+    "elapsed_seconds": 0.003642009000031976,
+    "status": "SAT",
+    "witness": [
+     0,
+     34,
+     44
+    ]
+   },
+   "witness": [
+    0,
+    34,
+    44
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C55",
+   "lower": {
+    "cnf": "mg-work/C55/lower-3.cnf",
+    "cnf_sha256": "304c33283fb8f589eab16f7ddbf8a982ff6906f876bcdf9b142a5505c44eaafe",
+    "elapsed_seconds": 0.03338152799960881,
+    "proof": "mg-work/C55/lower-3.drat",
+    "proof_sha256": "b75667bcdfe8a69733e710420833d22310fe11dc7efef4ffac7f3f44af694fd9",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    55
+   ],
+   "order": 55,
+   "retained": {
+    "archive_bytes": 85067,
+    "archive_sha256": "6d54fd9fcff2725ed9c5c336b9cffb6f3fbb37485442718cb1bf23bb472b77fb",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "304c33283fb8f589eab16f7ddbf8a982ff6906f876bcdf9b142a5505c44eaafe",
+    "drat_sha256": "b75667bcdfe8a69733e710420833d22310fe11dc7efef4ffac7f3f44af694fd9",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "0ed6e2764e58eb1587393bf59d14c08281b55e207f7c4bdd0d5512de3fc48147"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C55/upper-4.cnf",
+    "cnf_sha256": "86d8217d3c2475a82fc4a491d8d165089e5c95fdc43a41191de8ee450ac43c13",
+    "elapsed_seconds": 0.032223028000316845,
+    "status": "SAT",
+    "witness": [
+     0,
+     11,
+     22,
+     33
+    ]
+   },
+   "witness": [
+    0,
+    11,
+    22,
+    33
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C56",
+   "lower": {
+    "cnf": "mg-work/C56/lower-3.cnf",
+    "cnf_sha256": "f328b3ec81634ad1c9d1045e9dadce2ae4309b96d1ff5c2af075dd394fc01a4a",
+    "elapsed_seconds": 0.034959709999839106,
+    "proof": "mg-work/C56/lower-3.drat",
+    "proof_sha256": "ce79e27773df9e35bed82e94e0d8473f37781efd803915b838b004b16a672e11",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    56
+   ],
+   "order": 56,
+   "retained": {
+    "archive_bytes": 93751,
+    "archive_sha256": "f807cbcd7d2295ffcc549b0a8c2dc257fd9c307feaedbe58172aa97e7f881373",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "f328b3ec81634ad1c9d1045e9dadce2ae4309b96d1ff5c2af075dd394fc01a4a",
+    "drat_sha256": "ce79e27773df9e35bed82e94e0d8473f37781efd803915b838b004b16a672e11",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "e9430d5aae413a10d40157faa587c86462720d70dd8ac2de1c43347accb1dc03"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C56/upper-4.cnf",
+    "cnf_sha256": "ce790877b8faf11e6f08f73a34d6d74ac63cfe2f5b17abd3888dd08a732efd4d",
+    "elapsed_seconds": 0.036566100000072765,
+    "status": "SAT",
+    "witness": [
+     0,
+     14,
+     28,
+     42
+    ]
+   },
+   "witness": [
+    0,
+    14,
+    28,
+    42
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C2xC28",
+   "lower": {
+    "cnf": "mg-work/C2xC28/lower-3.cnf",
+    "cnf_sha256": "49c9d9c02ceca7e634a756a677491289ebb5d429562a84d39171b4b87ca7c822",
+    "elapsed_seconds": 0.0372729740001887,
+    "proof": "mg-work/C2xC28/lower-3.drat",
+    "proof_sha256": "ff81dc490cbdedea9d981b624a6be0745f5c004a3a0d3a28f5e3c69384d116cc",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    2,
+    28
+   ],
+   "order": 56,
+   "retained": {
+    "archive_bytes": 108983,
+    "archive_sha256": "6ba3a53eb4ea6dfce9b29dd68cc2ba5ec9358333a102749b7c4249d928d4ec32",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "49c9d9c02ceca7e634a756a677491289ebb5d429562a84d39171b4b87ca7c822",
+    "drat_sha256": "ff81dc490cbdedea9d981b624a6be0745f5c004a3a0d3a28f5e3c69384d116cc",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "88398b7f086401cf995e3d7ec346dfe893a21aca8f2606a40a093117a981c033"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC28/upper-4.cnf",
+    "cnf_sha256": "600e833e339cd7f31e8c9aced54c07fb5d382a14e8c82f076a5b5f7b51cbf133",
+    "elapsed_seconds": 0.03483818599988808,
+    "status": "SAT",
+    "witness": [
+     0,
+     7,
+     14,
+     21
+    ]
+   },
+   "witness": [
+    0,
+    7,
+    14,
+    21
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C2xC2xC14",
+   "lower": {
+    "cnf": "mg-work/C2xC2xC14/lower-3.cnf",
+    "cnf_sha256": "7b34125b11248a34bc6e13051581b388863730f649761240ea23e8ac22793c9e",
+    "elapsed_seconds": 0.0410499129998243,
+    "proof": "mg-work/C2xC2xC14/lower-3.drat",
+    "proof_sha256": "f6d5820719c0575e1e3f5fe908487464033213135377152d462aa94b817561cb",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    2,
+    2,
+    14
+   ],
+   "order": 56,
+   "retained": {
+    "archive_bytes": 111490,
+    "archive_sha256": "ffa1da1756577514126b44197f872d6b5bd9833b178645be9f02d15393b74a09",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "7b34125b11248a34bc6e13051581b388863730f649761240ea23e8ac22793c9e",
+    "drat_sha256": "f6d5820719c0575e1e3f5fe908487464033213135377152d462aa94b817561cb",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "a81ad02a5a5f1bc4047d7fd349e14ca9b101c5cf481aff5b92b71188561ab30d"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC2xC14/upper-4.cnf",
+    "cnf_sha256": "b6f62460aa4a0ecd7f3229057b3f4cfe6d052d539495a3635d8eb7b0aae7602f",
+    "elapsed_seconds": 0.03599084600000424,
+    "status": "SAT",
+    "witness": [
+     0,
+     7,
+     14,
+     21
+    ]
+   },
+   "witness": [
+    0,
+    7,
+    14,
+    21
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C57",
+   "lower": {
+    "cnf": "mg-work/C57/lower-2.cnf",
+    "cnf_sha256": "ff833b871d15fa9e77a8e4c5aa4f791534ef7bcb66bd33abf4737dc3696e27ff",
+    "elapsed_seconds": 0.004306963000090036,
+    "proof": "mg-work/C57/lower-2.drat",
+    "proof_sha256": "fc12a8cf138e3d62cd477299eebaa7c831e9e0508fc0a2dd0b597ab29ded14b9",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    57
+   ],
+   "order": 57,
+   "retained": {
+    "archive_bytes": 56048,
+    "archive_sha256": "7bced8e14a03288157b70f511d84635dc0126074b159ee9d19df7c637e3ce0fc",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "ff833b871d15fa9e77a8e4c5aa4f791534ef7bcb66bd33abf4737dc3696e27ff",
+    "drat_sha256": "fc12a8cf138e3d62cd477299eebaa7c831e9e0508fc0a2dd0b597ab29ded14b9",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "563987fd04fc03d05a24a3f37830193c9c01830eb9f829a5d064a41a76ab9091"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C57/upper-3.cnf",
+    "cnf_sha256": "7203e95360f757db4dd7fd8bfd5feefc341c816d66e5f369652aad7f175e4ce7",
+    "elapsed_seconds": 0.032798147999983485,
+    "status": "SAT",
+    "witness": [
+     0,
+     19,
+     38
+    ]
+   },
+   "witness": [
+    0,
+    19,
+    38
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C58",
+   "lower": {
+    "cnf": "mg-work/C58/lower-10.cnf",
+    "cnf_sha256": "cc8f8eafab51c786af82e614f5f590bbc31f2559387512f1429216570db7a3d3",
+    "elapsed_seconds": 1322.6470366580002,
+    "proof": "mg-work/C58/lower-10.drat",
+    "proof_sha256": "7d9e307a1a6e678f9997bc87aaa006ff979ac8f8cbec0d8b7457de42eaa4e67f",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 10,
+   "m": 11,
+   "moduli": [
+    58
+   ],
+   "order": 58,
+   "retained": {
+    "archive_bytes": 4547680922,
+    "archive_sha256": "3b2c6f62420a7dbb6b85279a6a03b4c8dcd871f6a019ebe24dbbf42bbefd233c",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "cc8f8eafab51c786af82e614f5f590bbc31f2559387512f1429216570db7a3d3",
+    "drat_sha256": "7d9e307a1a6e678f9997bc87aaa006ff979ac8f8cbec0d8b7457de42eaa4e67f",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "01d101fb2e1ab13ce17400002652ef8ed595dff55a34d24cba039e649617f43f"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C58/upper-11.cnf",
+    "cnf_sha256": "fc8ad428128576f7e98eb3e2c78f06668e7b40bbff6a6d40dffe2ef254b48e4d",
+    "elapsed_seconds": 0.16129146399998717,
+    "status": "SAT",
+    "witness": [
+     0,
+     2,
+     4,
+     6,
+     10,
+     16,
+     18,
+     26,
+     44,
+     46,
+     56
+    ]
+   },
+   "witness": [
+    0,
+    2,
+    4,
+    6,
+    10,
+    16,
+    18,
+    26,
+    44,
+    46,
+    56
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C60",
+   "lower": {
+    "cnf": "mg-work/C60/lower-2.cnf",
+    "cnf_sha256": "c3e68dd26118e7b3565a08261919c844b47d8f9d2de9875074458fdbc2999b40",
+    "elapsed_seconds": 0.004860039000050165,
+    "proof": "mg-work/C60/lower-2.drat",
+    "proof_sha256": "e4983c5287a859533dcf16a663a75eabbb8e7c0d5efdebab9c1cc76dd0ec0531",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    60
+   ],
+   "order": 60,
+   "retained": {
+    "archive_bytes": 66112,
+    "archive_sha256": "a2ff131bfd2d69f54a3a0c3f6ab0244912398a0588bebb9a462c5e92f82e1c38",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "c3e68dd26118e7b3565a08261919c844b47d8f9d2de9875074458fdbc2999b40",
+    "drat_sha256": "e4983c5287a859533dcf16a663a75eabbb8e7c0d5efdebab9c1cc76dd0ec0531",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "f591359e87f5b3bfad8d36f47eb362e60ae58329fb00f1282daf4507246a71e9"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C60/upper-3.cnf",
+    "cnf_sha256": "9482c2df3af62e3f52704fbf09414b024f8823260db468346ec3c6d498608735",
+    "elapsed_seconds": 0.03457774500020605,
+    "status": "SAT",
+    "witness": [
+     0,
+     20,
+     40
+    ]
+   },
+   "witness": [
+    0,
+    20,
+    40
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C2xC30",
+   "lower": {
+    "cnf": "mg-work/C2xC30/lower-2.cnf",
+    "cnf_sha256": "e20989db4a078a250176ea28b0018f8e4c227864df8f36e17e3a14749545e663",
+    "elapsed_seconds": 0.004972459999407874,
+    "proof": "mg-work/C2xC30/lower-2.drat",
+    "proof_sha256": "c76553629c265074b55f420fd2c48a6477a0417d6aca37bde81c176ad5a233a1",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    2,
+    30
+   ],
+   "order": 60,
+   "retained": {
+    "archive_bytes": 64962,
+    "archive_sha256": "0e841376e5c0d4d75c230ca5d828b1eeaaa1642eac87a470f3db151f415163b5",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "e20989db4a078a250176ea28b0018f8e4c227864df8f36e17e3a14749545e663",
+    "drat_sha256": "c76553629c265074b55f420fd2c48a6477a0417d6aca37bde81c176ad5a233a1",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "10560d37ba7a40901f8d62b8a1058bf26cf2eb125ab80c820367763dd5e066fb"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC30/upper-3.cnf",
+    "cnf_sha256": "61b453318dbb9690ef385d8daaffeddaa1db1d0e4cee3b57684baa67f0202fcc",
+    "elapsed_seconds": 0.03488831399954506,
+    "status": "SAT",
+    "witness": [
+     0,
+     10,
+     20
+    ]
+   },
+   "witness": [
+    0,
+    10,
+    20
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C63",
+   "lower": {
+    "cnf": "mg-work/C63/lower-2.cnf",
+    "cnf_sha256": "e47147a1bc275ece887234cb14a9149b9bb1005152d0b5038c4cc4a962d3ad14",
+    "elapsed_seconds": 0.005207713000345393,
+    "proof": "mg-work/C63/lower-2.drat",
+    "proof_sha256": "494a3b5847fba3fe373a1cef5baeb2e0959c99745124bdc086bfdd98d90861b6",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    63
+   ],
+   "order": 63,
+   "retained": {
+    "archive_bytes": 68882,
+    "archive_sha256": "b8fdec603d47829ad38f1c50a4b2e7ddd4477db25af30eb4d74865e62acb9dc8",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "e47147a1bc275ece887234cb14a9149b9bb1005152d0b5038c4cc4a962d3ad14",
+    "drat_sha256": "494a3b5847fba3fe373a1cef5baeb2e0959c99745124bdc086bfdd98d90861b6",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "3222703b6748e286494ed4508c128b3916e1cf7e8ce7e2e58856b037f1562edc"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C63/upper-3.cnf",
+    "cnf_sha256": "2b94950ccf71617dec57f4f2b9ccc638e2f6c51c964bcd9f53c78c318ab69348",
+    "elapsed_seconds": 0.03467883499979507,
+    "status": "SAT",
+    "witness": [
+     0,
+     21,
+     42
+    ]
+   },
+   "witness": [
+    0,
+    21,
+    42
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C3xC21",
+   "lower": {
+    "cnf": "mg-work/C3xC21/lower-2.cnf",
+    "cnf_sha256": "beabf3f97b49c5279e464e496409c165f2f97d9d0a60edbc26542149ccd5c4b6",
+    "elapsed_seconds": 0.005124514000272029,
+    "proof": "mg-work/C3xC21/lower-2.drat",
+    "proof_sha256": "6e9f5b540688adb305c5f908c9c61f7ddb0ed64fa9a00d5f7da432c96df2627d",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    3,
+    21
+   ],
+   "order": 63,
+   "retained": {
+    "archive_bytes": 70755,
+    "archive_sha256": "6077f4e1575c52412b7c93478463fd323a9037f88ff4e56a585130f8e92f2a66",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "beabf3f97b49c5279e464e496409c165f2f97d9d0a60edbc26542149ccd5c4b6",
+    "drat_sha256": "6e9f5b540688adb305c5f908c9c61f7ddb0ed64fa9a00d5f7da432c96df2627d",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "e874999a5b173c91c935e5cd53e7173767109ef9133accdec27967674390fb37"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C3xC21/upper-3.cnf",
+    "cnf_sha256": "05527e9f865060c3b557cda1c92e5b05c9b8275e5c1f671c82463fb3724b7064",
+    "elapsed_seconds": 0.004615062000084436,
+    "status": "SAT",
+    "witness": [
+     0,
+     35,
+     49
+    ]
+   },
+   "witness": [
+    0,
+    35,
+    49
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C64",
+   "lower": {
+    "cnf": "mg-work/C64/lower-3.cnf",
+    "cnf_sha256": "244eba54a28c4ca06b27439419d5246016ed167827e3ef55e6443d0709d53c3a",
+    "elapsed_seconds": 0.03964763699877949,
+    "proof": "mg-work/C64/lower-3.drat",
+    "proof_sha256": "c2b2af01c0af27b041251fa5bb5539638cd3db46b0baa41b0ac53a3911e99347",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    64
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 123743,
+    "archive_sha256": "51211ddc5e8bd3a0b15d43f86e1444553d045f4d337469eaf2b3e41e9b181312",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "244eba54a28c4ca06b27439419d5246016ed167827e3ef55e6443d0709d53c3a",
+    "drat_sha256": "c2b2af01c0af27b041251fa5bb5539638cd3db46b0baa41b0ac53a3911e99347",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "39e5454afbb987b184883538ca6441e2d4d4295c431c027615b93f93ea9213c8"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C64/upper-4.cnf",
+    "cnf_sha256": "7a504a8f00160dec4c6e7979aac191ec2d469eb5d4a0a9ff3e25b3390e67a2d8",
+    "elapsed_seconds": 0.042308959000365576,
+    "status": "SAT",
+    "witness": [
+     0,
+     16,
+     32,
+     48
+    ]
+   },
+   "witness": [
+    0,
+    16,
+    32,
+    48
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C2xC32",
+   "lower": {
+    "cnf": "mg-work/C2xC32/lower-3.cnf",
+    "cnf_sha256": "1b570753b3d09a52a37b123cd2cd97afc26273c88a03bab19e92d776b52f92a2",
+    "elapsed_seconds": 0.041391351998754544,
+    "proof": "mg-work/C2xC32/lower-3.drat",
+    "proof_sha256": "1ae658e6a6a7f510532cba741ed15ac5212c042a61ade43aa8018f9b96cfe095",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    2,
+    32
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 133706,
+    "archive_sha256": "049179d8b52a7a4599ba631ff6f587937b8d754a84a19ef31af92272c68dbce4",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "1b570753b3d09a52a37b123cd2cd97afc26273c88a03bab19e92d776b52f92a2",
+    "drat_sha256": "1ae658e6a6a7f510532cba741ed15ac5212c042a61ade43aa8018f9b96cfe095",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "bf0e1cd387f5c3c7fa7ed9ebc618fbcc80042d324ded93bb053f34f3c4d0c2e8"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC32/upper-4.cnf",
+    "cnf_sha256": "2f115a13e08b5b1d734bd800009f6e7a4dd62e15b0bfffcd849ea04c5ce3de42",
+    "elapsed_seconds": 0.03840425799899094,
+    "status": "SAT",
+    "witness": [
+     0,
+     8,
+     16,
+     24
+    ]
+   },
+   "witness": [
+    0,
+    8,
+    16,
+    24
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C4xC16",
+   "lower": {
+    "cnf": "mg-work/C4xC16/lower-3.cnf",
+    "cnf_sha256": "0fe7b541bc901d43528f73475dc2559f6698c4f493a915107d8fd5b2fe07e3f1",
+    "elapsed_seconds": 0.04194051200101967,
+    "proof": "mg-work/C4xC16/lower-3.drat",
+    "proof_sha256": "f5fb75d7c4c64017d69c41b07ab365e0f068dc288428c603a78a204765257a52",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    4,
+    16
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 138356,
+    "archive_sha256": "7549c4439a1efa965d638573cd6076fdf4c717910446d5dd6cf4721abc70131e",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "0fe7b541bc901d43528f73475dc2559f6698c4f493a915107d8fd5b2fe07e3f1",
+    "drat_sha256": "f5fb75d7c4c64017d69c41b07ab365e0f068dc288428c603a78a204765257a52",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "9850a3d944ef8d281eeedc50e8d9f0371c26e540ddf6edaa7963900bb5b2e883"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C4xC16/upper-4.cnf",
+    "cnf_sha256": "229b7e9a54476d86ed4c96440c6fc313a531d9a28375bb1368e13967cd77fa76",
+    "elapsed_seconds": 0.037012886999946204,
+    "status": "SAT",
+    "witness": [
+     0,
+     4,
+     8,
+     12
+    ]
+   },
+   "witness": [
+    0,
+    4,
+    8,
+    12
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C8xC8",
+   "lower": {
+    "cnf": "mg-work/C8xC8/lower-3.cnf",
+    "cnf_sha256": "958431623e95e2985e47ee587a05f6fc8336fd94f98d6a50a72808f9ab36d1ac",
+    "elapsed_seconds": 0.0427736889996595,
+    "proof": "mg-work/C8xC8/lower-3.drat",
+    "proof_sha256": "78bbebf17d5477dfdf5920d0532a3219f141b33ee5cc2e0db79b0df33a1bc72c",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    8,
+    8
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 142429,
+    "archive_sha256": "5e5878d199d914511d40f73cc24fff2655545a64c7cc8f366bbf894d75edfa29",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "958431623e95e2985e47ee587a05f6fc8336fd94f98d6a50a72808f9ab36d1ac",
+    "drat_sha256": "78bbebf17d5477dfdf5920d0532a3219f141b33ee5cc2e0db79b0df33a1bc72c",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "bcd1ab37ea2a8fe82dbae82ed694060e977a7902733681b42a5c0b337ca314ee"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C8xC8/upper-4.cnf",
+    "cnf_sha256": "83784f5955aa10ef22bff577b46ec1486ee52822c37cb0fef5fbdee9e5105352",
+    "elapsed_seconds": 0.036625171998821315,
+    "status": "SAT",
+    "witness": [
+     0,
+     2,
+     4,
+     6
+    ]
+   },
+   "witness": [
+    0,
+    2,
+    4,
+    6
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C2xC2xC16",
+   "lower": {
+    "cnf": "mg-work/C2xC2xC16/lower-3.cnf",
+    "cnf_sha256": "9b8181f9ed2d1bf86e4c2ce90b2cf2a6fbcf0d4ddbf46f8b463ff96f54bad334",
+    "elapsed_seconds": 0.048369157999331946,
+    "proof": "mg-work/C2xC2xC16/lower-3.drat",
+    "proof_sha256": "6a072b9bcb3942d242e28316d17e9eeaec7c44a6646127aee87ecc38ef7c0cd5",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    2,
+    2,
+    16
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 147431,
+    "archive_sha256": "a8a99e236d751684721cf2381dab89fa98b19148a4411475094478e9eb17d103",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "9b8181f9ed2d1bf86e4c2ce90b2cf2a6fbcf0d4ddbf46f8b463ff96f54bad334",
+    "drat_sha256": "6a072b9bcb3942d242e28316d17e9eeaec7c44a6646127aee87ecc38ef7c0cd5",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "bec8c2f24a8e869214dc266bcd7c16160e0388752ac57b01b8754c089e3dec8f"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC2xC16/upper-4.cnf",
+    "cnf_sha256": "55982423a762cca680381710a542d3c71d7de84e45fc6d5cee918af4352340a7",
+    "elapsed_seconds": 0.03740914999980305,
+    "status": "SAT",
+    "witness": [
+     0,
+     4,
+     8,
+     12
+    ]
+   },
+   "witness": [
+    0,
+    4,
+    8,
+    12
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C2xC4xC8",
+   "lower": {
+    "cnf": "mg-work/C2xC4xC8/lower-3.cnf",
+    "cnf_sha256": "8490cf4e4d7ee4d08e36e09bb95a6f1083714ea16ef12494124383a1423ddb59",
+    "elapsed_seconds": 0.04776352599947131,
+    "proof": "mg-work/C2xC4xC8/lower-3.drat",
+    "proof_sha256": "d98799b5ba1639be70d2facab8038114642e4526000605e0f1beea796051343b",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    2,
+    4,
+    8
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 154549,
+    "archive_sha256": "14fdcd61e2a0a0cddb2d508aa0f81e10f582d0af58cee0e874c636e479bca69d",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "8490cf4e4d7ee4d08e36e09bb95a6f1083714ea16ef12494124383a1423ddb59",
+    "drat_sha256": "d98799b5ba1639be70d2facab8038114642e4526000605e0f1beea796051343b",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "4765af24fe131b6293423efba87c5028e6fd525166616d0377635904fdcebc11"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC4xC8/upper-4.cnf",
+    "cnf_sha256": "2cf0011800d9de9209446b63cf8c0321a0fb04e9a4661095875435ae06dc122e",
+    "elapsed_seconds": 0.03739645399946312,
+    "status": "SAT",
+    "witness": [
+     0,
+     2,
+     4,
+     6
+    ]
+   },
+   "witness": [
+    0,
+    2,
+    4,
+    6
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C4xC4xC4",
+   "lower": {
+    "cnf": "mg-work/C4xC4xC4/lower-3.cnf",
+    "cnf_sha256": "042d283b5048607723adb6ac7a5cc300ad54df8f61ba53a33febf0d534b25c64",
+    "elapsed_seconds": 0.04560264399879088,
+    "proof": "mg-work/C4xC4xC4/lower-3.drat",
+    "proof_sha256": "4fd4498ecc479389dc7e8dbba2faaa67e74307a23d0f11690486bef3e1d555ca",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    4,
+    4,
+    4
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 143049,
+    "archive_sha256": "c26d6d702580d96233302340956213d842695b69bb6695755a9034825727b4bf",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "042d283b5048607723adb6ac7a5cc300ad54df8f61ba53a33febf0d534b25c64",
+    "drat_sha256": "4fd4498ecc479389dc7e8dbba2faaa67e74307a23d0f11690486bef3e1d555ca",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "ac84ae67371d767a6a82a0ad17a71dcc4d2f16b74bc09232f496a3e0b8d3f88b"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C4xC4xC4/upper-4.cnf",
+    "cnf_sha256": "d1525e863449944ad11b556f28690f5a1ddb888090ea53951afb28f290fcf73f",
+    "elapsed_seconds": 0.004669309999371762,
+    "status": "SAT",
+    "witness": [
+     0,
+     31,
+     42,
+     53
+    ]
+   },
+   "witness": [
+    0,
+    31,
+    42,
+    53
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C2xC2xC2xC8",
+   "lower": {
+    "cnf": "mg-work/C2xC2xC2xC8/lower-3.cnf",
+    "cnf_sha256": "a581184cca470351f6fef21dd2fb65bef6298faf77f64789956a71ab67b29f75",
+    "elapsed_seconds": 0.04579862900027365,
+    "proof": "mg-work/C2xC2xC2xC8/lower-3.drat",
+    "proof_sha256": "c03b3baec61ee9842fae81c88fb172b1dc71243d3d04fb44a50f35478c7dd613",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    2,
+    2,
+    2,
+    8
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 151762,
+    "archive_sha256": "11e2315ae4f8bed43920d70e89628afe131228aa611b88a5c0757a3623a8ac2e",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "a581184cca470351f6fef21dd2fb65bef6298faf77f64789956a71ab67b29f75",
+    "drat_sha256": "c03b3baec61ee9842fae81c88fb172b1dc71243d3d04fb44a50f35478c7dd613",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "0f50524005c8e69f7d0d626cf67a811dc5cc9c85eaa5112451661f297bd9625a"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC2xC2xC8/upper-4.cnf",
+    "cnf_sha256": "4fd555b4308745524288c957ce1a1d75931c5b0de306999643db93bb359dd275",
+    "elapsed_seconds": 0.0376635519987758,
+    "status": "SAT",
+    "witness": [
+     0,
+     2,
+     4,
+     6
+    ]
+   },
+   "witness": [
+    0,
+    2,
+    4,
+    6
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C2xC2xC4xC4",
+   "lower": {
+    "cnf": "mg-work/C2xC2xC4xC4/lower-3.cnf",
+    "cnf_sha256": "5f36590c3d06f4d094ed31b3dc58c01def8ac757ac93d6c3e98599f3752579c6",
+    "elapsed_seconds": 0.04706519300088985,
+    "proof": "mg-work/C2xC2xC4xC4/lower-3.drat",
+    "proof_sha256": "06ab9c3a4ee4fb23fce8c7eef62fbf3b4729a2e009ae8dfa49cc79c8d3e7cb7a",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    2,
+    2,
+    4,
+    4
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 147513,
+    "archive_sha256": "3943c43499a3b3e3686289cf6c27f26ad243710f54c092de9e7ddef95aeeee8e",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "5f36590c3d06f4d094ed31b3dc58c01def8ac757ac93d6c3e98599f3752579c6",
+    "drat_sha256": "06ab9c3a4ee4fb23fce8c7eef62fbf3b4729a2e009ae8dfa49cc79c8d3e7cb7a",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "ce8c08a697fbf51645715c69af2af7463818f8ed29b2bb56c160b0dc08eef0f6"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC2xC4xC4/upper-4.cnf",
+    "cnf_sha256": "76dbca18c2ff684309a60c78f48205a4f5874baa76b26314208aab9b72417dad",
+    "elapsed_seconds": 0.00478283199845464,
+    "status": "SAT",
+    "witness": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   "witness": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C2xC2xC2xC2xC4",
+   "lower": {
+    "cnf": "mg-work/C2xC2xC2xC2xC4/lower-3.cnf",
+    "cnf_sha256": "9c1edbdbd6dd10fb52fc3425911427ea8c3a51a5e6ba3a5402ad306025fcd601",
+    "elapsed_seconds": 0.04382634600005986,
+    "proof": "mg-work/C2xC2xC2xC2xC4/lower-3.drat",
+    "proof_sha256": "828609a71e595265cb353f4ba6869f47eea99a334a9bcbd1140a9acb4c0e4d39",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    2,
+    2,
+    2,
+    2,
+    4
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 135113,
+    "archive_sha256": "a272122700e7772588d0e107d2820192851a542b21e9268ec3532b048d965dd8",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "9c1edbdbd6dd10fb52fc3425911427ea8c3a51a5e6ba3a5402ad306025fcd601",
+    "drat_sha256": "828609a71e595265cb353f4ba6869f47eea99a334a9bcbd1140a9acb4c0e4d39",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "6caef29433215a7f2a438fc261ff63f90afce1ca364ac894929b48db55681aae"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC2xC2xC2xC4/upper-4.cnf",
+    "cnf_sha256": "48074dcacfcaf325a7f9277acba02541a3eb1b02e494c8f4eb31685b95358a7e",
+    "elapsed_seconds": 0.00477327100088587,
+    "status": "SAT",
+    "witness": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   "witness": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "first_published_here": false,
+   "group": "C2xC2xC2xC2xC2xC2",
+   "lower": {
+    "cnf": "mg-work/C2xC2xC2xC2xC2xC2/lower-3.cnf",
+    "cnf_sha256": "01097194ed97dbc410633a1b971c36010e32a595984e725ccd6233147136039a",
+    "elapsed_seconds": 0.04097172500041779,
+    "proof": "mg-work/C2xC2xC2xC2xC2xC2/lower-3.drat",
+    "proof_sha256": "337f4b6a36d4641d249e0a4b9e6173216cee4a5ecb230d1dc6c02eb42e80f7f4",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "order": 64,
+   "retained": {
+    "archive_bytes": 120402,
+    "archive_sha256": "e7410f1b10ed38522332b4489bab7b6404245f9bff740771794ddf88ba77b7cb",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "01097194ed97dbc410633a1b971c36010e32a595984e725ccd6233147136039a",
+    "drat_sha256": "337f4b6a36d4641d249e0a4b9e6173216cee4a5ecb230d1dc6c02eb42e80f7f4",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "a78802ff373c6de42b9449e47930b25dd7db52c972b9e3cfde9fe0939e9577ab"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC2xC2xC2xC2xC2/upper-4.cnf",
+    "cnf_sha256": "99a6229c8a2a8b2c66b46c47d1788a2c6a45ee3c3f245f123027ece69210ab63",
+    "elapsed_seconds": 0.004629454999303562,
+    "status": "SAT",
+    "witness": [
+     0,
+     31,
+     47,
+     48
+    ]
+   },
+   "witness": [
+    0,
+    31,
+    47,
+    48
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C65",
+   "lower": {
+    "cnf": "mg-work/C65/lower-3.cnf",
+    "cnf_sha256": "9adf1471954da4a2c208e7e4b67c9a291ade4d1a32e182ea04a56ea33cf4e2b4",
+    "elapsed_seconds": 0.03876046299956215,
+    "proof": "mg-work/C65/lower-3.drat",
+    "proof_sha256": "612a34e0209f79b49321617ef84fe6ce603f68030f4357b3a58e2696fa12625d",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    65
+   ],
+   "order": 65,
+   "retained": {
+    "archive_bytes": 121177,
+    "archive_sha256": "2fd66b2e4087727c12826767cb3b88ee5084def23a09c395ccef8349de74fb56",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "9adf1471954da4a2c208e7e4b67c9a291ade4d1a32e182ea04a56ea33cf4e2b4",
+    "drat_sha256": "612a34e0209f79b49321617ef84fe6ce603f68030f4357b3a58e2696fa12625d",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "9e15881b0efadda86192e1ead13609dd18d851e934012d6f6a56c353489d407d"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C65/upper-4.cnf",
+    "cnf_sha256": "7ba1dcfe83584679d01f73ec178f59f06eeaa70d15da16c4bd5d585edab96caa",
+    "elapsed_seconds": 0.03656414500073879,
+    "status": "SAT",
+    "witness": [
+     0,
+     13,
+     26,
+     39
+    ]
+   },
+   "witness": [
+    0,
+    13,
+    26,
+    39
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C66",
+   "lower": {
+    "cnf": "mg-work/C66/lower-2.cnf",
+    "cnf_sha256": "9078a86904aeff8f8b7893bfcb933fe4e3a72b26c53e997fc7ddf95407c90305",
+    "elapsed_seconds": 0.005572676000156207,
+    "proof": "mg-work/C66/lower-2.drat",
+    "proof_sha256": "c5aebafd13d75075beb7a9af57441db766a4df48df07ab1ff0ec56d639fa7677",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    66
+   ],
+   "order": 66,
+   "retained": {
+    "archive_bytes": 79565,
+    "archive_sha256": "8ba373b5b3db84107be8b56343cb89ea8335130d8514663c65cf268b54411c44",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "9078a86904aeff8f8b7893bfcb933fe4e3a72b26c53e997fc7ddf95407c90305",
+    "drat_sha256": "c5aebafd13d75075beb7a9af57441db766a4df48df07ab1ff0ec56d639fa7677",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "9eb8df9d8719f897c20dd0d3f8e5abf130027f37c1fea28108a2c24b0592100f"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C66/upper-3.cnf",
+    "cnf_sha256": "2e1928d61cdc76b69e16160c57a0e86fa681758841b3bedb42d4ac56fdab3750",
+    "elapsed_seconds": 0.03776382599971839,
+    "status": "SAT",
+    "witness": [
+     0,
+     22,
+     44
+    ]
+   },
+   "witness": [
+    0,
+    22,
+    44
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C68",
+   "lower": {
+    "cnf": "mg-work/C68/lower-3.cnf",
+    "cnf_sha256": "69dab153d69d081d63ee3a4c3d1ca794e7de5ddd8dcd58c036dca5edf67194d9",
+    "elapsed_seconds": 0.04263673499917786,
+    "proof": "mg-work/C68/lower-3.drat",
+    "proof_sha256": "cb17d43eddd85c768c39399fa9827d37485f586f998461ce8aa54abb98973090",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    68
+   ],
+   "order": 68,
+   "retained": {
+    "archive_bytes": 138179,
+    "archive_sha256": "9a2d0258d1f0e5513bfa767a20c2ed0162735797a2a06dbc20e8d9683ce1e68a",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "69dab153d69d081d63ee3a4c3d1ca794e7de5ddd8dcd58c036dca5edf67194d9",
+    "drat_sha256": "cb17d43eddd85c768c39399fa9827d37485f586f998461ce8aa54abb98973090",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "f103e6cc7aa7d1d5796233530c98a86a7acff0cc10c20db21eba18377be8e285"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C68/upper-4.cnf",
+    "cnf_sha256": "53f34906c212ea8cd6124635ce1bf297fdf85640d5249a629bb29befe5276531",
+    "elapsed_seconds": 0.0465076290001889,
+    "status": "SAT",
+    "witness": [
+     0,
+     17,
+     34,
+     51
+    ]
+   },
+   "witness": [
+    0,
+    17,
+    34,
+    51
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C2xC34",
+   "lower": {
+    "cnf": "mg-work/C2xC34/lower-3.cnf",
+    "cnf_sha256": "9624065b0ef7f41ffc1f501d36cd65db09b550696806e16de0833bfa347a2f49",
+    "elapsed_seconds": 0.04560167999989062,
+    "proof": "mg-work/C2xC34/lower-3.drat",
+    "proof_sha256": "c8849ed5d51f2e46c581402a823751a6b21113fb2c308d657af24199973556b4",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    2,
+    34
+   ],
+   "order": 68,
+   "retained": {
+    "archive_bytes": 158908,
+    "archive_sha256": "3007794a944db107d86039d9f61daf8db83e05cc4482eb1d066a266875c08ddd",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "9624065b0ef7f41ffc1f501d36cd65db09b550696806e16de0833bfa347a2f49",
+    "drat_sha256": "c8849ed5d51f2e46c581402a823751a6b21113fb2c308d657af24199973556b4",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "7681f11d8942e514dc35ae875dbee4398af6ddfcca00b589f1d21fe2524073df"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC34/upper-4.cnf",
+    "cnf_sha256": "f5fd423d1993fdb342e8c700fe4536ba4a24c9b983abb41220b6c7dc5b692c7c",
+    "elapsed_seconds": 0.053700510001363,
+    "status": "SAT",
+    "witness": [
+     0,
+     17,
+     34,
+     51
+    ]
+   },
+   "witness": [
+    0,
+    17,
+    34,
+    51
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C69",
+   "lower": {
+    "cnf": "mg-work/C69/lower-2.cnf",
+    "cnf_sha256": "82fe575d85311d8c857a81456c57e2b039dfddfd614e588e5394a7eeaddee917",
+    "elapsed_seconds": 0.005978436000077636,
+    "proof": "mg-work/C69/lower-2.drat",
+    "proof_sha256": "8f23544fc6e33351e3cb187af86361c922fba8148af7b86564f4a8bd38d6c227",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    69
+   ],
+   "order": 69,
+   "retained": {
+    "archive_bytes": 83067,
+    "archive_sha256": "90369f68f2fa073eb0e1d447626ea90fc72168d067c916a2ab1de32d48531673",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "82fe575d85311d8c857a81456c57e2b039dfddfd614e588e5394a7eeaddee917",
+    "drat_sha256": "8f23544fc6e33351e3cb187af86361c922fba8148af7b86564f4a8bd38d6c227",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "69d0b553b73e8415e1d559265708de1a3d2268ca1c6f627a10416b89af70be72"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C69/upper-3.cnf",
+    "cnf_sha256": "a4d0e3ef72604580d39884941c4f5a6c09cf00e259b6708efb0717aa930c166c",
+    "elapsed_seconds": 0.03844114700041246,
+    "status": "SAT",
+    "witness": [
+     0,
+     23,
+     46
+    ]
+   },
+   "witness": [
+    0,
+    23,
+    46
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C70",
+   "lower": {
+    "cnf": "mg-work/C70/lower-3.cnf",
+    "cnf_sha256": "b3e95877859f4ef9f00b1f1f74581a39d020061695b62f62375de78abd4cc6ab",
+    "elapsed_seconds": 0.04473967299963988,
+    "proof": "mg-work/C70/lower-3.drat",
+    "proof_sha256": "868b3adc76ab6273a02285f169cd60fcc264f86c24c167ea770fdf8911deb282",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 3,
+   "m": 4,
+   "moduli": [
+    70
+   ],
+   "order": 70,
+   "retained": {
+    "archive_bytes": 149991,
+    "archive_sha256": "9a853fba01fafc52189754e595bb2d6b8632490f0b045717865509d8fce1607e",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "b3e95877859f4ef9f00b1f1f74581a39d020061695b62f62375de78abd4cc6ab",
+    "drat_sha256": "868b3adc76ab6273a02285f169cd60fcc264f86c24c167ea770fdf8911deb282",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "61fb1a800e4fdc91477b4215109dc286ff3308678ae9a9ca30bbde9609bafc74"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C70/upper-4.cnf",
+    "cnf_sha256": "aa064b6b6d8227e0fd8ca6c78317e50f20b43dc798c187e68dd7b5e7324781be",
+    "elapsed_seconds": 0.04031990300063626,
+    "status": "SAT",
+    "witness": [
+     0,
+     14,
+     28,
+     42
+    ]
+   },
+   "witness": [
+    0,
+    14,
+    28,
+    42
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C72",
+   "lower": {
+    "cnf": "mg-work/C72/lower-2.cnf",
+    "cnf_sha256": "95d931f1e9cc645acbd9f726a783e6a455abf6f859453bf2abb15fbaebab9cb4",
+    "elapsed_seconds": 0.006508297999971546,
+    "proof": "mg-work/C72/lower-2.drat",
+    "proof_sha256": "91d876926d1354e3ab0097d4b4df2359b2044faf73768ff0acd271fbb4f235cc",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    72
+   ],
+   "order": 72,
+   "retained": {
+    "archive_bytes": 96368,
+    "archive_sha256": "8cc52be1e81d54ac8f598094216969bbd4b399b11eda313b8023c123fc50557d",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "95d931f1e9cc645acbd9f726a783e6a455abf6f859453bf2abb15fbaebab9cb4",
+    "drat_sha256": "91d876926d1354e3ab0097d4b4df2359b2044faf73768ff0acd271fbb4f235cc",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "4c228eb3cf9406c6201a25e07c0182d97476f3543d747e7a0ee991462a5cf496"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C72/upper-3.cnf",
+    "cnf_sha256": "15279846e4a51caf880a52de736cb127d42b985ab3d084bf6fa03ff294a15a40",
+    "elapsed_seconds": 0.041128262999336584,
+    "status": "SAT",
+    "witness": [
+     0,
+     24,
+     48
+    ]
+   },
+   "witness": [
+    0,
+    24,
+    48
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C2xC36",
+   "lower": {
+    "cnf": "mg-work/C2xC36/lower-2.cnf",
+    "cnf_sha256": "1ab91c3db4d59442fda3eb45b4abe9ef46566460ca5d1d357ef1a5a564b4b3f4",
+    "elapsed_seconds": 0.0068294009997771354,
+    "proof": "mg-work/C2xC36/lower-2.drat",
+    "proof_sha256": "9229a40cfb6485b33f597fb8cb962da3a86ea16d0f1d5db77162718d41641a3c",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    2,
+    36
+   ],
+   "order": 72,
+   "retained": {
+    "archive_bytes": 93364,
+    "archive_sha256": "32fc953daedf7ac31507a3b3adf0082a2406d18168346ac5e6f02e28397b809d",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "1ab91c3db4d59442fda3eb45b4abe9ef46566460ca5d1d357ef1a5a564b4b3f4",
+    "drat_sha256": "9229a40cfb6485b33f597fb8cb962da3a86ea16d0f1d5db77162718d41641a3c",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "9d405ee08025cf3f196b8526b44e4a5bc71d75b4cb86edaa5ae4123c2c51889d"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC36/upper-3.cnf",
+    "cnf_sha256": "b397b8775a64a92899f7b5f42c06e8b56db8522ce83df66e1357258c6f722b43",
+    "elapsed_seconds": 0.04218193399901793,
+    "status": "SAT",
+    "witness": [
+     0,
+     12,
+     24
+    ]
+   },
+   "witness": [
+    0,
+    12,
+    24
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C3xC24",
+   "lower": {
+    "cnf": "mg-work/C3xC24/lower-2.cnf",
+    "cnf_sha256": "685146f3e22a890a8246fadc760e86f7817a73d08a0b4649dfb83f85b2bdd21a",
+    "elapsed_seconds": 0.006433421000110684,
+    "proof": "mg-work/C3xC24/lower-2.drat",
+    "proof_sha256": "fb1ef8128e40b6457ded3e3c38090be54c5eb209cde2d933f76afa7ab13ba45e",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    3,
+    24
+   ],
+   "order": 72,
+   "retained": {
+    "archive_bytes": 95585,
+    "archive_sha256": "5340b06f6f38a677f0b54a4a557689f84525c69b4e63839c97514effcca8e054",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "685146f3e22a890a8246fadc760e86f7817a73d08a0b4649dfb83f85b2bdd21a",
+    "drat_sha256": "fb1ef8128e40b6457ded3e3c38090be54c5eb209cde2d933f76afa7ab13ba45e",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "04e687ad9fcdce095ec724b31f5d47bee885ddbc7059ae0beb9440305edb65dd"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C3xC24/upper-3.cnf",
+    "cnf_sha256": "97be41b6edea0fb5d89cb813e85d6bb55758f27d3534710011c2f5f3c9f9a08d",
+    "elapsed_seconds": 0.005661331000737846,
+    "status": "SAT",
+    "witness": [
+     0,
+     40,
+     56
+    ]
+   },
+   "witness": [
+    0,
+    40,
+    56
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C6xC12",
+   "lower": {
+    "cnf": "mg-work/C6xC12/lower-2.cnf",
+    "cnf_sha256": "91f0c3d0e6ddf81374654001779d010d912f5d597a147ee669aaaf2849b47d50",
+    "elapsed_seconds": 0.006522996000057901,
+    "proof": "mg-work/C6xC12/lower-2.drat",
+    "proof_sha256": "dab778fd06cbace1e0afef84c08418503f8ff26985257e79f5b6572cc094d27d",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    6,
+    12
+   ],
+   "order": 72,
+   "retained": {
+    "archive_bytes": 99413,
+    "archive_sha256": "fa369b691931aa445e83b783a3a2e66101bad60c9dbedc6e78452ff7547145d2",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "91f0c3d0e6ddf81374654001779d010d912f5d597a147ee669aaaf2849b47d50",
+    "drat_sha256": "dab778fd06cbace1e0afef84c08418503f8ff26985257e79f5b6572cc094d27d",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "6ad9ab8ac7c57b05c45515e84a63594b34f2bc4cb3db6682b0c83f888547818c"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C6xC12/upper-3.cnf",
+    "cnf_sha256": "dafe3f02c590559294b601bd27a1385a00a7c3f5d7f4b29206c52cf03345ffa1",
+    "elapsed_seconds": 0.04134010300003865,
+    "status": "SAT",
+    "witness": [
+     0,
+     4,
+     8
+    ]
+   },
+   "witness": [
+    0,
+    4,
+    8
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C2xC2xC18",
+   "lower": {
+    "cnf": "mg-work/C2xC2xC18/lower-2.cnf",
+    "cnf_sha256": "7960846ba7c286f33f8e7f9ccd767fedaede123b0c2ba34df406a8d3d621982d",
+    "elapsed_seconds": 0.006834124998931657,
+    "proof": "mg-work/C2xC2xC18/lower-2.drat",
+    "proof_sha256": "c309c396d342fa17707dde3898f4c45be5f4a10cc6b972a4b4c4fbe9ccb26f26",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    2,
+    2,
+    18
+   ],
+   "order": 72,
+   "retained": {
+    "archive_bytes": 101374,
+    "archive_sha256": "194adfc9c81d0275447d5578fe9031885b07d5e5a6824c4f55d94f07e6a5fa4e",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "7960846ba7c286f33f8e7f9ccd767fedaede123b0c2ba34df406a8d3d621982d",
+    "drat_sha256": "c309c396d342fa17707dde3898f4c45be5f4a10cc6b972a4b4c4fbe9ccb26f26",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "a31f772c1679661a03654c40a25f33d27b442a1110ac262c4f9cb8a43f4d341a"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC2xC18/upper-3.cnf",
+    "cnf_sha256": "00889d69ed4a49162f7b885d09ee3f4f3914620e5532cb50e8806a887d56c082",
+    "elapsed_seconds": 0.04255782200016256,
+    "status": "SAT",
+    "witness": [
+     0,
+     6,
+     12
+    ]
+   },
+   "witness": [
+    0,
+    6,
+    12
+   ]
+  },
+  {
+   "first_published_here": true,
+   "group": "C2xC6xC6",
+   "lower": {
+    "cnf": "mg-work/C2xC6xC6/lower-2.cnf",
+    "cnf_sha256": "4bf14b9f4ea16f701cbcf608ac54cbc2945a3b4f4de57ceddf417fddb0650438",
+    "elapsed_seconds": 0.006976308999583125,
+    "proof": "mg-work/C2xC6xC6/lower-2.drat",
+    "proof_sha256": "5b13f09105de07940f4d37abfbf4a09a46e3c33c91bd6c0e1904a0519ed22ddb",
+    "proof_verified": true,
+    "status": "UNSAT",
+    "witness": null
+   },
+   "lower_bound": 2,
+   "m": 3,
+   "moduli": [
+    2,
+    6,
+    6
+   ],
+   "order": 72,
+   "retained": {
+    "archive_bytes": 103250,
+    "archive_sha256": "9f503a225ccb35c03af477d0f312079109d9c4b0574f4c98d25b82305a6ce3d1",
+    "cake_lpr_log_sha256": "c680d3bd38a04c7beee7d54999f8f00b43051f75a53cf2bd170ae0cc5f99eb5f",
+    "cake_lpr_returncode": 0,
+    "cake_lpr_verified": true,
+    "cnf_sha256": "4bf14b9f4ea16f701cbcf608ac54cbc2945a3b4f4de57ceddf417fddb0650438",
+    "drat_sha256": "5b13f09105de07940f4d37abfbf4a09a46e3c33c91bd6c0e1904a0519ed22ddb",
+    "drat_trim_semantic_verified": true,
+    "lrat_sha256": "57ad9c5b388d8e11434112c4c46548813e2a86bce624634dbcba37cf33576498"
+   },
+   "tier": "DRAT-certified",
+   "upper": {
+    "cnf": "mg-work/C2xC6xC6/upper-3.cnf",
+    "cnf_sha256": "fe6eeefdbb37f41cc1730532a151febaee4fbf85a6085e422333336041a5c3aa",
+    "elapsed_seconds": 0.009097889998884057,
+    "status": "SAT",
+    "witness": [
+     0,
+     2,
+     4
+    ]
+   },
+   "witness": [
+    0,
+    2,
+    4
+   ]
+  }
+ ],
+ "run_date": "2026-08-21",
+ "schema": 1,
+ "tier_vocabulary": "README.md, section \"Verification tiers\"",
+ "timeout_seconds_per_checker_call": 3600,
+ "unresolved": [
+  {
+   "group": "C53",
+   "measured_m": null,
+   "moduli": [
+    53
+   ],
+   "order": 53,
+   "predicted_m": 14,
+   "reason": "not attempted in this run; C53 is the first gap in the contiguous census and still has no retained certificate meeting this census standard",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C59",
+   "measured_m": null,
+   "moduli": [
+    59
+   ],
+   "order": 59,
+   "predicted_m": 15,
+   "reason": "not attempted in this run; the exact value has no retained certificate at this census standard",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C61",
+   "measured_m": null,
+   "moduli": [
+    61
+   ],
+   "order": 61,
+   "predicted_m": null,
+   "reason": "excluded from this run by design: a bare prime order, outside the target class",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C62",
+   "measured_m": null,
+   "moduli": [
+    62
+   ],
+   "order": 62,
+   "predicted_m": 11,
+   "reason": "the independent checker exceeded its 3600-second replay limit on the lower-bound proof; no value admitted",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C67",
+   "measured_m": null,
+   "moduli": [
+    67
+   ],
+   "order": 67,
+   "predicted_m": null,
+   "reason": "excluded from this run by design: a bare prime order, outside the target class",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C71",
+   "measured_m": null,
+   "moduli": [
+    71
+   ],
+   "order": 71,
+   "predicted_m": null,
+   "reason": "excluded from this run by design: a bare prime order, outside the target class",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C73",
+   "measured_m": null,
+   "moduli": [
+    73
+   ],
+   "order": 73,
+   "predicted_m": null,
+   "reason": "excluded from this run by design: a bare prime order, outside the target class",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C74",
+   "measured_m": null,
+   "moduli": [
+    74
+   ],
+   "order": 74,
+   "predicted_m": 12,
+   "reason": "attempted, then interrupted by the run's own 300-minute time cap before any row or archive was written",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C75",
+   "measured_m": null,
+   "moduli": [
+    75
+   ],
+   "order": 75,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C5xC15",
+   "measured_m": null,
+   "moduli": [
+    5,
+    15
+   ],
+   "order": 75,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C76",
+   "measured_m": null,
+   "moduli": [
+    76
+   ],
+   "order": 76,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC38",
+   "measured_m": null,
+   "moduli": [
+    2,
+    38
+   ],
+   "order": 76,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C78",
+   "measured_m": null,
+   "moduli": [
+    78
+   ],
+   "order": 78,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C79",
+   "measured_m": null,
+   "moduli": [
+    79
+   ],
+   "order": 79,
+   "predicted_m": null,
+   "reason": "excluded from this run by design: a bare prime order, outside the target class",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C80",
+   "measured_m": null,
+   "moduli": [
+    80
+   ],
+   "order": 80,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC40",
+   "measured_m": null,
+   "moduli": [
+    2,
+    40
+   ],
+   "order": 80,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C4xC20",
+   "measured_m": null,
+   "moduli": [
+    4,
+    20
+   ],
+   "order": 80,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC2xC20",
+   "measured_m": null,
+   "moduli": [
+    2,
+    2,
+    20
+   ],
+   "order": 80,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC2xC2xC10",
+   "measured_m": null,
+   "moduli": [
+    2,
+    2,
+    2,
+    10
+   ],
+   "order": 80,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C81",
+   "measured_m": null,
+   "moduli": [
+    81
+   ],
+   "order": 81,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C3xC27",
+   "measured_m": null,
+   "moduli": [
+    3,
+    27
+   ],
+   "order": 81,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C9xC9",
+   "measured_m": null,
+   "moduli": [
+    9,
+    9
+   ],
+   "order": 81,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C3xC3xC9",
+   "measured_m": null,
+   "moduli": [
+    3,
+    3,
+    9
+   ],
+   "order": 81,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C3xC3xC3xC3",
+   "measured_m": null,
+   "moduli": [
+    3,
+    3,
+    3,
+    3
+   ],
+   "order": 81,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C82",
+   "measured_m": null,
+   "moduli": [
+    82
+   ],
+   "order": 82,
+   "predicted_m": 13,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C83",
+   "measured_m": null,
+   "moduli": [
+    83
+   ],
+   "order": 83,
+   "predicted_m": null,
+   "reason": "excluded from this run by design: a bare prime order, outside the target class",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C84",
+   "measured_m": null,
+   "moduli": [
+    84
+   ],
+   "order": 84,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC42",
+   "measured_m": null,
+   "moduli": [
+    2,
+    42
+   ],
+   "order": 84,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C85",
+   "measured_m": null,
+   "moduli": [
+    85
+   ],
+   "order": 85,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C86",
+   "measured_m": null,
+   "moduli": [
+    86
+   ],
+   "order": 86,
+   "predicted_m": 13,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C87",
+   "measured_m": null,
+   "moduli": [
+    87
+   ],
+   "order": 87,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C88",
+   "measured_m": null,
+   "moduli": [
+    88
+   ],
+   "order": 88,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC44",
+   "measured_m": null,
+   "moduli": [
+    2,
+    44
+   ],
+   "order": 88,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC2xC22",
+   "measured_m": null,
+   "moduli": [
+    2,
+    2,
+    22
+   ],
+   "order": 88,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C89",
+   "measured_m": null,
+   "moduli": [
+    89
+   ],
+   "order": 89,
+   "predicted_m": null,
+   "reason": "excluded from this run by design: a bare prime order, outside the target class",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C90",
+   "measured_m": null,
+   "moduli": [
+    90
+   ],
+   "order": 90,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C3xC30",
+   "measured_m": null,
+   "moduli": [
+    3,
+    30
+   ],
+   "order": 90,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C92",
+   "measured_m": null,
+   "moduli": [
+    92
+   ],
+   "order": 92,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC46",
+   "measured_m": null,
+   "moduli": [
+    2,
+    46
+   ],
+   "order": 92,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C93",
+   "measured_m": null,
+   "moduli": [
+    93
+   ],
+   "order": 93,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C94",
+   "measured_m": null,
+   "moduli": [
+    94
+   ],
+   "order": 94,
+   "predicted_m": 13,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C95",
+   "measured_m": null,
+   "moduli": [
+    95
+   ],
+   "order": 95,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C96",
+   "measured_m": null,
+   "moduli": [
+    96
+   ],
+   "order": 96,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC48",
+   "measured_m": null,
+   "moduli": [
+    2,
+    48
+   ],
+   "order": 96,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C4xC24",
+   "measured_m": null,
+   "moduli": [
+    4,
+    24
+   ],
+   "order": 96,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC2xC24",
+   "measured_m": null,
+   "moduli": [
+    2,
+    2,
+    24
+   ],
+   "order": 96,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC4xC12",
+   "measured_m": null,
+   "moduli": [
+    2,
+    4,
+    12
+   ],
+   "order": 96,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC2xC2xC12",
+   "measured_m": null,
+   "moduli": [
+    2,
+    2,
+    2,
+    12
+   ],
+   "order": 96,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC2xC2xC2xC6",
+   "measured_m": null,
+   "moduli": [
+    2,
+    2,
+    2,
+    2,
+    6
+   ],
+   "order": 96,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C97",
+   "measured_m": null,
+   "moduli": [
+    97
+   ],
+   "order": 97,
+   "predicted_m": null,
+   "reason": "excluded from this run by design: a bare prime order, outside the target class",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C98",
+   "measured_m": null,
+   "moduli": [
+    98
+   ],
+   "order": 98,
+   "predicted_m": 5,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C7xC14",
+   "measured_m": null,
+   "moduli": [
+    7,
+    14
+   ],
+   "order": 98,
+   "predicted_m": 5,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C99",
+   "measured_m": null,
+   "moduli": [
+    99
+   ],
+   "order": 99,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C3xC33",
+   "measured_m": null,
+   "moduli": [
+    3,
+    33
+   ],
+   "order": 99,
+   "predicted_m": 3,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C100",
+   "measured_m": null,
+   "moduli": [
+    100
+   ],
+   "order": 100,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C2xC50",
+   "measured_m": null,
+   "moduli": [
+    2,
+    50
+   ],
+   "order": 100,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C5xC20",
+   "measured_m": null,
+   "moduli": [
+    5,
+    20
+   ],
+   "order": 100,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  },
+  {
+   "group": "C10xC10",
+   "measured_m": null,
+   "moduli": [
+    10,
+    10
+   ],
+   "order": 100,
+   "predicted_m": 4,
+   "reason": "not attempted before the run's own 300-minute time cap",
+   "status": "UNSOLVED-within-budget"
+  }
+ ],
+ "unresolved_group_count": 58
+}

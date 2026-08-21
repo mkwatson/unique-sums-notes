@@ -104,6 +104,52 @@
   `statement-audit.md`'s new Part III give the exact tier definition, the
   formal statement, and its scope.
 
+# 2026-08-21: census extension, and the audit items this release closes
+
+This entry covers the whole of this release: the byte-tamper theorem recorded
+in the block above, the census extension, and the presentation fixes.
+
+- **36 further certified groups, in orders 54 to 72.** A census extension run
+  on 2026-08-21 solved and certified 36 Abelian groups above the contiguous
+  range, listed with their CNF, DRAT, and LRAT hashes in the new
+  `mg-census-extension-2026-08-21.json`. Every one matches the
+  minimum-over-prime-divisors formula and none contradicts it. Each lower
+  bound was replayed by `drat-trim` and again by the verified checker
+  `cake_lpr`. Fifteen of the 36 are published here for the first time; the
+  other 21 were already among the 26 stress groups of
+  `mg-census-through-52.json`, and the rerun reproduced their CNF and DRAT
+  hashes byte for byte.
+- **What the extension does not do.** It does not extend contiguity. The
+  contiguous certified census still stops at order 52 and $C_{53}$ is still
+  the first gap, unchanged by this run.
+- **Which groups of orders 53 to 100 were left unresolved, and why.** The bare
+  prime orders 61, 67, 71, 73, 79, 83, 89 and 97 were excluded from the run by
+  design. Of the rest, $C_{62}$ reached the checker and exceeded its
+  3600-second replay limit, $C_{74}$ was interrupted by the run's own
+  300-minute time cap, and the remainder were never attempted. All 58 are
+  listed in the new file with no certification tier, and no predicted value
+  among them is stated as measured.
+- **Single-toolchain trust basis stated in the tier vocabulary.** The
+  kernel-certified entry in `README.md`'s "Verification tiers" section now
+  says plainly that these statements are checked by one Lean toolchain and
+  re-checked by `lean4checker`, with no second, independently implemented
+  proof assistant cross-verifying them.
+- **A consequence line per claim.** `statement-audit.md` gains a "What each
+  claim changes" table: one line per claim saying what it changes for a
+  reader, in one of four categories (witness only, scope repair, reusable
+  mechanism, theory change). The audit tables said what each claim is and
+  what its check covers; they did not say what it is for.
+- **Still open: the second checker.** The external replay of the
+  `witness-kernel/` modules through a second, independently implemented proof
+  checker has not been run. The tier vocabulary now states that gap where a
+  reader will meet it.
+- **Still open: the two census predicates.** Neither census manifest is
+  accepted by `census-schema/validator.py`. That validator implements the
+  ordered representation count; both manifests record the unordered count,
+  and the two are different predicates, as `census-schema/SCHEMA.md` states
+  in its opening and again in its section 7. The manifests were left in the
+  predicate their certificates were produced under.
+
 <!-- The "Changes from v1 to staged v2" and "Changes from published v2 to
      staged v3" blocks are not repeated here: the repository's root
      `CHANGES.md` already carries the v1-to-v2 history, and `CHANGES-v3.md`
