@@ -1,0 +1,73 @@
+{
+ "schema": "external-attribution-1",
+ "convention": "unordered pairs with repetition; swapping the two entries is not a second representation",
+ "extends": "mg-census-extension-2026-08-21.json",
+ "purpose": "Cites four bare-prime rows (C61, C67, C71, C73) that mg-census-extension-2026-08-21.json deliberately excluded (see its excluded_bare_primes list). These rows are not computed, verified, or certified in this repository; they are attributed values, checked here only against the source repository's own stated tier language, not re-derived.",
+ "source": {
+  "repository": "https://github.com/pawelkwaczynski/unique-sum-free-cert",
+  "doi": "https://doi.org/10.5281/zenodo.22067683",
+  "citation": "Pawel Kwaczynski, unique-sum-free-cert: machine-checked certificates for m(p), p = 53 (v0.1), Zenodo, 2026, doi:10.5281/zenodo.22067683 (all versions: doi:10.5281/zenodo.22067682)",
+  "retrieved": "2026-08-23",
+  "oeis_terms": "A398173 a(15) through a(20), for p = 53, 59, 61, 67, 71, 73 respectively, per the source repository's own README table"
+ },
+ "attribution_note": "m(53) = 14 and m(59) = 15 are NOT repeated in this file. This repository holds its own solver-certified, hash-bound provenance for both (provenance/m53-exact-2026-07-25/, provenance/m59-exact-2026-07-27/, note.tex Sec. 'Exact values of m(p)'). Per the source repository's own README (2026-08-23 fetch): 'The values m(53) = 14 and m(59) = 15 are his [Scheinerman's]; ... m(53) and m(59) were proved minimal independently here and by Watson in the same month.' m(61), m(67), m(71), m(73) were computed first by Kwaczynski and appear ONLY there; they are cited here as external rows.",
+ "tier_correction_note": "The source repository's own tier table (README.md, 'Values' section, fetched 2026-08-23) marks p = 53 as 'solver-certified, hash-bound' but p = 59, 61, 67, 71, 73 all as 'search only': two independent search programs agree and the witness is checked, but no proof object is retained. The four rows below are therefore labeled EXTERNAL / search-only, not solver-certified, hash-bound; that stronger tier applies only to his p = 53 row, which this file does not cite.",
+ "results": [
+  {
+   "group": "C61",
+   "moduli": [61],
+   "order": 61,
+   "m": 15,
+   "witness": null,
+   "lower": null,
+   "upper": null,
+   "tier": "EXTERNAL: search only",
+   "tier_detail": "Value first computed by Kwaczynski (OEIS A398173, August 2026). Established by two independent search programs (an orbit-canonical branch-and-bound in C and a SAT cube-and-conquer), witness checked by a third method. No proof object retained (source repository's own tier language). Not certified in this repository.",
+   "source_row": "unique-sum-free-cert README.md, Values table, row p = 61",
+   "source_doi": "https://doi.org/10.5281/zenodo.22067683"
+  },
+  {
+   "group": "C67",
+   "moduli": [67],
+   "order": 67,
+   "m": 16,
+   "witness": null,
+   "lower": null,
+   "upper": null,
+   "tier": "EXTERNAL: search only",
+   "tier_detail": "Value first computed by Kwaczynski (OEIS A398173, August 2026). Established by two independent search programs (an orbit-canonical branch-and-bound in C and a SAT cube-and-conquer), witness checked by a third method. No proof object retained (source repository's own tier language). Not certified in this repository.",
+   "source_row": "unique-sum-free-cert README.md, Values table, row p = 67",
+   "source_doi": "https://doi.org/10.5281/zenodo.22067683"
+  },
+  {
+   "group": "C71",
+   "moduli": [71],
+   "order": 71,
+   "m": 16,
+   "witness": null,
+   "lower": null,
+   "upper": null,
+   "tier": "EXTERNAL: search only",
+   "tier_detail": "Value first computed by Kwaczynski (OEIS A398173, August 2026). Established by two independent search programs (an orbit-canonical branch-and-bound in C and a SAT cube-and-conquer), witness checked by a third method. No proof object retained (source repository's own tier language). Not certified in this repository.",
+   "source_row": "unique-sum-free-cert README.md, Values table, row p = 71",
+   "source_doi": "https://doi.org/10.5281/zenodo.22067683"
+  },
+  {
+   "group": "C73",
+   "moduli": [73],
+   "order": 73,
+   "m": 16,
+   "witness": null,
+   "lower": null,
+   "upper": null,
+   "tier": "EXTERNAL: search only",
+   "tier_detail": "Value first computed by Kwaczynski (OEIS A398173, August 2026). Established by two independent search programs (an orbit-canonical branch-and-bound in C and a SAT cube-and-conquer), witness checked by a third method. No proof object retained (source repository's own tier language). Not certified in this repository.",
+   "source_row": "unique-sum-free-cert README.md, Values table, row p = 73",
+   "source_doi": "https://doi.org/10.5281/zenodo.22067683"
+  }
+ ],
+ "coverage": {
+  "orders_added_by_this_file": [61, 67, 71, 73],
+  "note": "The composite orders between 53 and 100 remain as mg-census-extension-2026-08-21.json already lists them: some certified there, most listed with no tier and not attempted. This file does not add, guess, or imply a value for any composite order. C79, C83, C89, C97 (also excluded_bare_primes in the extension file) are not addressed here; no external source for those was available at time of writing."
+ }
+}

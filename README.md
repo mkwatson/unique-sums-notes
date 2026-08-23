@@ -48,6 +48,26 @@ one exceeded the checker's replay limit, one was cut off by the run's own time
 cap, and the remaining 48 were never attempted. All 58 are listed in the same
 file with no certification tier.
 
+Four of the excluded bare primes now have external rows.
+Pawel Kwaczynski's repository
+[unique-sum-free-cert](https://github.com/pawelkwaczynski/unique-sum-free-cert)
+([doi:10.5281/zenodo.22067683](https://doi.org/10.5281/zenodo.22067683))
+computed $m(61) = 15$, $m(67) = 16$, $m(71) = 16$, and $m(73) = 16$ first,
+and they are cited here as external rows in
+[`mg-census-external-primes-2026-08-23.json`](mg-census-external-primes-2026-08-23.json),
+not recomputed. His own README states these four at his "search only" tier
+(two independent search programs agree, witness checked, no proof object
+retained), distinct from the stronger "solver-certified, hash-bound" tier he
+gives his own $p = 53$ row; the external file preserves that distinction and
+does not upgrade it. $m(53) = 14$ and $m(59) = 15$ are not repeated there:
+this repository already holds its own solver-certified, hash-bound
+provenance for both. Minimality for $p = 53$ and $p = 59$ was reached
+independently by both parties in the same month; the values themselves, for
+$p \le 59$ only, are Scheinerman's, tabulated with witnesses in his thesis
+before either party's search. The composite orders between 53 and 100 are
+unaffected and remain as `mg-census-extension-2026-08-21.json` already lists
+them.
+
 On the asymptotic side the note proves a one-log sharpening of the paper's
 dissociation bound. Within weeks, two stronger results appeared: a
 preprint of Cao and Yuan (arXiv:2608.06728) and a
@@ -134,6 +154,7 @@ definitions live, so a claim can be audited without reading the proof body.
 | `repro/` | One deterministic command that reruns the computational claims, with a deliberately failing control that must fire | `./repro/run.sh` |
 | `mg-census-through-52.json` | Census manifest: CNF and DRAT SHA-256 hashes for all 114 groups | hashes within |
 | `mg-census-extension-2026-08-21.json` | 36 further certified groups in orders 54 to 72, with CNF, DRAT, and LRAT hashes, and the unresolved groups of orders 53 to 100 listed with no tier | hashes within |
+| `mg-census-external-primes-2026-08-23.json` | Four external rows, $C_{61}, C_{67}, C_{71}, C_{73}$, cited from Kwaczynski's unique-sum-free-cert at his own "search only" tier, not recomputed here | read it |
 
 The census DRAT proofs themselves are retained locally and are not
 distributed; the manifests record their hashes. Python bytecode caches
