@@ -18,3 +18,9 @@ unique-sum-freeness being monotone in k.
 per-cube UNSAT proofs, that the retained 16,384-cube partitions for m(53) k=13 and
 m(59) k=14 are complete covers of their search spaces, following a pattern by Pawel
 Kwaczynski.
+
+`interval-witnesses-2026-08-23/` ships explicit, independently verified USF witness
+sets, one per realized size, at p = 53, 59, 61, 67, 71, 73, prompted by Kwaczynski's
+observation that the sizes of USF sets appear to form an interval for p <= 47. See its
+own README for exactly what is and is not claimed; the general interval statement
+across all primes remains open.
