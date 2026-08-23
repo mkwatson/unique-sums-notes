@@ -13,3 +13,8 @@ only the last one or two sizes: `m53-exact-2026-07-25/` ships `counts_53_3.txt` 
 `counts_59_12.txt` plus the k = 13 leg at `m59-noprune-2026-07-27/` and the k = 14 leg in
 `m59-exact-2026-07-27/enum59_14.out`. Neither m(53) = 14 nor m(59) = 15 relies on
 unique-sum-freeness being monotone in k.
+
+`cover-certificates-2026-08-23/` adds a machine-checked SAT certificate, on top of the
+per-cube UNSAT proofs, that the retained 16,384-cube partitions for m(53) k=13 and
+m(59) k=14 are complete covers of their search spaces, following a pattern by Pawel
+Kwaczynski.

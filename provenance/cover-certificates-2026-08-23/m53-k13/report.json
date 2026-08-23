@@ -1,0 +1,26 @@
+{
+  "base_cnf": ".scratch/attack/cover-cert-m53/p53-k13.cnf",
+  "base_cnf_sha256": "b4dc490bfae1506d769b2919d011e6a29e5f324ed9dfa92cb1921447fce884b3",
+  "cube_input": ".scratch/attack/m53cert-landing/results.jsonl",
+  "cube_count": 16384,
+  "cover_cnf": ".scratch/attack/cover-cert-m53/checked/cover.cnf",
+  "cover_cnf_sha256": "a8cf0c752b8e810f42458b88d0fb6c0e424b24e746cb9d7f0b3054a69273c468",
+  "normalized_cubes": ".scratch/attack/cover-cert-m53/checked/cubes.dimacs",
+  "commands": [
+    "'/Users/openclaw/Projects/math/tools/kissat/build/kissat' -q '.scratch/attack/cover-cert-m53/checked/cover.cnf' '.scratch/attack/cover-cert-m53/checked/cover.drat'",
+    "'/Users/openclaw/Projects/math/tools/drat-trim/drat-trim' '.scratch/attack/cover-cert-m53/checked/cover.cnf' '.scratch/attack/cover-cert-m53/checked/cover.drat' -L '.scratch/attack/cover-cert-m53/checked/cover.lrat'",
+    "'/Users/openclaw/Projects/math/tools/cake_lpr/cake_lpr' '.scratch/attack/cover-cert-m53/checked/cover.cnf' '.scratch/attack/cover-cert-m53/checked/cover.lrat'"
+  ],
+  "kissat_rc": 20,
+  "kissat_seconds": 0.6903965840028832,
+  "drat_sha256": "9b5d6a792ef0ff4b3954afbc7372911a9fc26c605f0d46cb40d3ce485509356f",
+  "drat_trim_rc": 0,
+  "drat_trim_seconds": 0.29796420900675,
+  "drat_trim_verified": true,
+  "lrat_sha256": "5c22de2c521cc0f57c24028fc70a3ab6665a8ee9e7b97e5e919a0acabc531e75",
+  "cake_lpr_rc": 0,
+  "cake_lpr_seconds": 0.07344174999161623,
+  "cake_lpr_verified": true,
+  "total_seconds": 1.0618025430012494,
+  "verdict": "PASS"
+}
