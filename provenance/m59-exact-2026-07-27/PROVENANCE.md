@@ -12,6 +12,14 @@ Scheinerman's published upper bound is 15. Therefore **m(59) = 15**.
 This INDEPENDENTLY CONFIRMS Scheinerman's Table 3.1 value, which he asserts without proof (his
 thesis gives witnesses and no exhaustiveness claim), and raises it to an exhaustive tier.
 
+## Coverage below k = 13
+
+`m(59) = 15` does not rest on any assumption that unique-sum-freeness is monotone in k. Every
+size from 3 up to 12 is separately covered by a solver-free complete enumeration, each finding
+zero unique-sum-free sets: `counts_59_3.txt` through `counts_59_12.txt`, in this directory, each
+reading `59 n 0 0 <nodes>`. Together with the k = 13 leg at `../m59-noprune-2026-07-27/` and the
+k = 14 leg above, every k from 3 through 14 is covered by an exhaustive, zero-result search.
+
 ## Pre-registration held
 
 Before launch the arm derived the full unpruned tree for `(p,n)` as `C(p-2, n-3)`, validated
