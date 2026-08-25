@@ -1,0 +1,7 @@
+master 1596 unique 1596
+rows per ledger {'p59-pawelcubes5-20260824T141845Z.jsonl': 136, 'p59-pawelcubes6-20260824T151322Z.jsonl': 1, 'p59-pawelcubes7a-20260824T162054Z.jsonl': 22, 'p59-pawelcubes7b-20260824T162055Z.jsonl': 25, 'p59-run9a-20260825T022131Z.jsonl': 28, 'p59-run9b-20260825T022226Z.jsonl': 20, 'p59-split2-20260824T215145Z.jsonl': 340, 'run3.jsonl': 1238, 'run4.jsonl': 146}
+uncertified rows by (ledger,chain): {('p59-split2-20260824T215145Z.jsonl', 'split-cover'): 3, ('run3.jsonl', 'kissat-drat_trim-cake_lpr'): 20}
+foreign ids: 0
+certified unique: 1596 / 1596
+by chain combination: {('kissat-drat_trim-cake_lpr',): 1548, ('cadical-nativeLRAT-cake_lpr', 'split-cover'): 11, ('cadical-nativeLRAT-cake_lpr',): 17, ('split-cover',): 20}
+shortfall 0 []
