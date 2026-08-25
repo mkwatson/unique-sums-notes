@@ -36,3 +36,13 @@ positive control round-trips exactly on 29 of 29 `(p, k)` pairs spanning
 $p\in\{3,5,7,11,13\}$, and the negative control (a header clause count
 corrupted to disagree with the clause body, body left untouched) is correctly
 refused rather than silently accepted.
+
+## k = p property test
+
+`kp_property_test.py` checks the pinned production encoder at the one corner that
+differential tests and UNSAT-cube replays cannot see: k = p. The whole group Z/pZ is
+unique-sum-free, so `encode(p, p)` must be SAT; adding the unit clause `-1 0` (element 0
+forced out of A) must make it UNSAT. Both directions are checked for each prime given
+(`--primes 5,7,11,13` by default 7 and 13). It was added after Pawel Kwaczynski reported
+finding a sign error in his own symmetry breaker exactly this way (August 2026). Run:
+`python3 kp_property_test.py --kissat <path>`; exit status 0 only if every control passes.
