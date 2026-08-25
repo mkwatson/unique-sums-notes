@@ -13,8 +13,15 @@ an explicit USF set of size $k$ exists in $\mathbb{Z}/p\mathbb{Z}$: **every list
 is realized.** That is the entire claim. Each witness was found by a SAT solver
 (kissat) against a pinned CNF encoding and then independently re-checked by a
 completely separate code path, a plain multiplicity-counting verifier with no SAT
-machinery. All 239 witnesses across the six files were re-verified once more before
+machinery. All 292 witnesses across the six files were re-verified once more before
 publication.
+
+**Correction, 2026-08-25.** As first published (commit 0cfcfaf) the p = 53 and p = 59 files
+held witnesses only for sizes 14-27 and 15-30, while this README's table said 14-52 and 15-58.
+The gap-free claim was still correct, because every size from (p+3)/2 upward is unique-sum-free by
+counting (each sum then has at least 2|A| - p ordered representations), but the table overstated
+what had been *witnessed*. Witnesses for 53: 28-52 and 59: 31-58 were generated with the same
+encoder, solver and independent verifier and added; the files now match the other four primes.
 
 **Not claimed:**
 - That the listed sizes are the *complete* set of realized sizes at any prime. For
